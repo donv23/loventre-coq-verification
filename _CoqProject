@@ -1,0 +1,18 @@
+# Loventre_Coq_Clean — _CoqProject ufficiale (dicembre 2025)
+# Mapping logico/fisico dei namespace Coq
+
+-Q 01_Core Loventre_Core
+-Q 02_Advanced Loventre_Advanced
+-Q 02_Advanced/Geometry Loventre_Geometry
+-Q 03_Main Loventre_Main
+
+# Entry point principale attuale (v3 seed + bridge + P_vs_NP_like + phase separation)
+03_Main/Loventre_Theorem_v3_Seed.v
+03_Main/Loventre_Main_Theorem_v3_Bridge.v
+03_Main/Loventre_Theorem_v3_P_vs_NP_like.v
+03_Main/Loventre_Phase_Separation_v3.v
+03_Main/Loventre_Witness_v3.v
+03_Main/Loventre_Class_Separation_v3.v
+03_Main/Loventre_Mini_Theorem_P_vs_NPbh_Loventre_v3.v
+03_Main/Test_Loventre_Theorem_v3_All.v
+

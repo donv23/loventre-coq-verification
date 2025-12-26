@@ -1,0 +1,89 @@
+AUDIT V3 (01_Core, 02_Advanced, 03_Main)
+ROOT = /Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean
+TIMESTAMP = 20251224_141226
+
+TROVATI 83 HIT:
+
+01_Core/Loventre_Kernel.v:50: Axiom: 
+01_Core/Loventre_Kernel.v:53: Axiom: 
+01_Core/Loventre_Kernel.v:82: Axiom: 
+01_Core/Loventre_Kernel.v:85: Axiom: 
+01_Core/Loventre_Kernel.v:103: Axiom: 
+01_Core/Loventre_Kernel.v:109: Axiom:   Axiom overflow_implies_supercritical :
+01_Core/Loventre_Kernel.v:115: Axiom:   Axiom stable_implies_subcritical :
+01_Core/Loventre_Kernel.v:122: Axiom:   Axiom complexity_mono :
+01_Core/Loventre_Kernel.v:128: Axiom:   Axiom embed_flow :
+01_Core/Loventre_Kernel.v:138: Axiom: 
+01_Core/Loventre_Kernel.v:142: Axiom: 
+02_Advanced/Loventre_Mass_Equivalence.v:23: Axiom: 
+02_Advanced/Loventre_Mass_Equivalence.v:30: Axiom: 
+02_Advanced/Loventre_TM_Bridge.v:24: Axiom: 
+02_Advanced/Loventre_TM_Bridge.v:28: Axiom: 
+02_Advanced/Loventre_TM_Bridge.v:36: Axiom: 
+02_Advanced/Loventre_TM_Bridge.v:41: Axiom: 
+02_Advanced/Loventre_TM_Bridge.v:50: Axiom: 
+02_Advanced/Loventre_TM_Bridge.v:55: Axiom: 
+02_Advanced/Loventre_TM_Bridge.v:60: Axiom: 
+02_Advanced/Loventre_TM_Bridge.v:75: Axiom:   Axiom polytime_config_compatible :
+02_Advanced/Loventre_TM_1.v:39: Axiom:   Axiom tm1_polytime :
+02_Advanced/Loventre_Time_Regimes.v:26: Axiom: 
+02_Advanced/Loventre_Lemmas.v:33: Axiom: 
+02_Advanced/Loventre_Complexity_Barrier.v:27: Axiom: 
+02_Advanced/Geometry/Loventre_LMetrics_Structure.v:30: Axiom: 
+02_Advanced/Geometry/SAFE_Barrier_Structure.v:42: Axiom: 
+02_Advanced/Geometry/Loventre_GCT_Monodromy.v:72: Admitted: Admitted.
+02_Advanced/Geometry/Loventre_GCT_LocalGlobal.v:62: Admitted: Admitted.
+02_Advanced/Geometry/Loventre_LMetrics_Existence_Summary.v:41: Axiom: 
+02_Advanced/Geometry/Loventre_LMetrics_Existence_Summary.v:44: Axiom: 
+02_Advanced/Geometry/Loventre_LMetrics_Existence_Summary.v:47: Axiom: 
+02_Advanced/Geometry/Loventre_LMetrics_Existence_Summary.v:50: Axiom: 
+02_Advanced/Geometry/Loventre_GCT_Coupling.v:64: Admitted: Admitted.
+02_Advanced/Geometry/Loventre_LMetrics_v5_SAFE_Minimality.v:29: Admitted:     Admitted.
+02_Advanced/Geometry/Loventre_Invariance_C.v:39: Admitted: Admitted.
+02_Advanced/Geometry/Loventre_LMetrics_v5_Monotonicity.v:24: Admitted:     Admitted.
+02_Advanced/Geometry/Loventre_LMetrics_Accessible_Target.v:75: Admitted: Admitted.
+02_Advanced/Geometry/Loventre_LMetrics_Accessible_Target.v:14: Axiom:       Axiom exists_P_like_accessible :
+02_Advanced/Geometry/Loventre_GCT_Signature.v:83: Axiom: 
+02_Advanced/Geometry/Loventre_LMetrics_v5_BlackHole_Dominance.v:29: Admitted:     Admitted.
+02_Advanced/Geometry/Loventre_GCT_Trichotomy.v:64: Admitted: Admitted.
+02_Advanced/Geometry/Loventre_GCT_Conductance.v:63: Admitted: Admitted.
+03_Main/Loventre_Theorem_v1_Notes.v:30: Axiom: 
+03_Main/Loventre_NonRetraction_Seed.v:32: Admitted: Admitted.
+03_Main/Loventre_NonRetraction_Seed.v:37: Admitted: Admitted.
+03_Main/Loventre_SAT_TSP_Critical_Metrics.v:65: Axiom: 
+03_Main/Loventre_SAT_TSP_Critical_Metrics.v:68: Axiom: 
+03_Main/Loventre_SAT_TSP_Critical_Metrics.v:71: Axiom: 
+03_Main/Loventre_SAT_TSP_Critical_Metrics.v:74: Axiom: 
+03_Main/Loventre_Main_Theorem_v3_Instance.v:34: Admitted: Admitted. (* per ora; lo riempiremo a pezzi *)
+03_Main/Loventre_Main_Theorem.v:40: Axiom: 
+03_Main/Loventre_Main_Theorem.v:43: Axiom: 
+03_Main/Loventre_Main_Theorem.v:63: Axiom: 
+03_Main/Loventre_Main_Theorem.v:66: Axiom: 
+03_Main/Loventre_Main_Theorem.v:71: Axiom: 
+03_Main/Loventre_LMetrics_Policy_Specs.v:51: Axiom: 
+03_Main/Loventre_LMetrics_Policy_Specs.v:56: Axiom: 
+03_Main/Loventre_Theorem_v1.v:29: Axiom: 
+03_Main/Loventre_SAT_Critical_Family.v:44: Axiom: 
+03_Main/Loventre_SAT_Critical_Family.v:53: Axiom: 
+03_Main/Loventre_LMetrics_Policy_Theorem.v:27: Axiom: 
+03_Main/Loventre_TM_Family_Bridge.v:55: Axiom:   Axiom Loventre_polytime_family_iff_TM_realization :
+03_Main/Loventre_GlobalDecision_View.v:81: Axiom: 
+03_Main/Loventre_GlobalDecision_View.v:86: Axiom: 
+03_Main/Loventre_GlobalDecision_View.v:91: Axiom: 
+03_Main/Loventre_LMetrics_Policy_Specs 2.v:93: Axiom: 
+03_Main/Loventre_LMetrics_Policy_Specs 2.v:95: Axiom: Axiom GC_not_green_neq_GC_green : GC_not_green <> GC_green.
+03_Main/Loventre_TSP_Critical_Metrics.v:58: Axiom: 
+03_Main/Loventre_TSP_Critical_Family.v:44: Axiom: 
+03_Main/Loventre_TSP_Critical_Family.v:53: Axiom: 
+03_Main/Loventre_LMetrics_Policy_Theorem 2.v:31: Axiom: 
+03_Main/Loventre_SAT_Critical_Metrics.v:44: Axiom: 
+03_Main/Loventre_TSPcrit28_Witness.v:20: Axiom: Axiom m_TSPcrit28_is_witness :
+03_Main/Loventre_TSPcrit28_Witness.v:24: Axiom: Axiom m_SATcrit16_is_witness :
+03_Main/Loventre_TSPcrit28_Witness.v:56: Hypothesis: 
+03_Main/Loventre_LMetrics_Witness.v:95: Axiom: 
+03_Main/Loventre_LMetrics_Witness.v:98: Axiom: 
+03_Main/Loventre_LMetrics_Witness.v:163: Hypothesis: 
+03_Main/Loventre_Theorem_v2_Sketch.v:31: Axiom: 
+03_Main/Loventre_Main_Theorem_Instance.v:36: Hypothesis: 
+03_Main/Loventre_Main_Theorem_Instance.v:41: Hypothesis: 
+03_Main/Loventre_Theorem_v2_Witness.v:32: Axiom: 

@@ -1,0 +1,13 @@
+AUDIT V3 — GREEN CHAIN ONLY
+ROOT = /Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean
+TIMESTAMP = 20251224_141442
+
+TROVATI 7 HIT nella GREEN CHAIN:
+
+02_Advanced/Geometry/Loventre_LMetrics_Structure.v:30: Axiom: 
+02_Advanced/Geometry/Loventre_LMetrics_Existence_Summary.v:41: Axiom: 
+02_Advanced/Geometry/Loventre_LMetrics_Existence_Summary.v:44: Axiom: 
+02_Advanced/Geometry/Loventre_LMetrics_Existence_Summary.v:47: Axiom: 
+02_Advanced/Geometry/Loventre_LMetrics_Existence_Summary.v:50: Axiom: 
+03_Main/Loventre_LMetrics_Policy_Specs.v:51: Axiom: 
+03_Main/Loventre_LMetrics_Policy_Specs.v:56: Axiom: 

@@ -1,0 +1,37 @@
+=== AUDIT CANON (FILE DA MAKEFILE_SMOKE_ONLY) ===
+Data: Gio 25 Dic 2025 22:53:53 CET
+
+--- FILE ANALIZZATI ---
+01_Core/Loventre_Core_Prelude.v
+01_Core/Loventre_Foundation_Entropy.v
+01_Core/Loventre_Foundation_Params.v
+01_Core/Loventre_Foundation_Types.v
+01_Core/Loventre_Kernel.v
+02_Advanced/Loventre_Advanced_Index.v
+02_Advanced/Loventre_Barrier_Model.v
+02_Advanced/Loventre_Curvature_Field.v
+02_Advanced/Loventre_Mini_Theorem_EndToEnd.v
+02_Advanced/Loventre_Policy_Bridge.v
+02_Advanced/Loventre_Potential_Field.v
+02_Advanced/Loventre_Risk_Level_Bridge.v
+02_Advanced/Loventre_Risk_Level.v
+02_Advanced/Loventre_Tunneling_Model.v
+02_Advanced/Loventre_Witness_EndToEnd.v
+03_Main/Loventre_Main_Index.v
+
+--- Axiom ---
+  Axiom contractible_exclusive :
+  Axiom non_contractible_exclusive :
+  Axiom TM_step_0 :
+  Axiom TM_step_S :
+  Axiom embed_injective :
+  Axiom overflow_implies_supercritical :
+  Axiom stable_implies_subcritical :
+  Axiom complexity_mono :
+  Axiom embed_flow :
+  Axiom contractible_iff_polytime :
+  Axiom divergent_iff_noncontractible :
+
+--- Admitted ---
+
+=== FINE AUDIT CANON ===

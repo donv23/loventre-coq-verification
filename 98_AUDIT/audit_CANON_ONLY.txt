@@ -1,0 +1,138 @@
+=== AUDIT CANON COMPILANTE (NO LEGACY) ===
+Data: Gio 25 Dic 2025 22:50:15 CET
+
+--- Axiom ---
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v.save:Axiom embed_injective :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v.save:Axiom overflow_implies_supercritical :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v.save:Axiom stable_implies_subcritical :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v.save:Axiom complexity_mono :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v.save:Axiom embed_flow :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v.save:Axiom contractible_iff_polytime :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v.save:Axiom divergent_iff_noncontractible :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v.save:Axiom Reversibility_subcritical :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v.save:Axiom Divergence_supercritical :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v.save:Axiom Critical_transition :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v.save:Axiom Loventre_static_separation :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v:  Axiom contractible_exclusive :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v:  Axiom non_contractible_exclusive :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v:  Axiom TM_step_0 :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v:  Axiom TM_step_S :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v:  Axiom embed_injective :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v:  Axiom overflow_implies_supercritical :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v:  Axiom stable_implies_subcritical :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v:  Axiom complexity_mono :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v:  Axiom embed_flow :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v:  Axiom contractible_iff_polytime :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v:  Axiom divergent_iff_noncontractible :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v.save.1:Axiom embed_injective :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v.save.1:Axiom overflow_implies_supercritical :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v.save.1:Axiom stable_implies_subcritical :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v.save.1:Axiom complexity_mono :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v.save.1:Axiom embed_flow :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v.save.1:Axiom contractible_iff_polytime :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v.save.1:Axiom divergent_iff_noncontractible :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v.save.1:Axiom Reversibility_subcritical :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v.save.1:Axiom Divergence_supercritical :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v.save.1:Axiom Critical_transition :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/Loventre_Kernel.v.save.1:Axiom Loventre_static_separation :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/01_Core : Loventre_Base.txt.rtf:Axiom embed_injective :\
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/01_Core : Loventre_Base.txt.rtf:Axiom overflow_implies_supercritical :\
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/01_Core : Loventre_Base.txt.rtf:Axiom stable_implies_subcritical :\
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/01_Core : Loventre_Base.txt.rtf:Axiom complexity_mono :\
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/01_Core : Loventre_Base.txt.rtf:Axiom embed_flow :\
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/01_Core : Loventre_Base.txt.rtf:Axiom contractible_iff_polytime :\
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/01_Core : Loventre_Base.txt.rtf:Axiom divergent_iff_noncontractible :\
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/01_Core : Loventre_Base.txt.rtf:Axiom Reversibility_subcritical :\
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/01_Core : Loventre_Base.txt.rtf:Axiom Divergence_supercritical :\
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/01_Core/01_Core : Loventre_Base.txt.rtf:Axiom Critical_transition :\
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Loventre Advanced Manifold versione b.rtf:  Axiom local_equiv_sym :\
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Loventre Advanced Manifold versione b.rtf:  Axiom local_subcritical_stable :\
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Loventre Advanced Manifold versione b.rtf:  Axiom local_supercritical_stable :\
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/02_Loventre_Advanced_Manifold.rtf:  Axiom local_equiv_sym :\
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/02_Loventre_Advanced_Manifold.rtf:  Axiom local_subcritical_stable :\
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/02_Loventre_Advanced_Manifold.rtf:  Axiom local_supercritical_stable :\
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Loventre_Mass_Equivalence.v:Axiom mass_curvature_monotone :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Loventre_Mass_Equivalence.v:Axiom mass_complexity_monotone :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/02_Loventre_Advanced_Entropy.rtf:  Axiom subcritical_entropy_bounded :\
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/02_Loventre_Advanced_Entropy.rtf:  Axiom supercritical_entropy_unbounded :\
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Loventre_TM_Bridge.v:  Axiom cfg_roundtrip_abstract :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Loventre_TM_Bridge.v:  Axiom cfg_roundtrip_concrete :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Loventre_TM_Bridge.v:  Axiom next_compatible :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Loventre_TM_Bridge.v:  Axiom TM_step_compatible :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Loventre_TM_Bridge.v:  Axiom overflow_compatible :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Loventre_TM_Bridge.v:  Axiom stable_conf_compatible :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Loventre_TM_Bridge.v:  Axiom complexity_conf_compatible :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Loventre_TM_Bridge.v:  Axiom polytime_config_compatible :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Loventre_TM_1.v:  Axiom tm1_polytime :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Loventre_Time_Regimes.v:Axiom existence_critical_time :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Loventre_Lemmas.v:Axiom subcritical_not_supercritical :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Loventre_Complexity_Barrier.v:Axiom curvature_barrier :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Loventre_Advanced_Entropy.v con versione B (Coq-safe).rtf:  Axiom subcritical_entropy_bounded :\
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Loventre_Advanced_Entropy.v con versione B (Coq-safe).rtf:  Axiom supercritical_entropy_unbounded :\
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/Loventre_LMetrics_Structure.v:Axiom informational_potential_nonneg :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/SAFE_Barrier_Structure.v:Axiom informational_threshold_order :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/Loventre_LMetrics_Existence_Summary.v:Axiom m_seed11_soddisfa_is_P_like :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/Loventre_LMetrics_Existence_Summary.v:Axiom m_seed_grid_soddisfa_is_P_like :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/Loventre_LMetrics_Existence_Summary.v:Axiom m_TSPcrit28_soddisfa_is_NP_like_black_hole :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/Loventre_LMetrics_Existence_Summary.v:Axiom m_SATcrit16_soddisfa_is_NP_like_black_hole :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/Loventre_Formal_Core.v:Axiom EfficientBound :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/Loventre_LMetrics_Accessible_Target.v:      Axiom exists_P_like_accessible :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/Loventre_GCT_Signature.v:Axiom gct_pre_global_excludes_black_hole :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/99_LEGACY/Loventre_LMetrics_2SAT_Existence.v:Axiom m_2SAT_easy_in_links_ex :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/99_LEGACY/Loventre_LMetrics_2SAT_Existence.v:Axiom m_2SAT_crit_in_links_ex :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_Theorem_v1_Notes.v:Axiom Loventre_Theorem_v1_contextual_note :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_SAT_TSP_Critical_Metrics.v:Axiom SAT_crit_implies_High_risk_index :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_SAT_TSP_Critical_Metrics.v:Axiom SAT_crit_implies_Near_horizon_or_High_tunneling :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_SAT_TSP_Critical_Metrics.v:Axiom TSP_crit_implies_High_risk_index :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_SAT_TSP_Critical_Metrics.v:Axiom TSP_crit_implies_Near_horizon_or_High_tunneling :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_Main_Theorem.v:  Axiom Metrics_to_Dynamic :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_Main_Theorem.v:  Axiom Dynamic_to_Metrics :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_Main_Theorem.v:  Axiom SAT_crit_is_metrics_witness :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_Main_Theorem.v:  Axiom TSP_crit_is_metrics_witness :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_Main_Theorem.v:  Axiom Loventre_Theorem_Metrics :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_Theorem_v1.v:Axiom Loventre_Theorem_v1_statement :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_SAT_Critical_Family.v:  Axiom SAT_crit_family_size_lower_bound :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_SAT_Critical_Family.v:  Axiom SAT_crit_family_is_NP_like_critical :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_LMetrics_Policy_Theorem.v:Axiom Loventre_Policy_Theorem_abstract :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_TM_Family_Bridge.v:  Axiom Loventre_polytime_family_iff_TM_realization :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_GlobalDecision_View.v:Axiom PolicyBridge_block_high_risk :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_GlobalDecision_View.v:Axiom PolicyBridge_warn_medium_risk :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_GlobalDecision_View.v:Axiom PolicyBridge_allow_low_risk :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_LMetrics_Policy_Specs 2.v:Axiom GC_not_green : GlobalColor.
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_LMetrics_Policy_Specs 2.v:Axiom GC_not_green_neq_GC_green : GC_not_green <> GC_green.
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_TSP_Critical_Metrics.v:  Axiom TSP_crit_metrics_family_is_NP_like_critical :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_TSP_Critical_Family.v:  Axiom TSP_crit_family_size_lower_bound :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_TSP_Critical_Family.v:  Axiom TSP_crit_family_is_NP_like_critical :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_LMetrics_Policy_Theorem 2.v:Axiom NP_like_black_hole_implies_black_hole :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_SAT_Critical_Metrics.v:  Axiom SAT_crit_metrics_family_is_NP_like_critical :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_TSPcrit28_Witness.v:Axiom m_TSPcrit28_is_witness :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_TSPcrit28_Witness.v:Axiom m_SATcrit16_is_witness :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_LMetrics_Witness.v:Axiom Metrics_witness_TSPcrit28 :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_LMetrics_Witness.v:Axiom Metrics_witness_SATcrit16 :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_Theorem_v2_Sketch.v:Axiom Loventre_Theorem_v2_sketch_statement :
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_Theorem_v2_Witness.v:Axiom Loventre_Theorem_v2_witness_statement :
+
+--- Admitted ---
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/Loventre_GCT_Monodromy.v:Admitted.
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/Loventre_GCT_LocalGlobal.v:Admitted.
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/Loventre_GCT_Coupling.v:Admitted.
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/Loventre_LMetrics_v5_SAFE_Minimality.v:    Admitted.
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/Loventre_Invariance_C.v:Admitted.
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/Loventre_LMetrics_v5_Monotonicity.v:    Admitted.
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/Loventre_LMetrics_Accessible_Target.v:Admitted.
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/Loventre_LMetrics_v5_BlackHole_Dominance.v:    Admitted.
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/99_LEGACY/Loventre_LMetrics_2SAT_Easy_Lemma.v:Admitted.
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/99_LEGACY/Loventre_LMetrics_2SAT_Family_Stack.v:Admitted.
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/99_LEGACY/Loventre_LMetrics_2SAT_Mini_Theorem.v:Admitted.
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/99_LEGACY/Loventre_LMetrics_2SAT_Crit_Lemma.v:Admitted.
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/99_LEGACY/Loventre_LMetrics_JSON_Witness.v:Proof. Admitted.
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/99_LEGACY/Loventre_LMetrics_JSON_Witness.v:Proof. Admitted.
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/99_LEGACY/Loventre_LMetrics_JSON_Witness.v:Proof. Admitted.
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/Loventre_GCT_Trichotomy.v:Admitted.
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Geometry/Loventre_GCT_Conductance.v:Admitted.
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/02_Advanced/Loventre_Risk_From_Tunneling.v:Admitted.
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_NonRetraction_Seed.v:Admitted.
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_NonRetraction_Seed.v:Admitted.
+/Users/vincenzoloventre/Library/Mobile Documents/com~apple~CloudDocs/PROGETTO TEOREMA/Loventre_Coq_Modules/Loventre_Coq_Clean/03_Main/Loventre_Main_Theorem_v3_Instance.v:Admitted. (* per ora; lo riempiremo a pezzi *)
+
+=== FINE AUDIT CANON ===

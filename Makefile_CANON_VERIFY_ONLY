@@ -1,0 +1,4 @@
+.PHONY: canon-verify
+
+canon-verify:
+	@python3 scripts/canon_verify_v3.py

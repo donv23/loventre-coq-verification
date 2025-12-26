@@ -1,0 +1,49 @@
+# ============================================================
+# Makefile_SMOKE_ONLY
+# Verifica CANON minimale Loventre (NO ottimizzazioni)
+# ============================================================
+
+COQC = coqc
+
+CORE_Q = -Q 01_Core Loventre_Core
+ADV_Q  = -Q 02_Advanced Loventre_Advanced
+MAIN_Q = -Q 03_Main Loventre_Main
+
+.PHONY: clean verify
+
+clean:
+	find . -name "*.vo"   -delete
+	find . -name "*.vos"  -delete
+	find . -name "*.vok"  -delete
+	find . -name "*.glob" -delete
+
+verify: clean \
+	core \
+	advanced \
+	advanced_index \
+	main_index
+
+core:
+	$(COQC) $(CORE_Q) 01_Core/Loventre_Core_Prelude.v
+	$(COQC) $(CORE_Q) 01_Core/Loventre_Kernel.v
+	$(COQC) $(CORE_Q) 01_Core/Loventre_Foundation_Types.v
+	$(COQC) $(CORE_Q) 01_Core/Loventre_Foundation_Params.v
+	$(COQC) $(CORE_Q) 01_Core/Loventre_Foundation_Entropy.v
+
+advanced:
+	$(COQC) $(CORE_Q) $(ADV_Q) 02_Advanced/Loventre_Curvature_Field.v
+	$(COQC) $(CORE_Q) $(ADV_Q) 02_Advanced/Loventre_Potential_Field.v
+	$(COQC) $(CORE_Q) $(ADV_Q) 02_Advanced/Loventre_Barrier_Model.v
+	$(COQC) $(CORE_Q) $(ADV_Q) 02_Advanced/Loventre_Tunneling_Model.v
+	$(COQC) $(CORE_Q) $(ADV_Q) 02_Advanced/Loventre_Risk_Level.v
+	$(COQC) $(CORE_Q) $(ADV_Q) 02_Advanced/Loventre_Risk_Level_Bridge.v
+	$(COQC) $(CORE_Q) $(ADV_Q) 02_Advanced/Loventre_Policy_Bridge.v
+	$(COQC) $(CORE_Q) $(ADV_Q) 02_Advanced/Loventre_Witness_EndToEnd.v
+	$(COQC) $(CORE_Q) $(ADV_Q) 02_Advanced/Loventre_Mini_Theorem_EndToEnd.v
+
+advanced_index:
+	$(COQC) $(CORE_Q) $(ADV_Q) 02_Advanced/Loventre_Advanced_Index.v
+
+main_index:
+	$(COQC) $(CORE_Q) $(ADV_Q) $(MAIN_Q) 03_Main/Loventre_Main_Index.v
+
