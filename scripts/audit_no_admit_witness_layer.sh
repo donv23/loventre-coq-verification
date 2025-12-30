@@ -8,7 +8,13 @@ files=(
   "src/Loventre_Test_Geometric_Chain_Silent.v"
 )
 
-echo "[audit] checking no 'admit/Admitted' in witness layer & silent chain..."
+echo "[audit] checking no real 'admit./Admitted.' in witness layer & silent chain..."
+
+# Cerchiamo SOLO comandi/tattiche reali:
+#   - "Admitted." come comando di chiusura prova
+#   - "admit." / "Admit." come tattica, anche dopo bullet "- "
+# Questo evita falsi positivi in commenti tipo "Nessun Admitted."
+pattern='^[[:space:]]*([-+*][[:space:]]*)?(admit\.|Admit\.|Admitted\.)'
 
 for f in "${files[@]}"; do
   if [ ! -f "$f" ]; then
@@ -16,14 +22,14 @@ for f in "${files[@]}"; do
     exit 1
   fi
 
-  if egrep -n '\bAdmitted\b|\badmit\b' "$f" >/dev/null 2>&1; then
-    echo "ERROR: trovati admit/Admitted in $f"
-    egrep -n '\bAdmitted\b|\badmit\b' "$f" || true
+  if grep -nE "$pattern" "$f" >/dev/null 2>&1; then
+    echo "ERROR: trovati admit./Admitted. REALI in $f"
+    grep -nE "$pattern" "$f" || true
     exit 1
   fi
 
-  echo "OK: $f (no admit/Admitted)"
+  echo "OK: $f (no admit./Admitted.)"
 done
 
-echo "OK: witness layer clean (no admit/Admitted)"
+echo "OK: witness layer clean (no admit./Admitted.)"
 
