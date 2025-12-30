@@ -1,0 +1,7 @@
+# Coq build artifacts
+*.aux
+*.vo
+*.vos
+*.vok
+*.glob
+
