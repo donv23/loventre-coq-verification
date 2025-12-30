@@ -1,0 +1,9 @@
+.PHONY: verify audit
+
+verify:
+	./scripts/smoke_src.sh
+
+audit:
+	./scripts/audit_tracked_coq_artifacts.sh
+	./scripts/audit_no_admit_witness_layer.sh
+
