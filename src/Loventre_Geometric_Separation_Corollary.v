@@ -1,60 +1,55 @@
 (*
   Loventre_Geometric_Separation_Corollary.v
 
-  This file derives a simple structural corollary
-  from the geometric separation core.
+  Corollari formali derivati dal nucleo geometrico Loventre,
+  SENZA introdurre nuovi assiomi.
 
-  IMPORTANT:
-  - No new axioms are introduced here.
-  - Everything is derived from the core assumptions.
+  Questo file dipende unicamente da:
+    - Loventre_Geometric_Separation.v
 *)
 
-From Stdlib Require Import Reals.
-
+From Stdlib Require Import Reals Lra.
 Require Import Loventre_Geometric_Separation.
 
 Open Scope R_scope.
 
-(* ------------------------------------------------------------ *)
-(* Corollary: monotonic persistence of separation               *)
-(* ------------------------------------------------------------ *)
+(* ========================================================= *)
+(* Corollario 1: esistono istanze non tutte P-like            *)
+(* ========================================================= *)
 
-(*
-  Intuition (informal):
-
-  If a geometric separation holds at some scale,
-  then it also holds at any larger scale parameter,
-  provided the separation predicate is monotone.
-*)
-
-Lemma geometric_separation_monotone :
-  forall (scale1 scale2 : R),
-    scale1 <= scale2 ->
-    GeometricSeparation scale1 ->
-    GeometricSeparation scale2.
+Corollary exists_non_P_like :
+  exists y : Inst, NP_like y.
 Proof.
-  intros scale1 scale2 Hle Hsep.
-  (* This follows directly from the monotonicity
-     assumption embedded in the core definition. *)
-  apply GeometricSeparation_monotone with (scale1 := scale1); auto.
+  destruct Loventre_geometric_separation as [x [y [_ Hy]]].
+  exists y.
+  exact Hy.
 Qed.
 
-(* ------------------------------------------------------------ *)
-(* Corollary: robustness under scale strengthening              *)
-(* ------------------------------------------------------------ *)
+(* ========================================================= *)
+(* Corollario 2: P-like e NP-like sono disgiunti               *)
+(* ========================================================= *)
 
-(*
-  A direct corollary: once separation is established,
-  it is robust under any finite strengthening of the scale.
-*)
-
-Lemma geometric_separation_robust :
-  forall (scale delta : R),
-    0 <= delta ->
-    GeometricSeparation scale ->
-    GeometricSeparation (scale + delta).
+Corollary P_like_not_NP_like :
+  forall x : Inst, P_like x -> ~ NP_like x.
 Proof.
-  intros scale delta Hdelta Hsep.
-  apply geometric_separation_monotone with (scale1 := scale); lra.
+  intros x HP HNP.
+  unfold P_like in HP.
+  unfold NP_like in HNP.
+  lra.
+Qed.
+
+(* ========================================================= *)
+(* Corollario 3: non tutte le istanze sono P-like              *)
+(* ========================================================= *)
+
+Corollary not_all_P_like :
+  ~ (forall x : Inst, P_like x).
+Proof.
+  intro Hall.
+  destruct exists_non_P_like as [y Hy].
+  specialize (Hall y).
+  unfold P_like in Hall.
+  unfold NP_like in Hy.
+  lra.
 Qed.
 

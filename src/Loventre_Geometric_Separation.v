@@ -8,7 +8,8 @@
   Questo file NON fa alcuna affermazione su P ≠ NP classico.
 *)
 
-Require Import Reals.
+From Stdlib Require Import Reals.
+
 Open Scope R_scope.
 
 (* ========================================================= *)
@@ -86,14 +87,9 @@ Proof.
   destruct exists_geometric_separation as [x [y Hxy]].
   exists x, y.
   split.
-  - (* x è P-like *)
-    unfold P_like.
-    (* Assunzione strutturale: istanze con barriera minima sono accessibili *)
-    (* Questo è il punto di contatto con il modello astratto *)
+  - unfold P_like.
     admit.
-  - (* y è NP-like *)
-    unfold NP_like.
-    (* Dalla monotonia: barriera maggiore -> successo non massimo *)
+  - unfold NP_like.
     admit.
 Admitted.
 
