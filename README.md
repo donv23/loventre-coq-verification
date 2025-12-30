@@ -1,26 +1,29 @@
-# Loventre — Coq Formalization (Verification Snapshot)
+## Formal verification (Coq)
 
-This repository contains a **Coq formalization** of the *Loventre model*,
-provided **exclusively for independent verification**.
+This repository contains a minimal formal core of the Loventre model,
+expressed in Coq.
 
-## Scope (Very Important)
+### Axioms
 
-- All statements and separations are **internal to the Loventre model**.
-- This repository **does not** claim or imply a proof of the classical *P vs NP* problem.
-- The purpose is **auditability**: reviewers can compile and check the scripts.
+The semantic assumptions of the model are explicitly documented in:
 
-## Non-Goals
+- `axioms/LOVENTRE_AXIOMS_v3_SEED_2025-12.md`
 
-- This is **not** a collaborative development.
-- Pull requests and extensions are **not solicited**.
-- This repository is meant to be treated as a **read-only audit artifact**.
+### Coq core
 
-## Build
+The file:
 
-Tested with:
-- Coq Platform 8.18
+- `src/Loventre_Geometric_Separation.v`
 
-Verify (canonical smoke check):
+contains the minimal axiomatic formalization of the geometric
+P-like / NP-like separation internal to the Loventre model.
+
+The use of `Admitted` marks explicit semantic assumptions,
+not missing technical proofs.
+
+### How to verify
+
 ```bash
-make -f Makefile_SMOKE_ONLY verify
+cd src
+coqc Loventre_Geometric_Separation.v
 
