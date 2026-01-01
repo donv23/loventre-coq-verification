@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$ROOT_DIR"
+
+COQC_BIN="${COQC_BIN:-coqc}"
+
+exec "$COQC_BIN" -q -Q 04_Classical_Bridge Loventre_Axis_C "$@"
+
