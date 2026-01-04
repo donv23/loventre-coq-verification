@@ -1,54 +1,78 @@
-# Loventre Coq Verification — Formal Core
+# Loventre Coq Verification
 
-This repository contains the **public, minimal, and explicitly axiomatised Coq core**
-of the Loventre framework.
+Questo repository (`loventre-coq-verification`) contiene la **verifica formale in Coq** del nucleo logico del *Trattato Ultimissimo* di Vincenzo Loventre.
 
-The goal of this repository is **verification**, not interpretation.
-
----
-
-## Scope
-
-The current tagged release **v1.0-formal-core** provides:
-
-- a small Coq development formalising a **geometric separation principle**
-- an explicit list of **axioms and semantic assumptions**
-- a structure designed to be **auditable, reproducible, and citable**
-
-No claims are made here about classical P vs NP.
+⚠️ **Importante**
+Questo lavoro **non rivendica** alcun risultato di complessità computazionale classica (es. P≠NP).
+Tutte le separazioni dimostrate sono **interne al modello Loventre** e formalmente circoscritte.
 
 ---
 
-## Repository Structure
+## Stato del repository
 
-- `src/`  
-  Coq sources.  
-  In particular:
-  - `Loventre_Geometric_Separation.v` formalises a geometric separation result
-    under explicit axioms.
+* **Branch congelato:** `release-2026-01-04-ultimissimo`
+* **Tag di riferimento:** `v4-freeze-2026-01-04`
+* **Stato:** *freeze formale – stabile per valutazione*
 
-- `axioms/`  
-  Human-readable documentation of the axioms and semantic assumptions
-  used by the formal core:
-  - `LOVENTRE_AXIOMS_v3_SEED_2025-12.md`
+Il codice presente sotto questo branch e tag non è soggetto a modifiche retroattive.
 
 ---
 
-## What this repository is NOT
+## Governance epistemica
 
-- It is **not** a proof of P ≠ NP in the classical sense.
-- It is **not** an experimental or numerical implementation.
-- It does **not** contain heuristic, probabilistic, or empirical claims.
+Il repository segue una governance epistemica esplicita, basata su una *ladder* dichiarata di assunzioni:
 
-All such aspects belong to **separate repositories or layers**.
+* **A1 – Struttura:** proprietà geometriche e strutturali dimostrate formalmente;
+* **A2 – Dinamica:** vincoli ammissibili dichiarati e separati dalle definizioni;
+* **A3 – Ipotesi residua:** assunzioni esplicite localizzate, non derivabili da A1/A2.
+
+In particolare, l’esistenza di profili *P-like-accessible* è trattata come **assunzione A3 dichiarata**, senza:
+
+* definizioni per negazione,
+* circolarità logica,
+* encoding impliciti.
 
 ---
 
-## Reproducibility
+## Contenuto del repository
 
-The Coq files in `src/` compile with a standard Coq installation
-(8.18 tested), without requiring external plugins.
+Il repository include esclusivamente:
 
-The tag:
+* definizioni astratte;
+* predicati logici;
+* lemmi e teoremi Coq;
+* script di audit e *smoke test*.
 
+❌ **Non** è incluso alcun motore numerico, simulativo o algoritmico
+(oggetto di tutela separata).
+
+---
+
+## Verifica
+
+La consistenza del repository può essere verificata tramite gli script inclusi:
+
+```bash
+bash scripts/smoke_src.sh
+```
+
+Questi script garantiscono che la catena formale sia internamente coerente e compilabile nello stato congelato.
+
+---
+
+## Documentazione chiave
+
+* `REFEREE_NOTE.md` – Nota sintetica per i referee
+* `STATUS_2026-01-04.md` – Stato e freeze v4
+* `99_LEGACY_V4/` – Materiale archiviato e versioni precedenti
+
+---
+
+## Licenza e ambito
+
+Questo repository è destinato a **valutazione formale e revisione teorica**.
+Ogni uso esterno deve rispettare la distinzione tra:
+
+* risultati **interni al modello Loventre**,
+* e complessità computazionale classica.
 
