@@ -1,0 +1,255 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\usepackage{hyperref}
+\geometry{margin=2.5cm}
+
+\title{Il Teorema di Loventre v5\\
+\large SAFE Witness, Curvatura Informazionale e Asimmetria verso Black Hole}
+\author{Vincenzo Loventre}
+\date{\today}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposizione}
+\theoremstyle{definition}
+\newtheorem{definition}{Definizione}
+\theoremstyle{remark}
+\newtheorem{remark}{Osservazione}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+In questo lavoro introduciamo e formalizziamo, in Coq, una piccola ma
+rigida teoria di \emph{curvatura informazionale} per classi di problemi
+computazionali astratti. Il risultato principale, il Teorema di
+Loventre v5, afferma che esiste un witness concreto in una classe
+``stabile'' (denotata $P\_{\mathrm{STR}}$) che soddisfa una condizione
+di sicurezza globale (\emph{SAFE}), e che allo stesso tempo la
+curvatura informazionale verso una classe ``black-hole''
+($P\_{\mathrm{BH}}$) presenta una asimmetria strutturale rispetto a una
+classe intermedia ``accessibile'' ($P\_{\mathrm{ACC}}$). Il teorema è
+dimostrato completamente in Coq, con un ponte operativo verso Python
+tramite un export JSON che verifica computazionalmente le stesse
+relazioni di curvatura.
+\end{abstract}
+
+\section{Introduzione}
+
+L'obiettivo di questo lavoro è introdurre una struttura minimale, ma
+formalmente solida, che colleghi:
+\begin{itemize}
+  \item la presenza di un \emph{witness} concreto in una classe ``buona''
+        (denotata $P\_{\mathrm{STR}}$),
+  \item una proprietà globale di sicurezza (\emph{SAFE}),
+  \item una nozione discreta di \emph{curvatura informazionale}
+        tra classi,
+  \item un'asimmetria strutturale nella transizione verso una classe
+        \emph{black-hole} $P\_{\mathrm{BH}}$.
+\end{itemize}
+
+Il cuore concettuale è che, pur non parlando direttamente di problemi
+classici come SAT o TSP, la geometria informazionale che definiamo
+riflette un principio di \emph{irreversibilità}: la classe
+$P\_{\mathrm{BH}}$ si comporta come un attrattore assorbente nello
+spazio delle configurazioni informazionali, mentre $P\_{\mathrm{STR}}$
+resta ancorata a una regione SAFE.
+
+Tutto il nucleo del risultato è stato formalizzato in Coq
+(versione 8.18) in una catena di moduli che vanno da un witness
+concreto, attraverso un predicato di sicurezza, fino a un teorema
+principale chiamato \texttt{Loventre\_Main\_Theorem}.
+
+\section{Struttura formale delle classi}
+
+Introduciamo tre classi astratte di configurazioni informazionali:
+
+\begin{definition}[Classi informazionali]
+Sia $\mathcal{C} = \{P\_{\mathrm{STR}}, P\_{\mathrm{ACC}}, P\_{\mathrm{BH}}\}$
+un insieme di tre classi astratte:
+\begin{itemize}
+  \item $P\_{\mathrm{STR}}$: una classe ``stabile'',
+  \item $P\_{\mathrm{ACC}}$: una classe intermedia ``accessibile'',
+  \item $P\_{\mathrm{BH}}$: una classe di tipo \emph{black-hole}.
+\end{itemize}
+In Coq queste sono realizzate come costruttori di un tipo induttivo
+\texttt{LClass\_v3}.
+\end{definition}
+
+\section{Curvatura informazionale e differenza di curvatura}
+
+Definiamo una funzione di curvatura discreta
+$\kappa : \mathcal{C} \to \mathbb{N}$ e una differenza di curvatura
+$\Delta \kappa$.
+
+\begin{definition}[Curvatura]
+Una \emph{curvatura informazionale} è una mappa
+$\kappa: \mathcal{C} \to \mathbb{N}$. Nel modello implementato in Coq
+(\\\texttt{Loventre\_v3\_Curvature.v}) si assegna ad ogni classe un
+valore naturale, ad esempio
+\[
+  \kappa(P\_{\mathrm{STR}}) = 0,\quad
+  \kappa(P\_{\mathrm{ACC}}) = 1,\quad
+  \kappa(P\_{\mathrm{BH}}) = 2.
+\]
+\end{definition}
+
+\begin{definition}[Differenza di curvatura]
+Data la curvatura $\kappa$, definiamo la differenza di curvatura
+$\Delta\kappa : \mathcal{C} \times \mathcal{C} \to \mathbb{N}$ come
+\[
+  \Delta\kappa(c\_1, c\_2) = \max\{\,\kappa(c\_2) - \kappa(c\_1),\,0\,\}.
+\]
+Nel codice Coq (\texttt{Loventre\_v3\_DeltaCurvature.v}) questa è
+realizzata come differenza su numeri naturali con taglio a zero.
+\end{definition}
+
+Il lemma di asimmetria fondamentale è:
+
+\begin{lemma}[Asimmetria di curvatura v3]
+\label{lem:asymmetry}
+In Coq è dimostrato il lemma
+\texttt{Loventre\_v3\_asymmetry\_final}, che corrisponde all'enunciato:
+\[
+  1 + \Delta\kappa(P\_{\mathrm{ACC}}, P\_{\mathrm{BH}})
+  \;\leq\;
+  \Delta\kappa(P\_{\mathrm{STR}}, P\_{\mathrm{BH}}).
+\]
+\end{lemma}
+
+Questo implica che, verso $P\_{\mathrm{BH}}$, la ``distanza di
+curvatura'' di $P\_{\mathrm{STR}}$ è strutturalmente più ampia di
+quella di $P\_{\mathrm{ACC}}$.
+
+\section{Witness concreto e predicato SAFE}
+
+Sul lato ``v2'' della teoria, costruiamo un witness concreto che vive
+nella classe $P\_{\mathrm{STR}}$ e definiamo un predicato di sicurezza
+globale.
+
+\begin{definition}[Witness e predicato SAFE]
+Nel modulo \texttt{Loventre\_Witness\_Loader.v} definiamo una istanza
+concreta \texttt{LoventreWitness\_Instance} con un campo
+\texttt{w\_lmetrics\_type} che, nel caso specifico, vale la stringa
+\texttt{"P\_STR"}. Nel modulo
+\texttt{Loventre\_SAFE\_Predicate.v} viene definito un predicato
+\[
+  \mathrm{SAFE} : \mathcal{C} \to \mathrm{Prop}
+\]
+e, in particolare, un costruttore
+\[
+  \mathrm{Safe\_P\_STR} : \mathrm{SAFE}(P\_{\mathrm{STR}}).
+\]
+Nel modulo \texttt{Loventre\_Witness\_SAFE\_Global.v} si combina il
+witness concreto con il predicato SAFE ottenendo il lemma
+\[
+  \mathrm{Witness\_is\_SAFE} : \mathrm{SAFE}(P\_{\mathrm{STR}}).
+\]
+\end{definition}
+
+\section{Unificazione e Teorema Principale}
+
+Lo strato v4 unifica la parte SAFE (v2) e la parte di curvatura
+(asimmetria v3) in un unico lemma, che è la base del teorema globale.
+
+\begin{definition}[Sistema SAFE e asimmetria valida]
+Nel modulo \texttt{Loventre\_v4\_Unification.v} definiamo due proposizioni:
+\[
+  \mathrm{SAFE\_sys} := \mathrm{SAFE}(P\_{\mathrm{STR}}),
+\]
+\[
+  \mathrm{ASYM} := 1 + \Delta\kappa(P\_{\mathrm{ACC}}, P\_{\mathrm{BH}})
+     \leq \Delta\kappa(P\_{\mathrm{STR}}, P\_{\mathrm{BH}}).
+\]
+\end{definition}
+
+In Coq queste corrispondono a \texttt{Loventre\_v4\_system\_is\_SAFE}
+e \texttt{Loventre\_v4\_asymmetry\_valid}. Il lemma di unificazione è:
+
+\begin{lemma}[Unificazione v4]
+Nel modulo v4 è dimostrato il lemma:
+\[
+  \mathrm{SAFE\_sys} \wedge \mathrm{ASYM}.
+\]
+In Coq: \texttt{Loventre\_v4\_unified}.
+\end{lemma}
+
+Questo lemma è poi incapsulato nel seguente teorema principale:
+
+\begin{theorem}[Teorema di Loventre v5]
+\label{thm:main}
+Il teorema principale, formalizzato in Coq nel modulo
+\texttt{Loventre\_Main\_Theorem.v}, afferma:
+\[
+  \mathrm{SAFE}(P\_{\mathrm{STR}}) \;\wedge\;
+  \Bigl(
+    1 + \Delta\kappa(P\_{\mathrm{ACC}}, P\_{\mathrm{BH}})
+    \leq \Delta\kappa(P\_{\mathrm{STR}}, P\_{\mathrm{BH}})
+  \Bigr).
+\]
+\end{theorem}
+
+\begin{proof}[Idea della dimostrazione]
+La dimostrazione in Coq è molto compatta perché si appoggia sui lemmi
+combinati nello strato v4. In particolare:
+\begin{itemize}
+  \item dalla parte v2 (witness + SAFE) si ottiene
+        $\mathrm{SAFE}(P\_{\mathrm{STR}})$;
+  \item dalla parte v3 (curvatura + asimmetria) si ottiene il lemma
+        \texttt{Loventre\_v3\_asymmetry\_final} che viene riallineato
+        in v4 come proposizione $\mathrm{ASYM}$;
+  \item il lemma \texttt{Loventre\_v4\_unified} combina queste due
+        componenti in un'unica congiunzione, che viene poi incapsulata
+        in \texttt{Loventre\_Main\_Theorem}.
+\end{itemize}
+\end{proof}
+
+\section{Ponte Coq--Python via JSON}
+
+Un aspetto importante del progetto è l'esistenza di un ponte operativo
+con il motore Python: una struttura dati che rappresenta lo stato v3
+(distanze di curvatura e asimmetria) viene serializzata in JSON e
+ricaricata in Python, dove vengono verificati gli stessi vincoli
+numerici (ad esempio $\Delta\kappa(P\_{\mathrm{ACC}}, P\_{\mathrm{BH}})
+< \Delta\kappa(P\_{\mathrm{STR}}, P\_{\mathrm{BH}})$). Questo fornisce
+una forma di ``doppia validazione'':
+\begin{itemize}
+  \item lato Coq: prova formale del teorema,
+  \item lato Python: verifica computazionale dei parametri esportati.
+\end{itemize}
+
+\section{Conclusioni e sviluppi futuri}
+
+Il Teorema di Loventre v5 rappresenta una prima formalizzazione di
+un principio di \emph{irreversibilità informazionale} tra classi
+astratte di problemi:
+
+\begin{itemize}
+  \item esiste un witness concreto e SAFE in una classe stabile
+        $P\_{\mathrm{STR}}$;
+  \item la curvatura informazionale verso $P\_{\mathrm{BH}}$ è
+        asimmetrica e ``più distante'' per $P\_{\mathrm{STR}}$
+        rispetto a $P\_{\mathrm{ACC}}$;
+  \item l'intero risultato è formalizzato in Coq, con un ponte attivo
+        verso una implementazione Python.
+\end{itemize}
+
+Sviluppi futuri includono:
+\begin{itemize}
+  \item una formalizzazione più ricca della nozione di entropia
+        informazionale e potenziale,
+  \item il collegamento esplicito con istanze di problemi combinatoriali
+        (ad esempio SAT critico, TSP critico),
+  \item l'estensione del framework a classi multiple e strutture di
+        tipo ``barriera SAFE'' più complesse.
+\end{itemize}
+
+\end{document}
+

@@ -1,0 +1,43 @@
+###############################
+# Makefile_V50_ADVANCED (GENNAIO 2026)
+###############################
+
+COQC=coqc
+COQDEP=coqdep
+
+# Namespaces
+QFLAGS=-Q 01_Core Loventre_Core -Q 02_Advanced Loventre_Advanced -Q 03_Main Loventre_Main
+
+# ADVANCED SOURCES
+ADV_SRCS = \
+  02_Advanced/Loventre_Geometry_Core.v \
+  02_Advanced/Loventre_Geometry_Measure.v \
+  02_Advanced/Loventre_Curvature_Core.v \
+  02_Advanced/Loventre_Curvature_Potential.v \
+  02_Advanced/Loventre_Curvature_Entropy.v \
+  02_Advanced/Loventre_Curvature_Flow.v \
+  02_Advanced/Loventre_Regime_Core.v \
+  02_Advanced/Loventre_Regime_Discrete.v \
+  02_Advanced/Loventre_Regime_Continuous.v \
+  02_Advanced/Loventre_Regime_Thresholds.v \
+  02_Advanced/Loventre_Complexity_UpperBounds.v \
+  02_Advanced/Loventre_Complexity_Criticality.v \
+  02_Advanced/Loventre_LMetrics_Core.v
+
+ADV_VOS = $(ADV_SRCS:.v=.vo)
+
+all: build
+
+build: $(ADV_VOS)
+
+%.vo: %.v
+	$(COQC) $(QFLAGS) $<
+
+clean:
+	find 02_Advanced -name "*.vo" -delete
+	find 02_Advanced -name "*.glob" -delete
+	find 02_Advanced -name "*.vos" -delete
+	find 02_Advanced -name "*.vok" -delete
+
+.PHONY: all build clean
+

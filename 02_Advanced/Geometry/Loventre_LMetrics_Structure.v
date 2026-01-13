@@ -1,37 +1,27 @@
 (**
   Loventre_LMetrics_Structure.v
-  dicembre 2025 — versione v5.0 stabile finale
+  gennaio 2026 — V84.2.3
+  Unificazione struttura LMetrics senza duplicazioni.
 *)
 
 From Stdlib Require Import Reals.Rdefinitions Reals.Raxioms.
 
 (* ================================ *)
-(* === Record LMetrics v5.0     === *)
+(* === Re-export LMetrics Core  === *)
 (* ================================ *)
 
-Record LMetrics := {
-  (* metriche canoniche *)
-  kappa_eff    : R;
-  entropy_eff  : R;
-  V0           : R;
-  p_tunnel     : R;
-  P_success    : R;
-
-  (* diagnostica SAFE/BLACKHOLE (placeholder) *)
-  barrier_tag  : R;
-
-  (* v5.0 — informazione informazionale (placeholder diagnostico) *)
-  informational_potential : R
-}.
+From Loventre_Advanced Require Export Loventre_LMetrics_Core.
 
 (* --------------------------------------------------------------- *)
-(* v5.0 — Proprietà diagnostica coerente                           *)
+(* Proprietà aggiuntive NON strutturali                            *)
 (* --------------------------------------------------------------- *)
 
-Definition InformationalPotentialNonneg (M : LMetrics) : Prop :=
-  Rge (informational_potential M) 0%R.
+(* In v5.0 la proprietà informazionale diagnostica non è più un campo
+   del record. Manteniamo un placeholder debole e coerente. *)
 
-Axiom informational_potential_nonneg :
-  forall M : LMetrics,
-    InformationalPotentialNonneg M.
+Definition MetricNonneg (M : LMetrics) : Prop :=
+  Rge (kappa_eff M) 0%R /\ Rge (entropy_eff M) 0%R.
+
+Axiom metric_nonneg_axiom :
+  forall M : LMetrics, MetricNonneg M.
 

@@ -1,0 +1,151 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset128 HiraginoSans-W3;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 From Coq Require Import ZArith Lia Arith Nat.\
+(***************************************************)\
+(* GEOMETRIA *)\
+(***************************************************)\
+Module Loventre_Geometry.\
+Parameter M : Type.\
+Parameter Complexity : M -> nat.\
+Parameter g : M -> M -> nat.\
+Parameter kappa : M -> Z.\
+Parameter alpha_c : Z.\
+Parameter Flow : nat -> M -> M.\
+Parameter base_point : M.\
+Definition subcritical (x : M) : Prop :=\
+(kappa x < alpha_c)%Z.\
+Definition supercritical (x : M) : Prop :=\
+(kappa x >= alpha_c)%Z.\
+Definition stable (x : M) : Prop :=\
+exists N, forall n, (n >= N)%nat -> Flow n x = Flow N x.\
+Definition divergent (x : M) : Prop :=\
+forall N, exists n, (n >= N)%nat /\\ Flow n x <> Flow N x.\
+Definition contractible (x : M) : Prop :=\
+exists p : nat -> M,\
+p 0 = x / (exists T, p T = base_point) / (exists C, forall t, (t <= T)%\
+nat -> Complexity (p t) <= C).\
+Definition non_contractible (x : M) : Prop :=\
+forall p : nat -> M,\
+p 0 = x ->\
+(forall T, p T = base_point -> False).\
+End Loventre_Geometry.\
+Export Loventre_Geometry.\
+(***************************************************)\
+(* INTERFACCIA MACCHINE DI TURING *)\
+(***************************************************)\
+Module Loventre_TM_Interface.\
+Parameter Config : Type.\
+Parameter TMState : Type.\
+Parameter next : TMState -> Config -> Config.\
+Parameter overflow : Config -> Prop.\
+Parameter stable_conf : Config -> Prop.\
+Parameter complexity_conf : Config -> nat.\
+Definition TM_step (s : TMState) : Config -> Config := next s.\
+End Loventre_TM_Interface.\
+Export Loventre_TM_Interface.\
+(***************************************************)\
+(* CORRISPONDENZA GEOMETRIA 
+\f1 \uc0\u8596 
+\f0  COMPUTAZIONE *)\
+(***************************************************)\
+Module Loventre_Correspondence.\
+Parameter embed : Config -> M.\
+Axiom embed_injective :\
+forall c1 c2, embed c1 = embed c2 -> c1 = c2.\
+Axiom overflow_implies_supercritical :\
+forall c : Config,\
+overflow c ->\
+supercritical (embed c).\
+Axiom stable_implies_subcritical :\
+forall c : Config,\
+stable_conf c ->\
+subcritical (embed c).\
+Axiom complexity_mono :\
+forall c,\
+Complexity (embed c) >= complexity_conf c.\
+Axiom embed_flow :\
+forall (n : nat) (s : TMState) (c : Config),\
+embed (Nat.iter n (TM_step s) c) = Flow n (embed c).\
+Axiom contractible_iff_polytime :\
+forall c,\
+contractible (embed c) <->\
+exists p, forall n, complexity_conf (p n) <= complexity_conf c + n.\
+Axiom divergent_iff_noncontractible :\
+forall c,\
+divergent (embed c) <-> overflow c \\/ ~ stable_conf c.\
+End Loventre_Correspondence.\
+Export Loventre_Correspondence.\
+(***************************************************)\
+(* LEMMI BASE *)\
+(***************************************************)\
+Module Loventre_Lemmas.\
+Lemma subcritical_not_supercritical :\
+forall x : M, subcritical x -> ~ supercritical x.\
+Proof.\
+unfold subcritical, supercritical; intros; lia.\
+Qed.\
+Axiom Reversibility_subcritical :\
+forall x : M,\
+subcritical x ->\
+stable x /\\ contractible x.\
+Axiom Divergence_supercritical :\
+forall x : M,\
+supercritical x ->\
+divergent x /\\ non_contractible x.\
+Axiom Critical_transition :\
+forall x : M,\
+exists n_c : nat,\
+(forall n, (n < n_c)%nat -> subcritical (Flow n x)) /\\\
+(forall n, (n >= n_c)%nat -> supercritical (Flow n x)).\
+End Loventre_Lemmas.\
+Export Loventre_Lemmas.\
+(***************************************************)\
+(* TEOREMA DI LOVENTRE *)\
+(***************************************************)\
+Module Loventre_Theorem.\
+Theorem Loventre_static_separation :\
+forall x : M,\
+subcritical x ->\
+contractible x /\\ ~ non_contractible x.\
+Proof.\
+intro x; intro H.\
+pose proof (Reversibility_subcritical x H) as [Hs Hc].\
+split.\
+- exact Hc.\
+- intro Hnc.\
+destruct Hc as [p [Hp0 [HexT HexC]]].\
+destruct HexT as [T HT].\
+specialize (Hnc p Hp0).\
+apply Hnc; exact HT.\
+Qed.\
+Theorem Loventre_dynamic_separation :\
+forall x : M,\
+exists n_c : nat,\
+(forall n, (n < n_c)%nat ->\
+stable (Flow n x) /\\ contractible (Flow n x)) /\\\
+(forall n, (n >= n_c)%nat ->\
+divergent (Flow n x) /\\ non_contractible (Flow n x)).\
+Proof.\
+intro x.\
+destruct (Critical_transition x) as [n_c [H1 H2]].\
+exists n_c.\
+split.\
+- intros n Hlt.\
+specialize (H1 n Hlt).\
+pose proof (Reversibility_subcritical (Flow n x) H1)\
+as [Hs Hc].\
+split; assumption.\
+- intros n Hge.\
+specialize (H2 n Hge).\
+pose proof (Divergence_supercritical (Flow n x) H2)\
+as [Hd Hnc].\
+split; assumption.\
+Qed.\
+End Loventre_Theorem.\
+Export Loventre_Theorem.\
+}

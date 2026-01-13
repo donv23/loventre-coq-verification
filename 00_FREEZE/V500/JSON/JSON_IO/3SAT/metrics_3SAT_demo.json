@@ -1,0 +1,17 @@
+{
+  "kappa_eff": 3,
+  "entropy_eff": 2,
+  "V0": 5,
+  "a_min": 1,
+  "p_tunnel": 0,
+  "P_success": 0,
+  "gamma_dilation": 1,
+  "time_regime": "Regular_Time",
+  "mass_eff": 2,
+  "inertial_idx": 1,
+  "risk_index": 0,
+  "risk_class": "Risk_Undefined",
+  "chi_compactness": 0,
+  "horizon_flag": false
+}
+

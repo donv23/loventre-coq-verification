@@ -1,0 +1,169 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 From Coq Require Import ZArith Lia Arith Nat.\
+\
+Require Import Loventre_Base.\
+Require Import Loventre_Advanced_Flow.\
+Require Import Loventre_Advanced_Curvature.\
+Require Import Loventre_Advanced_Topology.\
+Require Import Loventre_Advanced_Entropy.\
+Require Import Loventre_Advanced_Manifold.\
+\
+(***************************************************)\
+(*   MODULO AVANZATO \'97 CRITICALIT\'c0 GLOBALE         *)\
+(*   punto critico, biforcazione e coerenza        *)\
+(***************************************************)\
+\
+Module Loventre_Advanced_Criticality.\
+\
+  Open Scope nat_scope.\
+\
+  (***************************************************)\
+  (* 1. Tempo critico come profilo di curvatura      *)\
+  (***************************************************)\
+\
+  Definition critical_time (x : M) (n_c : nat) : Prop :=\
+    CritProfile x n_c.\
+\
+  Lemma critical_time_unique :\
+    forall x n1 n2,\
+      critical_time x n1 ->\
+      critical_time x n2 ->\
+      n1 = n2.\
+  Proof.\
+    intros x n1 n2 H1 H2.\
+    unfold critical_time in *.\
+    eapply CritProfile_unique; eauto.\
+  Qed.\
+\
+  Lemma critical_time_exists_unique :\
+    forall x : M,\
+      exists! n_c, critical_time x n_c.\
+  Proof.\
+    intros x.\
+    unfold critical_time.\
+    apply CritProfile_exists_unique.\
+  Qed.\
+\
+  (***************************************************)\
+  (* 2. Compatibilit\'e0 con la separazione topologica  *)\
+  (***************************************************)\
+\
+  Lemma topology_critical_time :\
+    forall x n_c,\
+      critical_time x n_c ->\
+      (forall n, n < n_c -> P_along_flow x n) /\\\
+      (forall n, n >= n_c -> NP_along_flow x n).\
+  Proof.\
+    intros x n_c Hcrit.\
+    destruct (topology_flow_separation x) as [n0 [Hpre Hpost]].\
+    (* Ricostruiamo il profilo critico in n0 *)\
+    assert (CritProfile x n0) as Hprof0.\
+    \{ unfold CritProfile.\
+      split.\
+      - intros n Hlt.\
+        specialize (Hpre n Hlt).\
+        unfold P_along_flow, P_region in Hpre.\
+        tauto.\
+      - intros n Hge.\
+        specialize (Hpost n Hge).\
+        unfold NP_along_flow, NP_region in Hpost.\
+        tauto. \}\
+    (* Usiamo l'unicit\'e0 del tempo critico *)\
+    assert (critical_time x n0) as Hct0.\
+    \{ unfold critical_time; exact Hprof0. \}\
+    assert (critical_time x n_c) as Hctc.\
+    \{ unfold critical_time; exact Hcrit. \}\
+    pose proof (critical_time_unique x n0 n_c Hct0 Hctc) as Heq.\
+    subst n0.\
+    split; assumption.\
+  Qed.\
+\
+  (***************************************************)\
+  (* 3. Regimi entropici lungo il flusso            *)\
+  (***************************************************)\
+\
+  Lemma entropy_regimes_along_flow :\
+    forall x n_c,\
+      critical_time x n_c ->\
+      (forall n, n < n_c ->\
+         exists C, entropy_bounded_at (Flow n x) C) /\\\
+      (forall n, n >= n_c ->\
+         entropy_unbounded (Flow n x)).\
+  Proof.\
+    intros x n_c Hcrit.\
+    unfold critical_time in Hcrit.\
+    destruct Hcrit as [Hsub Hsup].\
+    split.\
+    - intros n Hlt.\
+      specialize (Hsub n Hlt).\
+      apply subcritical_entropy_bounded; assumption.\
+    - intros n Hge.\
+      specialize (Hsup n Hge).\
+      apply supercritical_entropy_unbounded; assumption.\
+  Qed.\
+\
+  (***************************************************)\
+  (* 4. Stabilit\'e0 locale dei regimi lungo l'orbita   *)\
+  (***************************************************)\
+\
+  Definition orbit_local_stability (x : M) : Prop :=\
+    forall n y,\
+      local_equiv (Flow n x) y ->\
+      same_regime (Flow n x) y.\
+\
+  Lemma orbit_local_stability_all :\
+    forall x : M, orbit_local_stability x.\
+  Proof.\
+    intros x.\
+    unfold orbit_local_stability.\
+    intros n y Hloc.\
+    destruct (Critical_transition x) as [n_c [Hsub Hsup]].\
+    destruct (Nat.lt_ge_cases n n_c) as [Hlt | Hge].\
+    - specialize (Hsub n Hlt).\
+      apply (local_equiv_same_regime_subcritical (Flow n x) y); assumption.\
+    - specialize (Hsup n Hge).\
+      apply (local_equiv_same_regime_supercritical (Flow n x) y); assumption.\
+  Qed.\
+\
+  (***************************************************)\
+  (* 5. Teorema globale di criticalit\'e0               *)\
+  (***************************************************)\
+\
+  Theorem Loventre_Criticality_Global :\
+    forall x : M,\
+      exists n_c,\
+        critical_time x n_c /\\\
+        (forall n, n < n_c -> P_along_flow x n) /\\\
+        (forall n, n >= n_c -> NP_along_flow x n) /\\\
+        (forall n, n < n_c ->\
+           exists C, entropy_bounded_at (Flow n x) C) /\\\
+        (forall n, n >= n_c ->\
+           entropy_unbounded (Flow n x)) /\\\
+        orbit_local_stability x.\
+  Proof.\
+    intros x.\
+    destruct (critical_time_exists_unique x) as [n_c [Hcrit _]].\
+    exists n_c.\
+    repeat split.\
+    - exact Hcrit.\
+    - destruct (topology_critical_time x n_c Hcrit) as [Hpre _].\
+      exact Hpre.\
+    - destruct (topology_critical_time x n_c Hcrit) as [_ Hpost].\
+      exact Hpost.\
+    - destruct (entropy_regimes_along_flow x n_c Hcrit) as [Hpre_ent _].\
+      exact Hpre_ent.\
+    - destruct (entropy_regimes_along_flow x n_c Hcrit) as [_ Hpost_ent].\
+      exact Hpost_ent.\
+    - apply orbit_local_stability_all.\
+  Qed.\
+\
+End Loventre_Advanced_Criticality.\
+\
+Export Loventre_Advanced_Criticality.\
+}

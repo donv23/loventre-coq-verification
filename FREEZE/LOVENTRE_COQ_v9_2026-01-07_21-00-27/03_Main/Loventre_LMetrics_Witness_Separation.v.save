@@ -1,0 +1,12 @@
+  exact Hsep.
+Qed.
+
+(** Lettura:
+
+    - Se m_TSPcrit28_json è NP_like-black-hole, allora non può essere SAFE.
+    - Se m_SATcrit16_json è NP_like-black-hole, allora non può essere SAFE.
+
+    Questi due lemmi sono i corollari "concreti" sul cono critico TSP/SAT,
+    in perfetta coerenza con il teorema generale di separazione SAFE.
+ *)
+

@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-01-12T10:51:08.784214",
+  "param": 3,
+  "factor": 4,
+  "kappa_eff": 0.7104,
+  "entropy_eff": 0.6151,
+  "V0": 0.6414,
+  "p_tunnel": 0.9934,
+  "class": "BH"
+}

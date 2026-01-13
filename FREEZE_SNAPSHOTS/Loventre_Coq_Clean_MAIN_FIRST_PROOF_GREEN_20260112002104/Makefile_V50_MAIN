@@ -1,0 +1,22 @@
+COQC=coqc
+COQFLAGS= -Q 01_Core Loventre_Core -Q 02_Advanced Loventre_Advanced -Q 03_Main Loventre_Main
+
+MAIN_FILES = \
+  03_Main/Loventre_Main_Prelude.v \
+  03_Main/Loventre_Main_Witness.v \
+  03_Main/Loventre_Main_Classes.v \
+  03_Main/Loventre_Main_Theorem.v \
+  03_Main/Loventre_Main_All.v
+
+all: build
+
+build:
+	@for f in $(MAIN_FILES); do \
+	  echo ">> Compiling $$f"; \
+	  $(COQC) $(COQFLAGS) $$f || exit 1; \
+	done
+
+clean:
+	find 03_Main -name "*.vo" -delete
+	find 03_Main -name "*.glob" -delete
+

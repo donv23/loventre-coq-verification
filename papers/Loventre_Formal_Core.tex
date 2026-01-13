@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\usepackage{amsthm}
+\usepackage{listings}
+
+\title{Loventre Formal Core — Minimal Coq Encoding}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Abstract Computational Structure}
+
+\textbf{Parameter C}: Type. \\
+\textbf{Parameter Val}: Type. \\
+\textbf{Parameter leVal}: $Val \to Val \to \text{Prop}$. \\
+
+\textbf{Admissible transitions}: \\
+\textbf{Parameter R}: $C \to C \to \text{Prop}$. \\
+
+\textbf{Structural invariants}: \\
+\textbf{Parameter kappa}: $C \to Val$. \\
+\textbf{Parameter entropy}: $C \to Val$. \\
+\textbf{Parameter compactness}: $C \to Val$. \\
+
+\textbf{Abstract structural variation}: \\
+\textbf{Parameter delta}: $(C \to Val) \to C \to C \to Val$. \\
+
+\textbf{Efficient trajectories}: \\
+\textbf{Parameter efficient}: $\text{list}(C) \to \text{Prop}$. \\
+
+\textbf{Target region (abstract)}: \\
+\textbf{Parameter Target}: $C \to \text{Prop}$.
+
+\section{Efficiency Axiom}
+
+\textbf{Axiom EfficientBound}: \\
+\textit{forall (traj : list C), efficient traj} \\
+\textit{-> exists B : Val,} \\
+\textit{    forall f, (f = kappa $\vee$ f = entropy $\vee$ f = compactness)} \\
+\textit{    -> forall c1 c2, In c1 traj $\to$ In c2 traj $\to$ leVal (delta f c1 c2) B.}
+
+\section{Structural Horizon Definition}
+
+\textbf{Definition Horizon}: \\
+\textit{Horizon c : Prop} \\
+\textit{:= forall traj : list C,} \\
+\textit{    In c traj -> (exists cT, In cT traj /\ Target cT) -> ~ efficient traj.}
+
+\section{Lemma L3 — Efficiency Obstruction}
+
+\textbf{Theorem NoEfficientCrossing}: \\
+\textit{forall c : C, Horizon c ->} \\
+\textit{    forall traj : list C, In c traj -> (exists cT, In cT traj /\ Target cT) -> ~ efficient traj.} \\
+\textbf{Proof}: \\
+\textit{intros c Hhor traj Hc HT Heff.} \\
+\textit{unfold Horizon in Hhor.} \\
+\textit{apply (Hhor traj); assumption.} \\
+\textit{Qed.}
+
+\end{document}
+

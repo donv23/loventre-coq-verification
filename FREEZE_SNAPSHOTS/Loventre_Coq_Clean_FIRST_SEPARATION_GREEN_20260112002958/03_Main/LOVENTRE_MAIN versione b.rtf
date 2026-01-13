@@ -1,0 +1,146 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 From Coq Require Import ZArith Lia Arith Nat.\
+\
+Require Import Loventre_Base.\
+Require Import Loventre_Advanced_Flow.\
+Require Import Loventre_Advanced_Curvature.\
+Require Import Loventre_Advanced_Topology.\
+Require Import Loventre_Advanced_Entropy.\
+Require Import Loventre_Advanced_Manifold.\
+Require Import Loventre_Advanced_Criticality.\
+\
+(***************************************************)\
+(*   LOVENTRE_MAIN \'97 TEOREMA DI LOVENTRE           *)\
+(*   Separazione P-like / NP-like strutturale      *)\
+(*   via curvatura informazionale                  *)\
+(***************************************************)\
+\
+Module Loventre_Main.\
+\
+  (***************************************************)\
+  (* 01. Interfaccia P/NP-like                      *)\
+  (***************************************************)\
+\
+  (* Usiamo direttamente le regioni topologiche     *)\
+  (* definite in Loventre_Advanced_Topology:        *)\
+  (*   P_region  : M -> Prop                        *)\
+  (*   NP_region : M -> Prop                        *)\
+\
+  Definition P_like (x : M) : Prop := P_region x.\
+  Definition NP_like (x : M) : Prop := NP_region x.\
+\
+  (* Stati lungo il flusso: P-like / NP-like        *)\
+\
+  Definition P_state (x : M) (n : nat) : Prop :=\
+    P_along_flow x n.       (* = P_region (Flow n x) *)\
+\
+  Definition NP_state (x : M) (n : nat) : Prop :=\
+    NP_along_flow x n.      (* = NP_region (Flow n x) *)\
+\
+  (***************************************************)\
+  (* 02. Profilo critico globale di Loventre        *)\
+  (***************************************************)\
+\
+  (* Riassumiamo in una sola struttura tutti gli    *)\
+  (* vincoli globali ottenuti nel modulo            *)\
+  (* Loventre_Advanced_Criticality.                 *)\
+\
+  Record Loventre_profile (x : M) := \{\
+    loventre_nc : nat;\
+    loventre_critical :\
+      critical_time x loventre_nc;\
+\
+    (* Prima del punto critico: regime P-like       *)\
+    loventre_P_before :\
+      forall n, n < loventre_nc -> P_state x n;\
+\
+    (* Dopo il punto critico: regime NP-like        *)\
+    loventre_NP_after :\
+      forall n, n >= loventre_nc -> NP_state x n;\
+\
+    (* Entropia: bounded nel regime P-like          *)\
+    loventre_entropy_P :\
+      forall n, n < loventre_nc ->\
+        exists C, entropy_bounded_at (Flow n x) C;\
+\
+    (* Entropia: unbounded nel regime NP-like       *)\
+    loventre_entropy_NP :\
+      forall n, n >= loventre_nc ->\
+        entropy_unbounded (Flow n x);\
+\
+    (* Stabilit\'e0 locale del regime lungo l'orbita   *)\
+    loventre_orbit_stable :\
+      orbit_local_stability x\
+  \}.\
+\
+  (***************************************************)\
+  (* 03. Esistenza del profilo critico globale      *)\
+  (***************************************************)\
+\
+  Lemma Loventre_profile_exists :\
+    forall x : M, Loventre_profile x.\
+  Proof.\
+    intro x.\
+    destruct (Loventre_Criticality_Global x)\
+      as [n_c [Hcrit\
+               [HP_before\
+               [HNP_after\
+               [Hent_P\
+               [Hent_NP Hstab]]]]]].\
+    refine (\{|\
+      loventre_nc          := n_c;\
+      loventre_critical    := Hcrit;\
+      loventre_P_before    := HP_before;\
+      loventre_NP_after    := HNP_after;\
+      loventre_entropy_P   := Hent_P;\
+      loventre_entropy_NP  := Hent_NP;\
+      loventre_orbit_stable := Hstab\
+    |\}).\
+  Qed.\
+\
+  (***************************************************)\
+  (* 04. Separazione strutturale P-like / NP-like   *)\
+  (***************************************************)\
+\
+  (* Separazione punto per punto lungo il flusso:   *)\
+  (* nessuno stato pu\'f2 essere contemporaneamente    *)\
+  (* P-like e NP-like.                              *)\
+\
+  Theorem Loventre_pointwise_separation :\
+    forall x n,\
+      P_state x n -> ~ NP_state x n.\
+  Proof.\
+    intros x n HP HNP.\
+    (* Questo \'e8 esattamente il teorema topologico   *)\
+    (* dimostrato nel modulo di topologia           *)\
+    (* (separazione P_region / NP_region lungo l'orbita). *)\
+    eapply topology_pointwise_separation_on_orbit; eauto.\
+  Qed.\
+\
+  (* Forma "compatta" del Teorema di Loventre:      *)\
+  (* ogni punto ammette un profilo critico globale  *)\
+  (* di curvatura/entropia, e P-like/NP-like sono   *)\
+  (* strutturalmente separati lungo l'orbita.       *)\
+\
+  Theorem Loventre_Theorem :\
+    forall x : M,\
+      Loventre_profile x /\\\
+      (forall n, P_state x n -> ~ NP_state x n).\
+  Proof.\
+    intro x.\
+    split.\
+    - apply Loventre_profile_exists.\
+    - intros n HP.\
+      apply Loventre_pointwise_separation with (x := x) (n := n); assumption.\
+  Qed.\
+\
+End Loventre_Main.\
+\
+Export Loventre_Main.\
+}

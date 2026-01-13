@@ -1,0 +1,97 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{An Interpretative Layer for the Loventre Formal Core}
+\author{Vincenzo Loventre}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Purpose and Scope}
+
+This document provides an \emph{interpretative reading} of the Loventre Formal Core.
+It introduces no new axioms, definitions, or theorems.
+All formal results are contained exclusively in the Formal Core and its Coq verification.
+
+No claim is made regarding the classical \emph{P vs NP} problem.
+
+\section{From Structure to Interpretation}
+
+The Loventre Formal Core defines an abstract notion of:
+\begin{itemize}
+  \item efficient trajectories,
+  \item structural horizons,
+  \item obstruction of efficiency.
+\end{itemize}
+
+These notions are purely formal.
+This document proposes an interpretation of these notions in terms of
+\emph{computational phases}.
+
+\section{Phase Interpretation}
+
+We introduce the following \emph{interpretative terminology}.
+
+\subsection*{P-like Phase (Interpretative)}
+
+A computation is said to be \emph{P-like} if it belongs to a region of the computational space
+where no structural horizon is present.
+In this phase, efficient trajectories are structurally admissible.
+
+\subsection*{NP-like-Black-Hole Phase (Interpretative)}
+
+A computation is said to be \emph{NP-like-black-hole} if it exhibits a structural horizon.
+In this phase, efficient trajectories are structurally obstructed.
+
+These terms are purely interpretative and do not correspond to classical complexity classes.
+
+\section{Algorithmic Intuition}
+
+From an algorithmic perspective, the obstruction of efficiency may manifest as:
+\begin{itemize}
+  \item exponential or super-polynomial growth of search effort,
+  \item loss of global information accessibility,
+  \item saturation of heuristic guidance.
+\end{itemize}
+
+These phenomena are not assumed in the Formal Core;
+they are \emph{explained} by it, under the proposed interpretation.
+
+\section{On Apparent Counterexamples}
+
+Occasional algorithmic successes in horizon-bearing regions
+may be interpreted as rare, non-scalable events.
+Such events do not contradict the Formal Core,
+as they do not correspond to efficient trajectories.
+
+\section{Relation to the Formal Core}
+
+All interpretative claims in this document are grounded in the following correspondence:
+
+\begin{center}
+\begin{tabular}{ll}
+\textbf{Formal Core} & \textbf{Interpretation} \\
+\hline
+Efficient trajectory & Feasible algorithmic evolution \\
+Structural horizon & Intrinsic computational barrier \\
+Efficiency obstruction & Phase separation \\
+\end{tabular}
+\end{center}
+
+The validity of the Formal Core does not depend on this interpretation.
+
+\section*{Conclusion}
+
+The Loventre Formal Core admits a natural interpretation
+in terms of computational phases and intrinsic barriers.
+This interpretation is optional, external, and non-binding.
+
+The Formal Core remains valid independently of any interpretative layer.
+
+\end{document}
+

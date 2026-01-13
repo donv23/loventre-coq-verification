@@ -1,49 +1,43 @@
-# ============================================================
-# Makefile_SMOKE_ONLY
-# Verifica CANON minimale Loventre (NO ottimizzazioni)
-# ============================================================
+# Makefile_SMOKE_ONLY — baseline lineare e pulita
 
-COQC = coqc
+SMOKE_CORE = \
+  01_Core/Loventre_Core_Prelude.v \
+  01_Core/Loventre_Kernel.v \
+  01_Core/Loventre_Foundation_Types.v \
+  01_Core/Loventre_Foundation_Params.v \
+  01_Core/Loventre_Foundation_Entropy.v
 
-CORE_Q = -Q 01_Core Loventre_Core
-ADV_Q  = -Q 02_Advanced Loventre_Advanced
-MAIN_Q = -Q 03_Main Loventre_Main
+SMOKE_ADVANCED = \
+  02_Advanced/Loventre_Curvature_Field.v \
+  02_Advanced/Loventre_Potential_Field.v \
+  02_Advanced/Loventre_Barrier_Model.v \
+  02_Advanced/Loventre_Tunneling_Model.v \
+  02_Advanced/Loventre_Risk_From_Tunneling.v \
+  02_Advanced/Loventre_Risk_Level.v \
+  02_Advanced/Loventre_Risk_Level_Bridge.v \
+  02_Advanced/Loventre_SAFE_Model.v \
+  02_Advanced/Loventre_Class_Model.v \
+  02_Advanced/Loventre_Class_Properties.v \
+  02_Advanced/Loventre_Phase_Assembly.v
 
-.PHONY: clean verify
+SMOKE_GEOMETRY = \
+  02_Advanced/Geometry/Loventre_Formal_Core.v \
+  02_Advanced/Geometry/Loventre_LMetrics_Phase_Predicates.v \
+  02_Advanced/Geometry/Loventre_LMetrics_Structure.v \
+  02_Advanced/Loventre_LMetrics_JSON_Witness.v
 
-clean:
-	find . -name "*.vo"   -delete
-	find . -name "*.vos"  -delete
-	find . -name "*.vok"  -delete
-	find . -name "*.glob" -delete
-
-verify: clean \
-	core \
-	advanced \
-	advanced_index \
-	main_index
-
-core:
-	$(COQC) $(CORE_Q) 01_Core/Loventre_Core_Prelude.v
-	$(COQC) $(CORE_Q) 01_Core/Loventre_Kernel.v
-	$(COQC) $(CORE_Q) 01_Core/Loventre_Foundation_Types.v
-	$(COQC) $(CORE_Q) 01_Core/Loventre_Foundation_Params.v
-	$(COQC) $(CORE_Q) 01_Core/Loventre_Foundation_Entropy.v
-
-advanced:
-	$(COQC) $(CORE_Q) $(ADV_Q) 02_Advanced/Loventre_Curvature_Field.v
-	$(COQC) $(CORE_Q) $(ADV_Q) 02_Advanced/Loventre_Potential_Field.v
-	$(COQC) $(CORE_Q) $(ADV_Q) 02_Advanced/Loventre_Barrier_Model.v
-	$(COQC) $(CORE_Q) $(ADV_Q) 02_Advanced/Loventre_Tunneling_Model.v
-	$(COQC) $(CORE_Q) $(ADV_Q) 02_Advanced/Loventre_Risk_Level.v
-	$(COQC) $(CORE_Q) $(ADV_Q) 02_Advanced/Loventre_Risk_Level_Bridge.v
-	$(COQC) $(CORE_Q) $(ADV_Q) 02_Advanced/Loventre_Policy_Bridge.v
-	$(COQC) $(CORE_Q) $(ADV_Q) 02_Advanced/Loventre_Witness_EndToEnd.v
-	$(COQC) $(CORE_Q) $(ADV_Q) 02_Advanced/Loventre_Mini_Theorem_EndToEnd.v
-
-advanced_index:
-	$(COQC) $(CORE_Q) $(ADV_Q) 02_Advanced/Loventre_Advanced_Index.v
-
-main_index:
-	$(COQC) $(CORE_Q) $(ADV_Q) $(MAIN_Q) 03_Main/Loventre_Main_Index.v
+verify:
+	find . -type f \( -name "*.vo" -o -name "*.vos" -o -name "*.vok" -o -name "*.glob" \) -delete
+	for f in $(SMOKE_CORE); do \
+	  coqc -Q 01_Core Loventre_Core $$f || exit 1 ; \
+	done
+	for f in $(SMOKE_ADVANCED); do \
+	  coqc -Q 01_Core Loventre_Core \
+	       -Q 02_Advanced Loventre_Advanced $$f || exit 1 ; \
+	done
+	for f in $(SMOKE_GEOMETRY); do \
+	  coqc -Q 01_Core Loventre_Core \
+	       -Q 02_Advanced Loventre_Advanced \
+	       -Q 02_Advanced/Geometry Loventre_Advanced.Geometry $$f || exit 1 ; \
+	done
 

@@ -1,0 +1,50 @@
+(** Loventre_LMetrics_JSON_Witness.v
+    Layer: Geometry/Bridge
+    Scopo: introdurre canonically i witness che arrivano dal JSON
+           (seed-grid, SAT-critico, TSP-critico, ecc.)
+           Versione minima: assiomi di esistenza come placeholder.
+*)
+
+From Loventre_Core Require Import
+  Loventre_Kernel
+  Loventre_Foundation_Types
+  Loventre_Foundation_Params
+  Loventre_Foundation_Entropy.
+
+From Loventre_Advanced Require Import
+  Loventre_Risk_Level
+  Loventre_Class_Model
+  Loventre_SAFE_Model.
+
+From Stdlib Require Import ZArith.
+
+Set Implicit Arguments.
+Unset Strict Implicit.
+Unset Printing Implicit Defensive.
+
+(** ----------------------------------------------------------- **)
+(** Testimoni astratti (saranno legati ai JSON v3)              **)
+(** ----------------------------------------------------------- **)
+
+Axiom m_seed11_cli_demo : M.
+Axiom m_seed_grid_demo : M.
+Axiom m_TSPcrit28_cli_demo : M.
+Axiom m_SATcrit16_cli_demo : M.
+Axiom m_2SAT_easy_demo : M.
+Axiom m_2SAT_crit_demo : M.
+
+(** ----------------------------------------------------------- **)
+(** Classificazioni desiderate (placeholder axiomatico)         **)
+(** NOTA: non è una prova, è una dichiarazione che servirà
+    finché non si costruirà il bridge JSON->LMetrics->testimoni **)
+(** ----------------------------------------------------------- **)
+
+Axiom m_grid_is_not_P : ~ In_P_Lov m_seed_grid_demo.
+Axiom m_grid_is_not_SAFE : ~ In_SAFE_Lov m_seed_grid_demo.
+
+Axiom m_tspcrit_is_NPbh_not_P :
+  In_NPbh_Lov m_TSPcrit28_cli_demo /\ ~ In_P_Lov m_TSPcrit28_cli_demo.
+
+Axiom m_satcrit_is_NPbh_not_P :
+  In
+

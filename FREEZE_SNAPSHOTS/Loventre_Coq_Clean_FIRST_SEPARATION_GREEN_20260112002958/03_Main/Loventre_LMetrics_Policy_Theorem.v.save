@@ -1,0 +1,68 @@
+
+(* Loventre_LMetrics_Policy_Theorem
+
+   Teorema di separazione "colorato" sull'asse LMetrics + Policy.
+
+   Assumiamo il programma core:
+
+     Loventre_Policy_Core_Program :=
+       Loventre_P_vs_NP_like_black_hole_Prop
+       /\ policy_ideal_spec.
+
+   e dimostriamo che ogni configurazione NP_like-black-hole rispetta
+   il vincolo "mai verde sul black-hole" espresso dal punto
+   policy_never_green_on_black_hole_pointwise.
+*)
+
+From Loventre_Geometry Require Import
+  Loventre_LMetrics_Existence_Summary
+  Loventre_LMetrics_Phase_Predicates
+  Loventre_LMetrics_Policy_Spec.
+
+From Loventre_Main Require Import
+  Loventre_LMetrics_Policy_Specs.
+
+Module Ex      := Loventre_LMetrics_Existence_Summary.
+Module Phase   := Loventre_LMetrics_Phase_Predicates.
+Module PolSpec := Loventre_LMetrics_Policy_Spec.
+Module Core    := Loventre_LMetrics_Policy_Specs.
+
+(* Proprietà di separazione "colorata" a livello di spec:
+   ogni stato NP_like-black-hole soddisfa il vincolo
+   [policy_never_green_on_black_hole_pointwise]. *)
+
+Definition Loventre_color_separation_prop : Prop :=
+  forall m,
+    Ex.is_NP_like_black_hole m ->
+    PolSpec.policy_never_green_on_black_hole_pointwise m.
+
+Theorem Loventre_color_separation_from_core :
+  Core.Loventre_Policy_Core_Program ->
+  Loventre_color_separation_prop.
+Proof.
+  intros Hcore m Hnp.
+  (* Spacchettiamo il programma core:
+       Hcore : Loventre_P_vs_NP_like_black_hole_Prop
+               /\ PolSpec.policy_ideal_spec *)
+  unfold Core.Loventre_Policy_Core_Program in Hcore.
+  destruct Hcore as [_ Hideal].
+
+  (* La spec ideale di Policy è definita in Geometry. *)
+  unfold PolSpec.policy_ideal_spec in Hideal.
+  destruct Hideal as [Hnever_green _Hrest].
+
+  (* Hnever_green : policy_never_green_on_black_hole_global *)
+  unfold PolSpec.policy_never_green_on_black_hole_global in Hnever_green.
+  (* Hnever_green : forall m, PolSpec.policy_never_green_on_black_hole_pointwise m *)
+
+  (* Dal fatto che la policy vale globalmente, vale in particolare
+     per questo m (che è NP_like-black-hole). *)
+  specialize (Hnever_green m).
+  (* Hnever_green ha ora esattamente il tipo:
+       PolSpec.policy_never_green_on_black_hole_pointwise m *)
+  exact Hnever_green.
+Qed.
+
+(* Piccolo goal di sanity. *)
+Goal True. exact I. Qed.
+

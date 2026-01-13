@@ -1,0 +1,85 @@
+===[MAIN] Cleaning artefatti]===
+find . -name "*.vo"   -delete
+find . -name "*.vos"  -delete
+find . -name "*.vok"  -delete
+find . -name "*.glob" -delete
+===[MAIN] BUILD CORE]===
+for f in \
+	  01_Core/Loventre_Core_Prelude.v \
+	  01_Core/Loventre_Kernel.v \
+	  01_Core/Loventre_Foundation_Types.v \
+	  01_Core/Loventre_Foundation_Params.v \
+	  01_Core/Loventre_Foundation_Entropy.v ; do \
+	    coqc -Q 01_Core Loventre_Core $f || exit 1 ; \
+	  done
+===[MAIN] BUILD CURVATURE]===
+for f in \
+	  02_Advanced/Loventre_Curvature_Field.v ; do \
+	    coqc -Q 01_Core Loventre_Core -Q 02_Advanced Loventre_Advanced $f || exit 1 ; \
+	  done
+===[MAIN] BUILD POTENTIAL]===
+for f in \
+	  02_Advanced/Loventre_Potential_Field.v ; do \
+	    coqc -Q 01_Core Loventre_Core -Q 02_Advanced Loventre_Advanced $f || exit 1 ; \
+	  done
+===[MAIN] BUILD BARRIER]===
+for f in \
+	  02_Advanced/Loventre_Barrier_Model.v ; do \
+	    coqc -Q 01_Core Loventre_Core -Q 02_Advanced Loventre_Advanced $f || exit 1 ; \
+	  done
+===[MAIN] BUILD TUNNEL]===
+for f in \
+	  02_Advanced/Loventre_Tunneling_Model.v \
+	  02_Advanced/Loventre_Risk_From_Tunneling.v ; do \
+	    coqc -Q 01_Core Loventre_Core -Q 02_Advanced Loventre_Advanced $f || exit 1 ; \
+	  done
+===[MAIN] BUILD RISK]===
+for f in \
+	  02_Advanced/Loventre_Risk_Level.v \
+	  02_Advanced/Loventre_Risk_Level_Bridge.v ; do \
+	    coqc -Q 01_Core Loventre_Core -Q 02_Advanced Loventre_Advanced $f || exit 1 ; \
+	  done
+===[MAIN] BUILD SAFE]===
+for f in \
+	  02_Advanced/Loventre_SAFE_Model.v ; do \
+	    coqc -Q 01_Core Loventre_Core -Q 02_Advanced Loventre_Advanced $f || exit 1 ; \
+	  done
+===[MAIN] BUILD CLASS]===
+for f in \
+	  02_Advanced/Loventre_Class_Model.v \
+	  02_Advanced/Loventre_Class_Properties.v \
+	  02_Advanced/Loventre_Phase_Assembly.v ; do \
+	    coqc -Q 01_Core Loventre_Core -Q 02_Advanced Loventre_Advanced $f || exit 1 ; \
+	  done
+===[MAIN] BUILD LMetrics Core]===
+for f in \
+	  02_Advanced/Loventre_LMetrics_Core.v \
+	  02_Advanced/Loventre_Metrics_Bus.v ; do \
+	    coqc -Q 01_Core Loventre_Core -Q 02_Advanced Loventre_Advanced $f || exit 1 ; \
+	  done
+===[MAIN] BUILD GEOMETRY]===
+for f in \
+	  02_Advanced/Geometry/Loventre_Formal_Core.v \
+	  02_Advanced/Geometry/Loventre_LMetrics_Phase_Predicates.v \
+	  02_Advanced/Geometry/Loventre_LMetrics_Structure.v ; do \
+	    coqc -Q 01_Core Loventre_Core -Q 02_Advanced Loventre_Advanced -Q 02_Advanced/Geometry Loventre_Advanced.Geometry $f || exit 1 ; \
+	  done
+===[MAIN] BUILD JSON]===
+for f in \
+	  02_Advanced/Loventre_LMetrics_JSON_Witness.v ; do \
+	    coqc -Q 01_Core Loventre_Core \
+	         -Q 02_Advanced Loventre_Advanced \
+	         -Q 02_Advanced/Geometry Loventre_Advanced.Geometry $f || exit 1 ; \
+	  done
+===[MAIN] BUILD 2-SAT]===
+for f in \
+	  02_Advanced/Geometry/Loventre_2SAT_LMetrics_Crit_JSON.v \
+	  02_Advanced/Geometry/Loventre_2SAT_LMetrics_From_JSON.v \
+	  02_Advanced/Geometry/Loventre_2SAT_Decode_Compute.v \
+	  02_Advanced/Geometry/Loventre_2SAT_EasyCrit_Compare.v \
+	  02_Advanced/Geometry/Loventre_Test_Pacc_2SAT_Profile_v3.v \
+	  02_Advanced/Geometry/Loventre_Test_All_2SAT.v ; do \
+	    coqc -Q 01_Core Loventre_Core \
+	         -Q 02_Advanced Loventre_Advanced \
+	         -Q 02_Advanced/Geometry Loventre_Advanced.Geometry $f || exit 1 ; \
+	  done

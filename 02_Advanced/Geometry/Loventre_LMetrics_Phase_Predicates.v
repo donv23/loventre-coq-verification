@@ -1,33 +1,42 @@
 (** Loventre_LMetrics_Phase_Predicates.v
-    Predicati di fase (semantica parziale, non dicotomica)
-    LIVELLO: Geometry (canonico)
-*)
+    Versione minimale CANONICA senza bus o JSON.
+ *)
 
-From Stdlib Require Import Reals.Rdefinitions Reals.Raxioms.
+From Loventre_Core Require Import
+  Loventre_Kernel
+  Loventre_Foundation_Types.
 
-From Loventre_Geometry Require Import
-  Loventre_Metrics_Bus
-  Loventre_LMetrics_Structure.
+From Loventre_Advanced Require Import
+  Loventre_SAFE_Model
+  Loventre_Class_Model.
 
-Import Loventre_Metrics_Bus.
+Import Loventre_Geometry.
 
-Module Loventre_LMetrics_Phase_Predicates.
+Set Implicit Arguments.
+Unset Strict Implicit.
+Unset Printing Implicit Defensive.
 
-  (** Una metrica ha “orizzonte” se horizon_flag = true *)
-  Definition has_horizon (m : LMetrics) : Prop :=
-    m.(horizon_flag) = true.
+(** Predicato: fase P_like se è in P (contractibile) *)
+Definition Phase_P_like (x : M) : Prop :=
+  In_P_Lov x.
 
-  (** Compattezza positiva: chi_compactness > 0 *)
-  Definition compact_positive (m : LMetrics) : Prop :=
-    (0 < m.(chi_compactness))%R.
+(** Predicato: fase P_accessible se P + stabilità *)
+Definition Phase_P_accessible (x : M) : Prop :=
+  In_Pacc_Lov x.
 
-  (** Stato NP-like (non esaustivo) *)
-  Definition is_NP_like (m : LMetrics) : Prop :=
-    compact_positive m /\ has_horizon m.
+(** Predicato: fase NP_blackhole-like se non contrattibile *)
+Definition Phase_NP_blackhole (x : M) : Prop :=
+  In_NPbh_Lov x.
 
-  (** Stato P-like (non esaustivo) *)
-  Definition is_P_like (m : LMetrics) : Prop :=
-    (~ compact_positive m) /\ (m.(horizon_flag) = false).
-
-End Loventre_LMetrics_Phase_Predicates.
+(** Esclusione: NPbh implica non P *)
+Lemma Phase_NPbh_not_P :
+  forall x : M,
+    Phase_NP_blackhole x ->
+    ~ Phase_P_like x.
+Proof.
+  intros x HNP HP.
+  unfold Phase_NP_blackhole in HNP.
+  unfold Phase_P_like in HP.
+  eapply In_NPbh_Lov_not_P; eauto.
+Qed.
 

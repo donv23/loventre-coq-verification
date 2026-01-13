@@ -1,0 +1,38 @@
+COQC=coqc
+
+COQFLAGS= -Q 01_Core Loventre_Core
+
+CORE_FILES = \
+  01_Core/Loventre_Kernel.v \
+  01_Core/Loventre_Core_Prelude.v \
+  01_Core/Loventre_Foundation_Types.v \
+  01_Core/Loventre_Foundation_History_Structure.v \
+  01_Core/Loventre_Foundation_Time.v \
+  01_Core/Loventre_Foundation_Params.v \
+  01_Core/Loventre_Foundation_Entropy.v \
+  01_Core/Loventre_Foundation_Logic.v \
+  01_Core/Loventre_Foundation_Measures.v \
+  01_Core/Loventre_Foundation_Complexity.v \
+  01_Core/Loventre_Project_Settings.v \
+  01_Core/Loventre_Zfloor_Core.v \
+  01_Core/Loventre_Zfloor_Lemmas.v \
+  01_Core/Loventre_Zfloor_Mono.v \
+  01_Core/Loventre_Zfloor_Compat_RNZ.v \
+  01_Core/Loventre_Zfloor_Compat.v \
+  01_Core/Loventre_Zfloor_Migrate_Core.v \
+  01_Core/Loventre_Core.v \
+  01_Core/Loventre_Foundation_All.v \
+  01_Core/Loventre_Guard_Zfloor_V50.v
+
+all: build
+
+build:
+	@for f in $(CORE_FILES); do \
+	  echo ">> Compiling $$f"; \
+	  $(COQC) $(COQFLAGS) $$f || exit 1; \
+	done
+
+clean:
+	find 01_Core -name "*.vo" -delete
+	find 01_Core -name "*.glob" -delete
+

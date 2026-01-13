@@ -1,0 +1,17 @@
+{
+  "name": "m_3SAT_crit_demo",
+  "source": "manual_seed_v120",
+  "kappa_eff": 0.61,
+  "entropy_eff": 0.74,
+  "potential": 0.85,
+  "V0": 0.90,
+  "p_tunnel": 0.18,
+  "P_success": 0.09,
+  "gamma_dilation": 0.59,
+  "mass_eff": 0.76,
+  "time_regime": "critical",
+  "risk_index": 0.81,
+  "chi_compactness": 0.84,
+  "horizon_flag": true
+}
+

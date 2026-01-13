@@ -1,0 +1,71 @@
+############################################################
+# Loventre Coq V50 — Build ordinato 02_Advanced
+############################################################
+
+.PHONY: all clean build
+
+COQC = coqc
+COQFLAGS = -Q 01_Core Loventre_Core -Q 02_Advanced Loventre_Advanced \
+           -Q 03_Main Loventre_Main -Q 04_JSON_Bridge_V50 Loventre_JSON
+
+# Ordine STABILE: prima definizioni, poi bridge, poi full aggregati
+ADV_STAGE1 = \
+  02_Advanced/Loventre_Curvature_Field.v \
+  02_Advanced/Loventre_Potential_Field.v \
+  02_Advanced/Loventre_Barrier_Model.v \
+  02_Advanced/Loventre_Tunneling_Model.v \
+  02_Advanced/Loventre_Time_Regimes.v \
+  02_Advanced/Loventre_Regimes_Definition.v
+
+ADV_STAGE2 = \
+  02_Advanced/Loventre_Regimes_Properties.v \
+  02_Advanced/Loventre_Risk_Level.v \
+  02_Advanced/Loventre_Risk_From_Tunneling.v \
+  02_Advanced/Loventre_Risk_Level_Bridge.v \
+  02_Advanced/Loventre_Instance_Profile.v \
+  02_Advanced/Loventre_Complexity_Barrier.v
+
+ADV_STAGE3 = \
+  02_Advanced/Loventre_Policy_Bridge.v \
+  02_Advanced/Loventre_Metrics_Bus.v \
+  02_Advanced/Loventre_Lemmas.v \
+  02_Advanced/Loventre_Unificato.v
+
+ADV_FINAL = \
+  02_Advanced/Loventre_Advanced_All.v \
+  02_Advanced/Loventre_Mini_Theorem_EndToEnd.v \
+  02_Advanced/Loventre_Witness_EndToEnd.v
+
+all: build
+
+build:
+	@echo ">> STAGE 1 --------------------------------------"
+	@for f in $(ADV_STAGE1); do \
+	  echo ">> Compiling $$f"; \
+	  $(COQC) $(COQFLAGS) $$f || exit 1 ; \
+	done
+	@echo ">> STAGE 2 --------------------------------------"
+	@for f in $(ADV_STAGE2); do \
+	  echo ">> Compiling $$f"; \
+	  $(COQC) $(COQFLAGS) $$f || exit 1 ; \
+	done
+	@echo ">> STAGE 3 --------------------------------------"
+	@for f in $(ADV_STAGE3); do \
+	  echo ">> Compiling $$f"; \
+	  $(COQC) $(COQFLAGS) $$f || exit 1 ; \
+	done
+	@echo ">> FINAL AGGREGATION FILES ----------------------"
+	@for f in $(ADV_FINAL); do \
+	  echo ">> Compiling $$f"; \
+	  $(COQC) $(COQFLAGS) $$f || exit 1 ; \
+	done
+	@echo ">> DONE — 02_Advanced now GREEN!"
+
+clean:
+	@echo ">> Cleaning .vo/.vos/.vok/.glob inside 02_Advanced"; \
+	find 02_Advanced -name "*.vo"  -delete ; \
+	find 02_Advanced -name "*.vos" -delete ; \
+	find 02_Advanced -name "*.vok" -delete ; \
+	find 02_Advanced -name "*.glob" -delete ; \
+	echo "Clean completed."
+

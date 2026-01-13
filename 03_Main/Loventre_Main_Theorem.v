@@ -1,108 +1,94 @@
-From Coq Require Import List Arith ZArith.
-Require Import Loventre_All.
-Require Import Loventre_Complexity_Barrier.
-Require Import Loventre_Metrics_Bus.
-Require Import Loventre_SAT_TSP_Critical_Metrics.
+(** Loventre_Main_Theorem.v
+    V57-08 — Mini-Teorema + Lemmi ponte coerenti
+ *)
 
-Module Loventre_Main_Theorem.
+From Stdlib Require Import Bool.
 
-  (** We reuse the complexity-theoretic module defined in [Loventre_Complexity_Barrier].
-      Here we connect it to the geometric side and to the Loventre Metrics Bus. *)
+From Loventre_Main Require Import
+  Loventre_Main_Prelude
+  Loventre_Main_Witness
+  Loventre_Main_Predicates
+  Loventre_Main_Classes.
 
-  Module C := Loventre_Complexity.
+Set Implicit Arguments.
+Unset Strict Implicit.
+Unset Printing Implicit Defensive.
 
-  (** * Static (complexity-theoretic) side *)
+(** ============================
+        MINI TEOREMA V57-08
+    ============================ *)
 
-  Definition Word     := C.Word.
-  Definition Language := C.Language.
-  Definition InP      := C.inP.
-  Definition InNP     := C.inNP.
+Theorem loventre_internal_separation_v57 :
+  In_P_like m_seed_minimal /\
+  In_P_accessible_like m_seed_middle /\
+  In_NP_blackhole_like m_seed_critico.
+Proof.
+  split.
+  - unfold In_P_like, SAFE; simpl; reflexivity.
+  - split.
+    + unfold In_P_accessible_like, SAFE, BlackHole; simpl.
+      split; [reflexivity|].
+      intro H; discriminate.
+    + unfold In_NP_blackhole_like, BlackHole; simpl; reflexivity.
+Qed.
 
-  (** * Dynamic (geometric / flow) side *)
+(** ============================
+      COROLLARIO DI ESISTENZA
+    ============================ *)
 
-  (** Geometric states are the abstract states from the Loventre geometry. *)
-  Definition GeomState := State.
+Corollary loventre_internal_separation_exists_v57 :
+  exists m1 m2 m3,
+    In_P_like m1 /\
+    In_P_accessible_like m2 /\
+    In_NP_blackhole_like m3.
+Proof.
+  exists m_seed_minimal, m_seed_middle, m_seed_critico.
+  apply loventre_internal_separation_v57.
+Qed.
 
-  (** Abstract predicate: a state is a "dynamic Loventre witness". *)
-  Parameter Dynamic_witness : GeomState -> Prop.
+(** ============================
+        LEMMI PONTE V57-08
+    ============================ *)
 
-  (** * Metrics Bus side *)
+Lemma not_all_P_like_if_blackhole_exists :
+  In_NP_blackhole_like m_seed_critico ->
+  ~ (In_P_like m_seed_minimal /\
+     In_P_like m_seed_middle /\
+     In_P_like m_seed_critico).
+Proof.
+  intros Hbh [Hmin [Hmid Hcrit]].
+  unfold In_P_like, SAFE in Hcrit.
+  unfold In_NP_blackhole_like, BlackHole in Hbh.
+  simpl in *.
+  rewrite Hcrit in Hbh.
+  discriminate.
+Qed.
 
-  Definition BusState := Loventre_Metrics_Bus.LMetrics.
+Lemma existence_of_blackhole_breaks_uniformity :
+  In_P_like m_seed_minimal ->
+  In_NP_blackhole_like m_seed_critico ->
+  ~ (forall m, In_P_like m).
+Proof.
+  intros Hmin Hbh Hall.
+  specialize (Hall m_seed_critico).
+  unfold In_P_like, SAFE in Hall.
+  unfold In_NP_blackhole_like, BlackHole in Hbh.
+  simpl in *.
+  rewrite Hall in Hbh.
+  discriminate.
+Qed.
 
-  (** A metrics-level witness: an LMetrics configuration that encodes
-      the hardness gap in the bus representation. *)
-  Parameter Metrics_witness : BusState -> Prop.
-
-  (** Abstract (but structurally fixed) bridge between bus and geometry. *)
-  Parameter geom_of_bus : BusState -> GeomState.
-  Parameter bus_of_geom : GeomState -> BusState.
-
-  Axiom Metrics_to_Dynamic :
-    forall m : BusState, Metrics_witness m -> Dynamic_witness (geom_of_bus m).
-
-  Axiom Dynamic_to_Metrics :
-    forall x : GeomState, Dynamic_witness x -> Metrics_witness (bus_of_geom x).
-
-  (** * SAT/TSP-critical metrics – structural definitions
-
-      Qui agganciamo i predicati [SAT_crit] e [TSP_crit] a definizioni
-      esplicite sul bus (campi di [LMetrics]), definite nel modulo
-      [Loventre_SAT_TSP_Critical_Metrics].
-   *)
-
-  Module Crit := Loventre_SAT_TSP_Critical_Metrics.
-
-  Definition SAT_crit : BusState -> Prop := Crit.SAT_crit.
-  Definition TSP_crit : BusState -> Prop := Crit.TSP_crit.
-
-  (** Per ora rimangono assiomi: ogni configurazione SAT/TSP-critica è
-      un witness metrico. In futuro questi assiomi sono ottimi candidati
-      per diventare teoremi, una volta espansa la struttura di
-      [Metrics_witness]. *)
-
-  Axiom SAT_crit_is_metrics_witness :
-    forall m : BusState, SAT_crit m -> Metrics_witness m.
-
-  Axiom TSP_crit_is_metrics_witness :
-    forall m : BusState, TSP_crit m -> Metrics_witness m.
-
-  (** * Main Loventre theorem – bus-level statement *)
-
-  Axiom Loventre_Theorem_Metrics :
-    exists L : Language,
-      InNP L /\ ~ InP L /\
-      exists m : BusState, Metrics_witness m.
-
-  (** * Main Loventre theorem – geometric / dynamic version *)
-
-  Theorem Loventre_Theorem :
-    exists L : Language,
-      InNP L /\ ~ InP L /\
-      exists x : GeomState, Dynamic_witness x.
-  Proof.
-    destruct Loventre_Theorem_Metrics as [L [HNP [HnotP [m Hm]]]].
-    exists L; split; [assumption | ].
-    split; [assumption | ].
-    exists (geom_of_bus m).
-    apply Metrics_to_Dynamic; assumption.
-  Qed.
-
-  (** * High-level corollaries (now derived, not axiomatic) *)
-
-  Theorem Loventre_Corollary_Static :
-    exists L : Language, InNP L /\ ~ InP L.
-  Proof.
-    destruct Loventre_Theorem as [L [HNP [HnotP _]]].
-    exists L; split; assumption.
-  Qed.
-
-  Theorem Loventre_Corollary_Dynamic :
-    exists x : GeomState, Dynamic_witness x.
-  Proof.
-    destruct Loventre_Theorem as [L [_ [_ [x Hx]]]].
-    exists x; exact Hx.
-  Qed.
-
-End Loventre_Main_Theorem.
+Lemma existence_of_blackhole_breaks_accessibility :
+  In_NP_blackhole_like m_seed_critico ->
+  ~ (forall m, In_P_accessible_like m).
+Proof.
+  intros Hbh Hall.
+  specialize (Hall m_seed_critico) as Hacc.
+  unfold In_P_accessible_like in Hacc.
+  destruct Hacc as [Hsafe _].
+  unfold SAFE, In_NP_blackhole_like, BlackHole in *.
+  simpl in *.
+  rewrite Hsafe in Hbh.
+  discriminate.
+Qed.
 

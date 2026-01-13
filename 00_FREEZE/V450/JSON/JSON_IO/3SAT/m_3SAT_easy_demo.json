@@ -1,0 +1,17 @@
+{
+  "name": "m_3SAT_easy_demo",
+  "source": "manual_seed_v120",
+  "kappa_eff": 0.18,
+  "entropy_eff": 0.32,
+  "potential": 0.25,
+  "V0": 0.40,
+  "p_tunnel": 0.82,
+  "P_success": 0.79,
+  "gamma_dilation": 0.15,
+  "mass_eff": 0.28,
+  "time_regime": "subcrit",
+  "risk_index": 0.19,
+  "chi_compactness": 0.21,
+  "horizon_flag": false
+}
+

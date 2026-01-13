@@ -1,0 +1,150 @@
+Module Loventre_TM_Interface.
+(** Loventre_Kernel.v
+    Kernel astratto per il Teorema di Loventre (versione pulita). *)
+
+From Coq Require Import Arith ZArith Lia.
+
+Set Implicit Arguments.
+Unset Strict Implicit.
+Unset Printing Implicit Defensive.
+
+Module Loventre_Geometry.
+
+Parameter M : Type.
+
+Parameter Complexity : M -> nat.
+Parameter g : M -> M -> nat.
+Parameter kappa : M -> Z.
+Parameter alpha_c : Z.
+Parameter Flow : nat -> M -> M.
+Parameter base_point : M.
+
+Definition subcritical (x : M) : Prop :=
+  (kappa x < alpha_c)%Z.
+
+Definition supercritical (x : M) : Prop :=
+  (kappa x >= alpha_c)%Z.
+
+Definition stable (x : M) : Prop :=
+  exists N : nat, forall n : nat,
+    (n >= N)%nat -> Flow n x = Flow N x.
+
+Definition divergent (x : M) : Prop :=
+  forall N : nat, exists n : nat,
+    (n >= N)%nat /\ Flow n x <> Flow N x.
+
+Definition contractible (x : M) : Prop :=
+  exists p : nat -> M,
+    p 0 = x /\
+    (exists T : nat, p T = base_point) /\
+    (exists C : nat, forall t : nat,
+        (t >= C)%nat -> p t = base_point).
+
+Definition non_contractible (x : M) : Prop :=
+  forall p : nat -> M,
+    p 0 = x ->
+    forall T : nat, p T = base_point -> False.
+
+End Loventre_Geometry.
+
+Module Loventre_TM_Interface.
+
+Parameter Config : Type.
+Parameter TMState : Type.
+
+Parameter next : Config -> Config.
+Parameter overflow : Config -> Prop.
+Parameter stable_conf : Config -> Prop.
+Parameter complexity_conf : Config -> nat.
+Parameter TM_step : nat -> Config -> Config.
+
+End Loventre_TM_Interface.
+
+Module Loventre_Correspondence.
+
+Import Loventre_Geometry.
+Import Loventre_TM_Interface.
+
+Parameter embed : Config -> M.
+
+Axiom embed_injective :
+  forall c1 c2 : Config,
+    embed c1 = embed c2 -> c1 = c2.
+
+Axiom overflow_implies_supercritical :
+  forall c : Config,
+    overflow c -> supercritical (embed c).
+
+Axiom stable_implies_subcritical :
+  forall c : Config,
+    stable_conf c -> subcritical (embed c).
+
+Axiom complexity_mono :
+  forall c1 c2 : Config,
+    Complexity (embed c1) <= Complexity (embed c2) ->
+    complexity_conf c1 <= complexity_conf c2.
+
+Axiom embed_flow :
+  forall n : nat, forall c : Config,
+    Flow n (embed c) = embed (TM_step n c).
+
+Parameter polytime_config : Config -> Prop.
+
+Axiom contractible_iff_polytime :
+  forall c : Config,
+    contractible (embed c) <-> polytime_config c.
+
+Axiom divergent_iff_noncontractible :
+  forall c : Config,
+    divergent (embed c) <-> non_contractible (embed c).
+
+End Loventre_Correspondence.
+
+Module Loventre_Lemmas.
+
+Import Loventre_Geometry.
+
+Lemma subcritical_not_supercritical :
+  forall x : M, subcritical x -> ~ supercritical x.
+Proof.
+  intros x Hsub Hsup.
+  unfold subcritical, supercritical in *.
+  lia.
+Qed.
+
+Axiom Reversibility_subcritical :
+  forall x : M,
+    subcritical x -> stable x.
+
+Axiom Divergence_supercritical :
+  forall x : M,
+    supercritical x -> divergent x.
+
+Axiom Critical_transition :
+  forall x : M,
+    exists n_c : nat,
+      (forall n : nat, (n < n_c)%nat -> subcritical (Flow n x)) /\
+      (forall n : nat, (n >= n_c)%nat -> supercritical (Flow n x)).
+
+End Loventre_Lemmas.
+
+Module Loventre_Theorem.
+
+Import Loventre_Geometry.
+Import Loventre_Lemmas.
+
+Axiom Loventre_static_separation :
+  forall x : M, subcritical x \/ supercritical x.
+
+Theorem Loventre_dynamic_separation :
+  forall x : M,
+    exists n_c : nat,
+      (forall n : nat, (n < n_c)%nat -> subcritical (Flow n x)) /\
+      (forall n : nat, (n >= n_c)%nat -> supercritical (Flow n x)).
+Proof.
+  intro x.
+  apply Critical_transition.
+Qed.
+
+End Loventre_Theorem.
+

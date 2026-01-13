@@ -1,0 +1,83 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{The Loventre Formal Core:\\
+An Abstract Geometric Model of Structural Separation}
+\author{Vincenzo Loventre}
+\date{}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+\maketitle
+
+\section*{Scope and Non-Claims}
+This paper presents the \emph{formal core} of the Loventre Model.
+All results are internal to the model.
+No claim is made regarding the classical \emph{P vs NP} problem or any external complexity-theoretic conjecture.
+
+\section{Abstract Computational Structure}
+
+\begin{definition}[Computational Space]
+Let $\mathcal{C}$ be a non-empty set whose elements are called computations.
+\end{definition}
+
+\begin{definition}[Structural Values]
+Let $\mathcal{V}$ be an abstract set equipped with a relation $\leq$.
+No algebraic or order-theoretic properties are assumed.
+\end{definition}
+
+\begin{definition}[Admissible Transitions]
+Let $\mathcal{R} \subseteq \mathcal{C} \times \mathcal{C}$ be a relation of admissible transitions.
+\end{definition}
+
+\section{Structural Invariants}
+
+Let
+\[
+\kappa, H, \chi : \mathcal{C} \to \mathcal{V}
+\]
+be structural invariants.
+
+\begin{definition}[Structural Variation]
+Let $\Delta(f,c_1,c_2)$ denote the structural variation of invariant $f$ between $c_1$ and $c_2$.
+\end{definition}
+
+\section{Efficiency}
+
+\begin{definition}[Efficient Trajectory]
+A trajectory $\tau \subseteq \mathcal{C}$ is said to be efficient if there exists $B \in \mathcal{V}$ such that
+for all invariants $f \in \{\kappa,H,\chi\}$ and all $c_1,c_2 \in \tau$,
+\[
+\Delta(f,c_1,c_2) \leq B.
+\]
+\end{definition}
+
+\section{Structural Horizons}
+
+\begin{definition}[Horizon]
+A computation $c \in \mathcal{C}$ exhibits a structural horizon if for every trajectory $\tau$ containing $c$
+and reaching a target region $\mathcal{T}$, the trajectory is not efficient.
+\end{definition}
+
+\section{Structural Separation}
+
+\begin{theorem}[Efficiency Obstruction]
+No efficient trajectory starting at a computation exhibiting a structural horizon can reach the target region.
+\end{theorem}
+
+\begin{proof}
+Immediate from the definition of structural horizon.
+\end{proof}
+
+\section*{Formal Verification}
+The above definitions and theorem are mechanically verified in Coq in the module
+\texttt{02\_Advanced/Geometry/Loventre\_Formal\_Core.v}.
+\end{document}
+
