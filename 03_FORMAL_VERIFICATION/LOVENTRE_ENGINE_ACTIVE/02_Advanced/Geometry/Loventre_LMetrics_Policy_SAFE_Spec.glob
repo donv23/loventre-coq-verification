@@ -1,0 +1,38 @@
+DIGEST f9310a0d78464e4a552991981de00725
+FLoventre_LMetrics_Policy_SAFE_Spec
+R228:232 Stdlib.Arith.Arith <> <> lib
+ax 452:462 <> SAFE_Policy
+ax 540:556 <> SAFE_Policy_Holds
+R560:570 Loventre_LMetrics_Policy_SAFE_Spec <> SAFE_Policy defax
+ax 810:821 <> Green_Metric
+ax 908:925 <> Green_Metric_Valid
+R929:940 Loventre_LMetrics_Policy_SAFE_Spec <> Green_Metric defax
+def 1159:1165 <> is_SAFE
+R1172:1182 Loventre_LMetrics_Policy_SAFE_Spec <> SAFE_Policy defax
+binder 1168:1168 <> p:9
+R1199:1201 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1198:1198 Loventre_LMetrics_Policy_SAFE_Spec <> p:9 var
+R1202:1218 Loventre_LMetrics_Policy_SAFE_Spec <> SAFE_Policy_Holds prfax
+def 1278:1285 <> is_Green
+R1292:1303 Loventre_LMetrics_Policy_SAFE_Spec <> Green_Metric defax
+binder 1288:1288 <> m:10
+R1320:1322 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1319:1319 Loventre_LMetrics_Policy_SAFE_Spec <> m:10 var
+R1323:1340 Loventre_LMetrics_Policy_SAFE_Spec <> Green_Metric_Valid prfax
+ax 1571:1590 <> Loventre_SAFE_Metric
+R1605:1608 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1594:1604 Loventre_LMetrics_Policy_SAFE_Spec <> SAFE_Policy defax
+R1621:1624 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1609:1620 Loventre_LMetrics_Policy_SAFE_Spec <> Green_Metric defax
+ax 1692:1717 <> Loventre_SAFE_Metric_Valid
+binder 1728:1728 <> p:13
+binder 1730:1730 <> m:14
+R1745:1748 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1736:1742 Loventre_LMetrics_Policy_SAFE_Spec <> is_SAFE def
+R1744:1744 Loventre_LMetrics_Policy_SAFE_Spec <> p:13 var
+R1759:1762 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1749:1756 Loventre_LMetrics_Policy_SAFE_Spec <> is_Green def
+R1758:1758 Loventre_LMetrics_Policy_SAFE_Spec <> m:14 var
+R1763:1782 Loventre_LMetrics_Policy_SAFE_Spec <> Loventre_SAFE_Metric defax
+R1784:1784 Loventre_LMetrics_Policy_SAFE_Spec <> p:13 var
+R1786:1786 Loventre_LMetrics_Policy_SAFE_Spec <> m:14 var

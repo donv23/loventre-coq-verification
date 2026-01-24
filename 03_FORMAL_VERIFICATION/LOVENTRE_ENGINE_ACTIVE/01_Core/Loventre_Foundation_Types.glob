@@ -1,0 +1,45 @@
+DIGEST 88cfab43edee9e36f2d62dae114c0a0d
+FLoventre_Core.Loventre_Foundation_Types
+R27:30 Stdlib.Lists.List <> <> lib
+R32:36 Stdlib.Arith.Arith <> <> lib
+R38:43 Stdlib.Strings.String <> <> lib
+R53:65 Stdlib.Lists.List ListNotations <> mod
+R103:117 Loventre_Core.Loventre_Kernel <> <> lib
+ind 249:257 <> RiskClass
+constr 264:271 <> risk_LOW
+constr 275:282 <> risk_MID
+constr 286:308 <> risk_NP_like_black_hole
+scheme 249:257 <> RiskClass_rect
+scheme 249:257 <> RiskClass_ind
+scheme 249:257 <> RiskClass_rec
+scheme 249:257 <> RiskClass_sind
+ind 322:330 <> MetaLabel
+constr 337:352 <> meta_P_like_like
+constr 356:377 <> meta_P_like_accessible
+constr 381:403 <> meta_NP_like_black_hole
+scheme 322:330 <> MetaLabel_rect
+scheme 322:330 <> MetaLabel_ind
+scheme 322:330 <> MetaLabel_rec
+scheme 322:330 <> MetaLabel_sind
+rec 414:431 <> LMetrics_JSON_Link
+proj 440:449 <> lm_id_link
+proj 463:474 <> lm_json_path
+proj 488:497 <> risk_class
+proj 514:523 <> meta_label
+R453:458 Stdlib.Strings.String <> string ind
+R478:483 Stdlib.Strings.String <> string ind
+R501:509 Loventre_Core.Loventre_Foundation_Types <> RiskClass ind
+R527:535 Loventre_Core.Loventre_Foundation_Types <> MetaLabel ind
+def 594:603 <> lm_default
+R607:624 Loventre_Core.Loventre_Foundation_Types <> LMetrics_JSON_Link rec
+R638:647 Loventre_Core.Loventre_Foundation_Types <> lm_id_link proj
+R638:647 Loventre_Core.Loventre_Foundation_Types <> lm_id_link proj
+R638:647 Loventre_Core.Loventre_Foundation_Types <> lm_id_link proj
+R667:678 Loventre_Core.Loventre_Foundation_Types <> lm_json_path proj
+R667:678 Loventre_Core.Loventre_Foundation_Types <> lm_json_path proj
+R695:704 Loventre_Core.Loventre_Foundation_Types <> risk_class proj
+R695:704 Loventre_Core.Loventre_Foundation_Types <> risk_class proj
+R723:732 Loventre_Core.Loventre_Foundation_Types <> meta_label proj
+R723:732 Loventre_Core.Loventre_Foundation_Types <> meta_label proj
+R709:716 Loventre_Core.Loventre_Foundation_Types <> risk_LOW constr
+R737:752 Loventre_Core.Loventre_Foundation_Types <> meta_P_like_like constr

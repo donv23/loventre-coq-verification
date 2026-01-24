@@ -1,0 +1,22 @@
+DIGEST c623e9bf10427f3af5fbd997d58d4bd6
+FLoventre_LMetrics_Witness_Separation
+R228:232 Stdlib.Arith.Arith <> <> lib
+ax 459:476 <> Witness_Separation
+ax 551:574 <> Witness_Separation_Valid
+R578:595 Loventre_LMetrics_Witness_Separation <> Witness_Separation defax
+def 817:829 <> is_Separation
+R836:853 Loventre_LMetrics_Witness_Separation <> Witness_Separation defax
+binder 832:832 <> w:5
+R870:872 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R869:869 Loventre_LMetrics_Witness_Separation <> w:5 var
+R873:896 Loventre_LMetrics_Witness_Separation <> Witness_Separation_Valid prfax
+ax 1134:1160 <> Loventre_Witness_Separation
+R1182:1185 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1164:1181 Loventre_LMetrics_Witness_Separation <> Witness_Separation defax
+ax 1260:1292 <> Loventre_Witness_Separation_Valid
+binder 1306:1306 <> w:8
+R1324:1327 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1309:1321 Loventre_LMetrics_Witness_Separation <> is_Separation def
+R1323:1323 Loventre_LMetrics_Witness_Separation <> w:8 var
+R1328:1354 Loventre_LMetrics_Witness_Separation <> Loventre_Witness_Separation defax
+R1356:1356 Loventre_LMetrics_Witness_Separation <> w:8 var

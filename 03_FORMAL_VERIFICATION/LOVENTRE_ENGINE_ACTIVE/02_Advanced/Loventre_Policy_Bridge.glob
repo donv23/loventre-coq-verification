@@ -1,0 +1,37 @@
+DIGEST 083d3963372fbea14f5e5cdbdd84a1bd
+FLoventre_Advanced.Loventre_Policy_Bridge
+R168:173 Stdlib.ZArith.ZArith <> <> lib
+R213:227 Loventre_Core.Loventre_Kernel <> <> lib
+R231:255 Loventre_Core.Loventre_Foundation_Types <> <> lib
+ind 560:573 <> GlobalDecision
+constr 586:599 <> DECISION_GREEN
+constr 603:617 <> DECISION_YELLOW
+constr 621:632 <> DECISION_RED
+scheme 560:573 <> GlobalDecision_rect
+scheme 560:573 <> GlobalDecision_ind
+scheme 560:573 <> GlobalDecision_rec
+scheme 560:573 <> GlobalDecision_sind
+def 855:875 <> RiskClass_to_Decision
+R883:891 Loventre_Core.Loventre_Foundation_Types <> RiskClass ind
+binder 878:879 <> rc:3
+R896:909 Loventre_Advanced.Loventre_Policy_Bridge <> GlobalDecision ind
+R922:923 Loventre_Advanced.Loventre_Policy_Bridge <> rc:3 var
+R934:941 Loventre_Core.Loventre_Foundation_Types <> risk_LOW constr
+R962:975 Loventre_Advanced.Loventre_Policy_Bridge <> DECISION_GREEN constr
+R981:988 Loventre_Core.Loventre_Foundation_Types <> risk_MID constr
+R1009:1023 Loventre_Advanced.Loventre_Policy_Bridge <> DECISION_YELLOW constr
+R1029:1051 Loventre_Core.Loventre_Foundation_Types <> risk_NP_like_black_hole constr
+R1057:1068 Loventre_Advanced.Loventre_Policy_Bridge <> DECISION_RED constr
+prf 1293:1319 <> RiskClass_to_Decision_total
+R1337:1345 Loventre_Core.Loventre_Foundation_Types <> RiskClass ind
+binder 1332:1333 <> rc:5
+R1352:1358 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1377:1384 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1363:1376 Loventre_Advanced.Loventre_Policy_Bridge <> GlobalDecision ind
+binder 1359:1359 <> d:6
+R1409:1411 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1385:1405 Loventre_Advanced.Loventre_Policy_Bridge <> RiskClass_to_Decision def
+R1407:1408 Loventre_Advanced.Loventre_Policy_Bridge <> rc:5 var
+R1412:1412 Loventre_Advanced.Loventre_Policy_Bridge <> d:6 var
+R1442:1462 Loventre_Advanced.Loventre_Policy_Bridge <> RiskClass_to_Decision def
+R1442:1462 Loventre_Advanced.Loventre_Policy_Bridge <> RiskClass_to_Decision def

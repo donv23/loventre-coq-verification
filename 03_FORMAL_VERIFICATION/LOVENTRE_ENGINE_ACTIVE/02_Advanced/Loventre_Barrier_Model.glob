@@ -1,0 +1,62 @@
+DIGEST cb70403939e34b26d3cae010e9f29542
+FLoventre_Advanced.Loventre_Barrier_Model
+R164:168 Stdlib.Arith.Arith <> <> lib
+R170:175 Stdlib.ZArith.ZArith <> <> lib
+R215:229 Loventre_Core.Loventre_Kernel <> <> lib
+R233:257 Loventre_Core.Loventre_Foundation_Types <> <> lib
+R261:286 Loventre_Core.Loventre_Foundation_Params <> <> lib
+R330:353 Loventre_Advanced.Loventre_Potential_Field <> <> lib
+R468:484 Loventre_Core.Loventre_Kernel Loventre_Geometry <> mod
+ax 715:718 <> V0_L
+R722:722 Corelib.Numbers.BinNums <> Z ind
+def 954:966 <> under_barrier
+R973:973 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 969:969 <> x:3
+R994:996 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<'_x not
+R989:991 Loventre_Advanced.Loventre_Potential_Field <> U_L def
+R993:993 Loventre_Advanced.Loventre_Barrier_Model <> x:3 var
+R997:1000 Loventre_Advanced.Loventre_Barrier_Model <> V0_L defax
+def 1018:1029 <> over_barrier
+R1036:1036 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 1032:1032 <> x:4
+R1057:1060 Stdlib.ZArith.BinInt <> ::Z_scope:x_'>='_x not
+R1052:1054 Loventre_Advanced.Loventre_Potential_Field <> U_L def
+R1056:1056 Loventre_Advanced.Loventre_Barrier_Model <> x:4 var
+R1061:1064 Loventre_Advanced.Loventre_Barrier_Model <> V0_L defax
+def 1082:1095 <> barrier_region
+R1102:1102 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 1098:1098 <> x:5
+R1117:1128 Loventre_Advanced.Loventre_Barrier_Model <> over_barrier def
+R1130:1130 Loventre_Advanced.Loventre_Barrier_Model <> x:5 var
+def 1362:1380 <> beyond_barrier_from
+R1387:1387 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 1383:1383 <> x:6
+R1396:1398 Corelib.Init.Datatypes <> nat ind
+binder 1391:1392 <> n0:7
+R1424:1426 Corelib.Init.Datatypes <> nat ind
+binder 1420:1420 <> n:8
+R1446:1453 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1435:1438 Corelib.Init.Peano <> ::nat_scope:x_'>='_x not
+R1434:1434 Loventre_Advanced.Loventre_Barrier_Model <> n:8 var
+R1439:1440 Loventre_Advanced.Loventre_Barrier_Model <> n0:7 var
+R1454:1465 Loventre_Advanced.Loventre_Barrier_Model <> over_barrier def
+R1468:1471 Loventre_Core.Loventre_Kernel Loventre_Geometry Flow defax
+R1475:1475 Loventre_Advanced.Loventre_Barrier_Model <> x:6 var
+R1473:1473 Loventre_Advanced.Loventre_Barrier_Model <> n:8 var
+def 1491:1505 <> barrier_segment
+R1512:1512 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 1508:1508 <> x:9
+R1520:1522 Corelib.Init.Datatypes <> nat ind
+binder 1516:1516 <> n:10
+R1548:1550 Corelib.Init.Datatypes <> nat ind
+binder 1544:1544 <> k:11
+R1575:1582 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1559:1562 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R1558:1558 Loventre_Advanced.Loventre_Barrier_Model <> k:11 var
+R1563:1569 Loventre_Core.Loventre_Foundation_Params <> a_min_L defax
+R1583:1595 Loventre_Advanced.Loventre_Barrier_Model <> under_barrier def
+R1598:1601 Loventre_Core.Loventre_Kernel Loventre_Geometry Flow defax
+R1615:1615 Loventre_Advanced.Loventre_Barrier_Model <> x:9 var
+R1605:1607 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R1604:1604 Loventre_Advanced.Loventre_Barrier_Model <> n:10 var
+R1608:1608 Loventre_Advanced.Loventre_Barrier_Model <> k:11 var

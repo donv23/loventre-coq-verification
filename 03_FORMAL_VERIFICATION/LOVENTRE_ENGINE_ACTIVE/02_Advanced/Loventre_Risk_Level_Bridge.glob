@@ -1,0 +1,31 @@
+DIGEST aa7b361347b6965a84bb2eef18c19ed8
+FLoventre_Advanced.Loventre_Risk_Level_Bridge
+R213:218 Stdlib.ZArith.ZArith <> <> lib
+R258:272 Loventre_Core.Loventre_Kernel <> <> lib
+R276:300 Loventre_Core.Loventre_Foundation_Types <> <> lib
+R344:362 Loventre_Advanced.Loventre_Risk_Level <> <> lib
+R456:472 Loventre_Core.Loventre_Kernel Loventre_Geometry <> mod
+def 695:716 <> RiskLevel_to_RiskClass
+R723:732 Loventre_Advanced.Loventre_Risk_Level <> Risk_Level ind
+binder 719:719 <> r:1
+R737:745 Loventre_Core.Loventre_Foundation_Types <> RiskClass ind
+R758:758 Loventre_Advanced.Loventre_Risk_Level_Bridge <> r:1 var
+R769:776 Loventre_Advanced.Loventre_Risk_Level <> RISK_LOW constr
+R784:791 Loventre_Core.Loventre_Foundation_Types <> risk_LOW constr
+R797:807 Loventre_Advanced.Loventre_Risk_Level <> RISK_MEDIUM constr
+R812:819 Loventre_Core.Loventre_Foundation_Types <> risk_MID constr
+R825:833 Loventre_Advanced.Loventre_Risk_Level <> RISK_HIGH constr
+R840:862 Loventre_Core.Loventre_Foundation_Types <> risk_NP_like_black_hole constr
+prf 1086:1113 <> RiskLevel_to_RiskClass_total
+R1130:1139 Loventre_Advanced.Loventre_Risk_Level <> Risk_Level ind
+binder 1126:1126 <> r:3
+R1146:1152 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1167:1174 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1158:1166 Loventre_Core.Loventre_Foundation_Types <> RiskClass ind
+binder 1153:1154 <> rc:4
+R1199:1201 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1175:1196 Loventre_Advanced.Loventre_Risk_Level_Bridge <> RiskLevel_to_RiskClass def
+R1198:1198 Loventre_Advanced.Loventre_Risk_Level_Bridge <> r:3 var
+R1202:1203 Loventre_Advanced.Loventre_Risk_Level_Bridge <> rc:4 var
+R1232:1253 Loventre_Advanced.Loventre_Risk_Level_Bridge <> RiskLevel_to_RiskClass def
+R1232:1253 Loventre_Advanced.Loventre_Risk_Level_Bridge <> RiskLevel_to_RiskClass def

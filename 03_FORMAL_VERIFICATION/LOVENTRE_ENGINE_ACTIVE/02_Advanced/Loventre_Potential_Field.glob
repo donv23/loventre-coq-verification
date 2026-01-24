@@ -1,0 +1,36 @@
+DIGEST 7160792d1fdc7632854ab07bb94a0e89
+FLoventre_Advanced.Loventre_Potential_Field
+R151:156 Stdlib.ZArith.ZArith <> <> lib
+R196:210 Loventre_Core.Loventre_Kernel <> <> lib
+R214:240 Loventre_Core.Loventre_Foundation_Entropy <> <> lib
+R244:269 Loventre_Core.Loventre_Foundation_Params <> <> lib
+R313:336 Loventre_Advanced.Loventre_Curvature_Field <> <> lib
+R497:529 Loventre_Core.Loventre_Kernel Loventre_Geometry <> mod
+def 631:633 <> U_L
+R640:640 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 636:636 <> x:1
+R645:645 Corelib.Numbers.BinNums <> Z ind
+R671:673 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R659:661 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R652:658 Loventre_Core.Loventre_Foundation_Params <> alpha_L defax
+R662:668 Loventre_Advanced.Loventre_Curvature_Field <> kappa_L def
+R670:670 Loventre_Advanced.Loventre_Potential_Field <> x:1 var
+R680:682 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R674:679 Loventre_Core.Loventre_Foundation_Params <> beta_L defax
+R683:691 Loventre_Core.Loventre_Foundation_Entropy <> Entropy_L defax
+R693:693 Loventre_Advanced.Loventre_Potential_Field <> x:1 var
+prf 703:729 <> U_L_linear_in_kappa_entropy
+R746:746 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 742:742 <> x:2
+R758:760 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R753:755 Loventre_Advanced.Loventre_Potential_Field <> U_L def
+R757:757 Loventre_Advanced.Loventre_Potential_Field <> x:2 var
+R780:782 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R768:770 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R761:767 Loventre_Core.Loventre_Foundation_Params <> alpha_L defax
+R771:777 Loventre_Advanced.Loventre_Curvature_Field <> kappa_L def
+R779:779 Loventre_Advanced.Loventre_Potential_Field <> x:2 var
+R789:791 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R783:788 Loventre_Core.Loventre_Foundation_Params <> beta_L defax
+R792:800 Loventre_Core.Loventre_Foundation_Entropy <> Entropy_L defax
+R802:802 Loventre_Advanced.Loventre_Potential_Field <> x:2 var

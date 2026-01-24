@@ -1,0 +1,11 @@
+DIGEST e401e4e8c0a63f74c6fa758c60a8051b
+FLoventre_Advanced.Loventre_Advanced_Index
+R344:367 Loventre_Advanced.Loventre_Curvature_Field <> <> lib
+R371:394 Loventre_Advanced.Loventre_Potential_Field <> <> lib
+R398:419 Loventre_Advanced.Loventre_Barrier_Model <> <> lib
+R423:446 Loventre_Advanced.Loventre_Tunneling_Model <> <> lib
+R450:468 Loventre_Advanced.Loventre_Risk_Level <> <> lib
+R472:497 Loventre_Advanced.Loventre_Risk_Level_Bridge <> <> lib
+R501:522 Loventre_Advanced.Loventre_Policy_Bridge <> <> lib
+R526:550 Loventre_Advanced.Loventre_Witness_EndToEnd <> <> lib
+R554:583 Loventre_Advanced.Loventre_Mini_Theorem_EndToEnd <> <> lib

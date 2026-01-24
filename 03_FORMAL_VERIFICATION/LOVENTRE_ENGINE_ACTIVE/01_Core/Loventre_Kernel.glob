@@ -1,0 +1,250 @@
+DIGEST 018f020892c26f95f43d63ab0ce6c5ab
+FLoventre_Core.Loventre_Kernel
+R116:120 Stdlib.Arith.Arith <> <> lib
+R122:127 Stdlib.ZArith.ZArith <> <> lib
+R129:131 Stdlib.micromega.Lia <> <> lib
+mod 439:455 <> Loventre_Geometry
+ax 471:471 Loventre_Geometry M
+ax 494:503 Loventre_Geometry Complexity
+R508:511 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R507:507 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+R512:514 Corelib.Init.Datatypes <> nat ind
+ax 529:529 Loventre_Geometry g
+R543:546 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R542:542 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+R548:551 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R547:547 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+R552:554 Corelib.Init.Datatypes <> nat ind
+ax 569:573 Loventre_Geometry kappa
+R583:586 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R582:582 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+R587:587 Corelib.Numbers.BinNums <> Z ind
+ax 602:608 Loventre_Geometry alpha_c
+R615:615 Corelib.Numbers.BinNums <> Z ind
+ax 630:633 Loventre_Geometry Flow
+R646:649 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R643:645 Corelib.Init.Datatypes <> nat ind
+R651:654 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R650:650 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+R655:655 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+ax 670:679 Loventre_Geometry base_point
+R683:683 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+def 777:787 Loventre_Geometry subcritical
+R794:794 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 790:790 <> x:15
+R819:821 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<'_x not
+R812:816 Loventre_Core.Loventre_Kernel Loventre_Geometry kappa defax
+R818:818 Loventre_Core.Loventre_Kernel <> x:15 var
+R822:828 Loventre_Core.Loventre_Kernel Loventre_Geometry alpha_c defax
+def 848:860 Loventre_Geometry supercritical
+R867:867 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 863:863 <> x:16
+R892:895 Stdlib.ZArith.BinInt <> ::Z_scope:x_'>='_x not
+R885:889 Loventre_Core.Loventre_Kernel Loventre_Geometry kappa defax
+R891:891 Loventre_Core.Loventre_Kernel <> x:16 var
+R896:902 Loventre_Core.Loventre_Kernel Loventre_Geometry alpha_c defax
+def 996:1001 Loventre_Geometry stable
+R1008:1008 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 1004:1004 <> x:17
+R1025:1031 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1039:1040 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1036:1038 Corelib.Init.Datatypes <> nat ind
+binder 1032:1032 <> N:18
+R1052:1054 Corelib.Init.Datatypes <> nat ind
+binder 1048:1048 <> n:19
+R1075:1078 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1065:1068 Corelib.Init.Peano <> ::nat_scope:x_'>='_x not
+R1064:1064 Loventre_Core.Loventre_Kernel <> n:19 var
+R1069:1069 Loventre_Core.Loventre_Kernel <> N:18 var
+R1087:1089 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1079:1082 Loventre_Core.Loventre_Kernel Loventre_Geometry Flow defax
+R1086:1086 Loventre_Core.Loventre_Kernel <> x:17 var
+R1084:1084 Loventre_Core.Loventre_Kernel <> n:19 var
+R1090:1093 Loventre_Core.Loventre_Kernel Loventre_Geometry Flow defax
+R1097:1097 Loventre_Core.Loventre_Kernel <> x:17 var
+R1095:1095 Loventre_Core.Loventre_Kernel <> N:18 var
+def 1185:1193 Loventre_Geometry divergent
+R1200:1200 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 1196:1196 <> x:20
+R1228:1230 Corelib.Init.Datatypes <> nat ind
+binder 1224:1224 <> N:21
+R1233:1239 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1247:1254 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1244:1246 Corelib.Init.Datatypes <> nat ind
+binder 1240:1240 <> n:22
+R1267:1270 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R1257:1260 Corelib.Init.Peano <> ::nat_scope:x_'>='_x not
+R1256:1256 Loventre_Core.Loventre_Kernel <> n:22 var
+R1261:1261 Loventre_Core.Loventre_Kernel <> N:21 var
+R1279:1282 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1271:1274 Loventre_Core.Loventre_Kernel Loventre_Geometry Flow defax
+R1278:1278 Loventre_Core.Loventre_Kernel <> x:20 var
+R1276:1276 Loventre_Core.Loventre_Kernel <> n:22 var
+R1283:1286 Loventre_Core.Loventre_Kernel Loventre_Geometry Flow defax
+R1290:1290 Loventre_Core.Loventre_Kernel <> x:20 var
+R1288:1288 Loventre_Core.Loventre_Kernel <> N:21 var
+ax 1451:1462 Loventre_Geometry contractible
+R1472:1475 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1471:1471 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+ax 1494:1509 Loventre_Geometry non_contractible
+R1515:1518 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1514:1514 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+ax 1534:1555 Loventre_Geometry contractible_exclusive
+R1574:1574 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 1570:1570 <> x:27
+R1591:1594 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1577:1588 Loventre_Core.Loventre_Kernel Loventre_Geometry contractible defax
+R1590:1590 Loventre_Core.Loventre_Kernel <> x:27 var
+R1595:1596 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R1597:1612 Loventre_Core.Loventre_Kernel Loventre_Geometry non_contractible defax
+R1614:1614 Loventre_Core.Loventre_Kernel <> x:27 var
+ax 1626:1651 Loventre_Geometry non_contractible_exclusive
+R1670:1670 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 1666:1666 <> x:30
+R1691:1694 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1673:1688 Loventre_Core.Loventre_Kernel Loventre_Geometry non_contractible defax
+R1690:1690 Loventre_Core.Loventre_Kernel <> x:30 var
+R1695:1696 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R1697:1708 Loventre_Core.Loventre_Kernel Loventre_Geometry contractible defax
+R1710:1710 Loventre_Core.Loventre_Kernel <> x:30 var
+R1718:1734 Loventre_Core.Loventre_Kernel Loventre_Geometry <> mod
+mod 1959:1979 <> Loventre_TM_Interface
+ax 1995:2000 Loventre_TM_Interface Config
+ax 2023:2029 Loventre_TM_Interface TMState
+ax 2093:2096 Loventre_TM_Interface next
+R2106:2109 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2100:2105 Loventre_Core.Loventre_Kernel Loventre_TM_Interface Config defax
+R2110:2115 Loventre_Core.Loventre_Kernel Loventre_TM_Interface Config defax
+ax 2212:2219 Loventre_TM_Interface overflow
+R2229:2232 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2223:2228 Loventre_Core.Loventre_Kernel Loventre_TM_Interface Config defax
+ax 2320:2330 Loventre_TM_Interface stable_conf
+R2340:2343 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2334:2339 Loventre_Core.Loventre_Kernel Loventre_TM_Interface Config defax
+ax 2423:2437 Loventre_TM_Interface complexity_conf
+R2447:2450 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2441:2446 Loventre_Core.Loventre_Kernel Loventre_TM_Interface Config defax
+R2451:2453 Corelib.Init.Datatypes <> nat ind
+ax 2501:2507 Loventre_TM_Interface TM_step
+R2514:2517 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2511:2513 Corelib.Init.Datatypes <> nat ind
+R2524:2527 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2518:2523 Loventre_Core.Loventre_Kernel Loventre_TM_Interface Config defax
+R2528:2533 Loventre_Core.Loventre_Kernel Loventre_TM_Interface Config defax
+ax 2545:2553 Loventre_TM_Interface TM_step_0
+R2572:2577 Loventre_Core.Loventre_Kernel Loventre_TM_Interface Config defax
+binder 2568:2568 <> c:47
+R2591:2593 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2580:2586 Loventre_Core.Loventre_Kernel Loventre_TM_Interface TM_step defax
+R2590:2590 Loventre_Core.Loventre_Kernel <> c:47 var
+R2594:2594 Loventre_Core.Loventre_Kernel <> c:47 var
+ax 2606:2614 Loventre_TM_Interface TM_step_S
+R2634:2636 Corelib.Init.Datatypes <> nat ind
+binder 2630:2630 <> n:50
+R2644:2649 Loventre_Core.Loventre_Kernel Loventre_TM_Interface Config defax
+binder 2640:2640 <> c:51
+R2674:2676 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2659:2665 Loventre_Core.Loventre_Kernel Loventre_TM_Interface TM_step defax
+R2673:2673 Loventre_Core.Loventre_Kernel <> c:51 var
+R2668:2668 Corelib.Init.Datatypes <> S constr
+R2670:2670 Loventre_Core.Loventre_Kernel <> n:50 var
+R2677:2683 Loventre_Core.Loventre_Kernel Loventre_TM_Interface TM_step defax
+R2688:2691 Loventre_Core.Loventre_Kernel Loventre_TM_Interface next defax
+R2693:2693 Loventre_Core.Loventre_Kernel <> c:51 var
+R2685:2685 Loventre_Core.Loventre_Kernel <> n:50 var
+R2702:2722 Loventre_Core.Loventre_Kernel Loventre_TM_Interface <> mod
+mod 2949:2971 <> Loventre_Correspondence
+R2991:3007 Loventre_Core.Loventre_Kernel Loventre_Geometry <> mod
+mod 2984:2986 <> Loventre_Correspondence.Geo
+R3026:3046 Loventre_Core.Loventre_Kernel Loventre_TM_Interface <> mod
+mod 3019:3020 <> Loventre_Correspondence.TM
+ax 3131:3135 Loventre_Correspondence embed
+R3148:3151 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3139:3147 Loventre_Core.Loventre_Kernel Loventre_Correspondence Config defax
+R3152:3156 Loventre_Core.Loventre_Kernel Loventre_Correspondence M defax
+ax 3168:3182 Loventre_Correspondence embed_injective
+R3205:3213 Loventre_Core.Loventre_Kernel Loventre_Correspondence Config defax
+binder 3197:3198 <> c1:56
+binder 3200:3201 <> c2:57
+R3241:3244 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3230:3232 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3222:3226 Loventre_Core.Loventre_Kernel Loventre_Correspondence embed defax
+R3228:3229 Loventre_Core.Loventre_Kernel <> c1:56 var
+R3233:3237 Loventre_Core.Loventre_Kernel Loventre_Correspondence embed defax
+R3239:3240 Loventre_Core.Loventre_Kernel <> c2:57 var
+R3247:3249 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3245:3246 Loventre_Core.Loventre_Kernel <> c1:56 var
+R3250:3251 Loventre_Core.Loventre_Kernel <> c2:57 var
+ax 3313:3342 Loventre_Correspondence overflow_implies_supercritical
+R3361:3369 Loventre_Core.Loventre_Kernel Loventre_Correspondence Config defax
+binder 3357:3357 <> c:60
+R3391:3400 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3378:3388 Loventre_Core.Loventre_Kernel Loventre_Correspondence overflow defax
+R3390:3390 Loventre_Core.Loventre_Kernel <> c:60 var
+R3401:3417 Loventre_Core.Loventre_Kernel Loventre_Correspondence supercritical def
+R3420:3424 Loventre_Core.Loventre_Kernel Loventre_Correspondence embed defax
+R3426:3426 Loventre_Core.Loventre_Kernel <> c:60 var
+ax 3510:3535 Loventre_Correspondence stable_implies_subcritical
+R3554:3562 Loventre_Core.Loventre_Kernel Loventre_Correspondence Config defax
+binder 3550:3550 <> c:63
+R3587:3596 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3571:3584 Loventre_Core.Loventre_Kernel Loventre_Correspondence stable_conf defax
+R3586:3586 Loventre_Core.Loventre_Kernel <> c:63 var
+R3597:3611 Loventre_Core.Loventre_Kernel Loventre_Correspondence subcritical def
+R3614:3618 Loventre_Core.Loventre_Kernel Loventre_Correspondence embed defax
+R3620:3620 Loventre_Core.Loventre_Kernel <> c:63 var
+ax 3780:3794 Loventre_Correspondence complexity_mono
+R3817:3825 Loventre_Core.Loventre_Kernel Loventre_Correspondence Config defax
+binder 3809:3810 <> c1:66
+binder 3812:3813 <> c2:67
+R3880:3889 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3855:3858 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R3834:3851 Loventre_Core.Loventre_Kernel Loventre_Correspondence complexity_conf defax
+R3853:3854 Loventre_Core.Loventre_Kernel <> c1:66 var
+R3859:3876 Loventre_Core.Loventre_Kernel Loventre_Correspondence complexity_conf defax
+R3878:3879 Loventre_Core.Loventre_Kernel <> c2:67 var
+R3915:3918 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R3890:3903 Loventre_Core.Loventre_Kernel Loventre_Correspondence Complexity defax
+R3906:3910 Loventre_Core.Loventre_Kernel Loventre_Correspondence embed defax
+R3912:3913 Loventre_Core.Loventre_Kernel <> c1:66 var
+R3919:3932 Loventre_Core.Loventre_Kernel Loventre_Correspondence Complexity defax
+R3935:3939 Loventre_Core.Loventre_Kernel Loventre_Correspondence embed defax
+R3941:3942 Loventre_Core.Loventre_Kernel <> c2:67 var
+ax 4007:4016 Loventre_Correspondence embed_flow
+R4036:4038 Corelib.Init.Datatypes <> nat ind
+binder 4032:4032 <> n:70
+R4046:4054 Loventre_Core.Loventre_Kernel Loventre_Correspondence Config defax
+binder 4042:4042 <> c:71
+R4084:4086 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4064:4071 Loventre_Core.Loventre_Kernel Loventre_Correspondence Flow defax
+R4076:4080 Loventre_Core.Loventre_Kernel Loventre_Correspondence embed defax
+R4082:4082 Loventre_Core.Loventre_Kernel <> c:71 var
+R4073:4073 Loventre_Core.Loventre_Kernel <> n:70 var
+R4087:4091 Loventre_Core.Loventre_Kernel Loventre_Correspondence embed defax
+R4094:4103 Loventre_Core.Loventre_Kernel Loventre_Correspondence TM_step defax
+R4107:4107 Loventre_Core.Loventre_Kernel <> c:71 var
+R4105:4105 Loventre_Core.Loventre_Kernel <> n:70 var
+ax 4199:4213 Loventre_Correspondence polytime_config
+R4226:4229 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4217:4225 Loventre_Core.Loventre_Kernel Loventre_Correspondence Config defax
+ax 4395:4419 Loventre_Correspondence contractible_iff_polytime
+R4438:4446 Loventre_Core.Loventre_Kernel Loventre_Correspondence Config defax
+binder 4434:4434 <> c:76
+R4472:4476 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R4455:4469 Loventre_Core.Loventre_Kernel Loventre_Correspondence polytime_config defax
+R4471:4471 Loventre_Core.Loventre_Kernel <> c:76 var
+R4477:4492 Loventre_Core.Loventre_Kernel Loventre_Correspondence contractible defax
+R4495:4499 Loventre_Core.Loventre_Kernel Loventre_Correspondence embed defax
+R4501:4501 Loventre_Core.Loventre_Kernel <> c:76 var
+ax 4514:4542 Loventre_Correspondence divergent_iff_noncontractible
+R4561:4569 Loventre_Core.Loventre_Kernel Loventre_Correspondence Config defax
+binder 4557:4557 <> c:79
+R4578:4578 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R4598:4603 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R4579:4580 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R4581:4595 Loventre_Core.Loventre_Kernel Loventre_Correspondence polytime_config defax
+R4597:4597 Loventre_Core.Loventre_Kernel <> c:79 var
+R4604:4623 Loventre_Core.Loventre_Kernel Loventre_Correspondence non_contractible defax
+R4626:4630 Loventre_Core.Loventre_Kernel Loventre_Correspondence embed defax
+R4632:4632 Loventre_Core.Loventre_Kernel <> c:79 var
+R4641:4663 Loventre_Core.Loventre_Kernel Loventre_Correspondence <> mod

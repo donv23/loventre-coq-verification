@@ -1,0 +1,9 @@
+DIGEST f0978facabab8a15a0aa8bc4cbe643d4
+FLoventre_Core.Loventre_Foundation_Entropy
+R141:146 Stdlib.ZArith.ZArith <> <> lib
+R186:200 Loventre_Core.Loventre_Kernel <> <> lib
+R294:310 Loventre_Core.Loventre_Kernel Loventre_Geometry <> mod
+ax 365:373 <> Entropy_L
+R378:381 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R377:377 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+R382:382 Corelib.Numbers.BinNums <> Z ind

@@ -1,0 +1,196 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 From Coq Require Import ZArith Lia Arith Nat.\
+\
+(***************************************************)\
+(*   MODULO AVANZATO \'97 MANIFOLD INFORMAZIONALE     *)\
+(*   stabilit\'e0 locale dei regimi P-like / NP-like  *)\
+(***************************************************)\
+\
+Module Loventre_Advanced_Manifold.\
+\
+  (*\
+     Dal core (Loventre_Base) assumiamo:\
+\
+       - M : Type\
+       - g : M -> M -> nat           (* metrica informazionale discreta *)\
+       - subcritical, supercritical : M -> Prop\
+       - subcritical_not_supercritical :\
+           forall x, subcritical x -> supercritical x -> False\
+   *)\
+\
+  Open Scope nat_scope.\
+\
+  (***************************************************)\
+  (* 1. Vicinanza locale sul manifold discreto       *)\
+  (***************************************************)\
+\
+  (* Due punti sono localmente vicini se la distanza informazionale\
+     \'e8 al pi\'f9 1 (raggio unitario nella metrica discreta). *)\
+  Definition local_equiv (x y : M) : Prop :=\
+    g x y <= 1%nat.\
+\
+  (* Simmetria locale della metrica: se x \'e8 vicino a y, y \'e8 vicino a x. *)\
+  Axiom local_equiv_sym :\
+    forall x y : M,\
+      local_equiv x y -> local_equiv y x.\
+\
+  (***************************************************)\
+  (* 2. Stabilit\'e0 locale dei regimi di curvatura     *)\
+  (***************************************************)\
+\
+  (* Regime subcritico stabile rispetto a piccole perturbazioni\
+     nella metrica informazionale. *)\
+  Axiom local_subcritical_stable :\
+    forall x y : M,\
+      local_equiv x y ->\
+      subcritical x ->\
+      subcritical y.\
+\
+  (* Regime supercritico stabile rispetto a piccole perturbazioni\
+     nella metrica informazionale. *)\
+  Axiom local_supercritical_stable :\
+    forall x y : M,\
+      local_equiv x y ->\
+      supercritical x ->\
+      supercritical y.\
+\
+  (***************************************************)\
+  (* 3. Relazione di equivalenza di regime           *)\
+  (***************************************************)\
+\
+  (* Due punti hanno lo stesso regime se condividono esattamente\
+     lo stato subcritico/supercritico. *)\
+  Definition same_regime (x y : M) : Prop :=\
+    (subcritical x <-> subcritical y) /\\\
+    (supercritical x <-> supercritical y).\
+\
+  Lemma same_regime_refl :\
+    forall x : M, same_regime x x.\
+  Proof.\
+    intros x.\
+    split; split; tauto.\
+  Qed.\
+\
+  Lemma same_regime_sym :\
+    forall x y : M,\
+      same_regime x y -> same_regime y x.\
+  Proof.\
+    intros x y [Hsub Hsup].\
+    split; [symmetry | symmetry]; assumption.\
+  Qed.\
+\
+  Lemma same_regime_trans :\
+    forall x y z : M,\
+      same_regime x y ->\
+      same_regime y z ->\
+      same_regime x z.\
+  Proof.\
+    intros x y z [Hsub_xy Hsup_xy] [Hsub_yz Hsup_yz].\
+    split.\
+    - (* subcritical *)\
+      split; intro H.\
+      + apply Hsub_yz.\
+        apply Hsub_xy; exact H.\
+      + apply Hsub_xy.\
+        apply Hsub_yz; exact H.\
+    - (* supercritical *)\
+      split; intro H.\
+      + apply Hsup_yz.\
+        apply Hsup_xy; exact H.\
+      + apply Hsup_xy.\
+        apply Hsup_yz; exact H.\
+  Qed.\
+\
+  (***************************************************)\
+  (* 4. Vicinanza locale implica stesso regime       *)\
+  (***************************************************)\
+\
+  Lemma local_equiv_same_regime_subcritical :\
+    forall x y : M,\
+      local_equiv x y ->\
+      subcritical x ->\
+      same_regime x y.\
+  Proof.\
+    intros x y Hloc Hsub.\
+    unfold same_regime.\
+    split.\
+    - (* equivalenza subcritical *)\
+      split.\
+      + (* subcritical x -> subcritical y *)\
+        intro _; apply (local_subcritical_stable x y); assumption.\
+      + (* subcritical y -> subcritical x *)\
+        intro Hsub_y.\
+        (* usiamo la simmetria locale per tornare da y a x *)\
+        pose proof (local_equiv_sym x y Hloc) as Hloc'.\
+        apply (local_subcritical_stable y x); assumption.\
+    - (* equivalenza supercritical: entrambe false, per incompatibilit\'e0 *)\
+      split; intro Hsup.\
+      + (* supercritical x impossibile, dato subcritical x *)\
+        exfalso.\
+        apply (subcritical_not_supercritical x); assumption.\
+      + (* supercritical y impossibile, dato subcritical y *)\
+        exfalso.\
+        (* da Hsup e local_equiv otteniamo supercritical x,\
+           ma abbiamo subcritical x *)\
+        pose proof (local_equiv_sym x y Hloc) as Hloc'.\
+        pose proof (local_supercritical_stable y x Hloc' Hsup)\
+          as Hsup_x.\
+        apply (subcritical_not_supercritical x); assumption.\
+  Qed.\
+\
+  Lemma local_equiv_same_regime_supercritical :\
+    forall x y : M,\
+      local_equiv x y ->\
+      supercritical x ->\
+      same_regime x y.\
+  Proof.\
+    intros x y Hloc Hsup.\
+    unfold same_regime.\
+    split.\
+    - (* equivalenza subcritical: entrambe false, per incompatibilit\'e0 *)\
+      split; intro Hsub.\
+      + exfalso.\
+        apply (subcritical_not_supercritical x); assumption.\
+      + exfalso.\
+        pose proof (local_equiv_sym x y Hloc) as Hloc'.\
+        pose proof (local_subcritical_stable y x Hloc' Hsub)\
+          as Hsub_x.\
+        apply (subcritical_not_supercritical x); assumption.\
+    - (* equivalenza supercritical *)\
+      split.\
+      + (* supercritical x -> supercritical y *)\
+        intro _; apply (local_supercritical_stable x y); assumption.\
+      + (* supercritical y -> supercritical x *)\
+        intro Hsup_y.\
+        pose proof (local_equiv_sym x y Hloc) as Hloc'.\
+        apply (local_supercritical_stable y x); assumption.\
+  Qed.\
+\
+  (***************************************************)\
+  (* 5. same_regime \'e8 una relazione di equivalenza   *)\
+  (*    indotta dalla metrica informazionale         *)\
+  (***************************************************)\
+\
+  Lemma same_regime_equiv_relation :\
+    (forall x : M, same_regime x x) /\\\
+    (forall x y : M, same_regime x y -> same_regime y x) /\\\
+    (forall x y z : M,\
+        same_regime x y -> same_regime y z -> same_regime x z).\
+  Proof.\
+    split.\
+    - apply same_regime_refl.\
+    - split.\
+      + apply same_regime_sym.\
+      + apply same_regime_trans.\
+  Qed.\
+\
+End Loventre_Advanced_Manifold.\
+\
+Export Loventre_Advanced_Manifold.\
+}

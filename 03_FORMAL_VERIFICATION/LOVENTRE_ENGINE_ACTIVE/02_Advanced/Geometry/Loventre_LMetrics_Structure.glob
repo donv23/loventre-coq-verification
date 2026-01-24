@@ -1,0 +1,30 @@
+DIGEST f28239a44e0f45fbd3be9345706c0b65
+FLoventre_LMetrics_Structure
+R116:133 Stdlib.Reals.Rdefinitions <> <> lib
+R135:147 Stdlib.Reals.Raxioms <> <> lib
+rec 276:283 <> LMetrics
+proj 319:327 <> kappa_eff
+proj 339:349 <> entropy_eff
+proj 359:360 <> V0
+proj 379:386 <> p_tunnel
+proj 399:407 <> P_success
+proj 469:479 <> barrier_tag
+proj 561:583 <> informational_potential
+R334:334 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R354:354 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R374:374 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R394:394 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R414:414 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R484:484 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R587:587 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+def 818:845 <> InformationalPotentialNonneg
+R852:859 Loventre_LMetrics_Structure <> LMetrics rec
+binder 848:848 <> M:9
+R874:876 Stdlib.Reals.Rdefinitions <> Rge def
+R879:901 Loventre_LMetrics_Structure <> informational_potential proj
+R903:903 Loventre_LMetrics_Structure <> M:9 var
+ax 918:947 <> informational_potential_nonneg
+R964:971 Loventre_LMetrics_Structure <> LMetrics rec
+binder 960:960 <> M:10
+R978:1005 Loventre_LMetrics_Structure <> InformationalPotentialNonneg def
+R1007:1007 Loventre_LMetrics_Structure <> M:10 var

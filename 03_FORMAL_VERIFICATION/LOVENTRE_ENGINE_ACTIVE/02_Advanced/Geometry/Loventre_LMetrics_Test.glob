@@ -1,0 +1,6 @@
+DIGEST 76875c2d756e85b299511aeaa55b8a16
+FLoventre_LMetrics_Test
+R219:223 Stdlib.Arith.Arith <> <> lib
+prf 268:277 <> test_lemma
+R286:288 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R282:284 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not

@@ -1,0 +1,14 @@
+DIGEST 2b7eb2e4185c5d3983adcbb93ef02c8d
+FLoventre_Core.Loventre_Core_Prelude
+R343:347 Stdlib.Reals.Reals <> <> lib
+R351:360 Stdlib.Lists.List <> <> lib
+R364:372 Stdlib.Bool.Bool <> <> lib
+R376:386 Stdlib.Arith.Arith <> <> lib
+R390:409 Stdlib.Logic.Classical_Prop <> <> lib
+R420:432 Stdlib.Lists.List ListNotations <> mod
+def 836:839 <> Real
+R844:844 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+def 858:860 <> Nat
+R866:868 Corelib.Init.Datatypes <> nat ind
+def 882:885 <> Bool
+R890:893 Corelib.Init.Datatypes <> bool ind

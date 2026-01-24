@@ -1,0 +1,43 @@
+DIGEST f4695b46aec233009163f579a724abb9
+FLoventre_Advanced.Loventre_Witness_EndToEnd
+R120:125 Stdlib.ZArith.ZArith <> <> lib
+R165:179 Loventre_Core.Loventre_Kernel <> <> lib
+R183:207 Loventre_Core.Loventre_Foundation_Types <> <> lib
+R251:269 Loventre_Advanced.Loventre_Risk_Level <> <> lib
+R273:298 Loventre_Advanced.Loventre_Risk_Level_Bridge <> <> lib
+R302:323 Loventre_Advanced.Loventre_Policy_Bridge <> <> lib
+R417:433 Loventre_Core.Loventre_Kernel Loventre_Geometry <> mod
+prf 651:676 <> exists_end_to_end_decision
+R682:689 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R779:785 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R694:694 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 690:690 <> x:1
+R712:721 Loventre_Advanced.Loventre_Risk_Level <> Risk_Level ind
+binder 707:708 <> rl:2
+R739:747 Loventre_Core.Loventre_Foundation_Types <> RiskClass ind
+binder 734:735 <> rc:3
+R765:778 Loventre_Advanced.Loventre_Policy_Bridge <> GlobalDecision ind
+binder 760:760 <> d:4
+R816:823 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R811:813 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R786:807 Loventre_Advanced.Loventre_Risk_Level_Bridge <> RiskLevel_to_RiskClass def
+R809:810 Loventre_Advanced.Loventre_Witness_EndToEnd <> rl:2 var
+R814:815 Loventre_Advanced.Loventre_Witness_EndToEnd <> rc:3 var
+R848:850 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R824:844 Loventre_Advanced.Loventre_Policy_Bridge <> RiskClass_to_Decision def
+R846:847 Loventre_Advanced.Loventre_Witness_EndToEnd <> rc:3 var
+R851:851 Loventre_Advanced.Loventre_Witness_EndToEnd <> d:4 var
+R909:918 Loventre_Core.Loventre_Kernel Loventre_Geometry base_point defax
+R909:918 Loventre_Core.Loventre_Kernel Loventre_Geometry base_point defax
+R982:989 Loventre_Advanced.Loventre_Risk_Level <> RISK_LOW constr
+R982:989 Loventre_Advanced.Loventre_Risk_Level <> RISK_LOW constr
+R1034:1055 Loventre_Advanced.Loventre_Risk_Level_Bridge <> RiskLevel_to_RiskClass def
+R1057:1064 Loventre_Advanced.Loventre_Risk_Level <> RISK_LOW constr
+R1034:1055 Loventre_Advanced.Loventre_Risk_Level_Bridge <> RiskLevel_to_RiskClass def
+R1057:1064 Loventre_Advanced.Loventre_Risk_Level <> RISK_LOW constr
+R1110:1130 Loventre_Advanced.Loventre_Policy_Bridge <> RiskClass_to_Decision def
+R1145:1166 Loventre_Advanced.Loventre_Risk_Level_Bridge <> RiskLevel_to_RiskClass def
+R1168:1175 Loventre_Advanced.Loventre_Risk_Level <> RISK_LOW constr
+R1110:1130 Loventre_Advanced.Loventre_Policy_Bridge <> RiskClass_to_Decision def
+R1145:1166 Loventre_Advanced.Loventre_Risk_Level_Bridge <> RiskLevel_to_RiskClass def
+R1168:1175 Loventre_Advanced.Loventre_Risk_Level <> RISK_LOW constr

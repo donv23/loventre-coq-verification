@@ -1,0 +1,48 @@
+l(** Loventre_LMetrics_Instances.v
+
+    Catalogo delle istanze LMetrics canoniche
+    (CLI-demo, seed grid, ecc.) secondo il seed COQ↔PYTHON 2025-12.
+*)
+
+From Loventre_Geometry Require Import Loventre_Metrics_Bus.
+From Loventre_Geometry Require Import Loventre_LMetrics_Witness_CLI.
+
+Module MB  := Loventre_Metrics_Bus.
+Module CLI := Loventre_LMetrics_Witness_CLI.
+
+Definition LMetrics       := MB.LMetrics.
+Definition GlobalDecision := MB.GlobalDecision.
+Definition GlobalColor    := MB.GlobalColor.
+
+Definition GD_safe       := MB.GD_safe.
+Definition GD_borderline := MB.GD_borderline.
+Definition GD_critical   := MB.GD_critical.
+Definition GD_invalid    := MB.GD_invalid.
+
+Definition GC_green := MB.GC_green.
+Definition GC_amber := MB.GC_amber.
+Definition GC_red   := MB.GC_red.
+
+Definition loventre_global_decision := MB.loventre_global_decision.
+Definition loventre_global_color    := MB.loventre_global_color.
+
+(**
+  Istanze canoniche lato CLI, ribattezzate con i nomi
+  del seed COQ↔PYTHON (2025-12-05).
+*)
+
+Definition m_seed11_cli_demo    : LMetrics := CLI.m_seed11_safe.
+Definition m_TSPcrit28_cli_demo : LMetrics := CLI.m_TSPcrit28_crit.
+Definition m_SATcrit16_cli_demo : LMetrics := CLI.m_SATcrit16_crit.
+
+(**
+  Istanza seed_grid (param = 2, factor = 2, E = 0.5).
+
+  Per ora viene modellata come Parameter astratto; in seguito
+  sara' sostituita da una Definition generata via CLI
+  (loventre_metrics_cli_coq_bridge.py) a partire dallo
+  snippet JSON/metrics canonico.
+*)
+
+Parameter m_seed_grid_demo : LMetrics.
+

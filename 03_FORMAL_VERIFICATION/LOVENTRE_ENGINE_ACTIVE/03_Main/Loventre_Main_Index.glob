@@ -1,0 +1,7 @@
+DIGEST 3b489634c1d0671336586e020ec5678a
+FLoventre_Main.Loventre_Main_Index
+R261:275 Loventre_Core.Loventre_Kernel <> <> lib
+R279:303 Loventre_Core.Loventre_Foundation_Types <> <> lib
+R307:332 Loventre_Core.Loventre_Foundation_Params <> <> lib
+R336:362 Loventre_Core.Loventre_Foundation_Entropy <> <> lib
+R406:428 Loventre_Advanced.Loventre_Advanced_Index <> <> lib

@@ -1,0 +1,52 @@
+DIGEST c45b0294655fcebf2f95d4deb3f8a611
+FLoventre_Advanced.Loventre_Curvature_Field
+R150:155 Stdlib.ZArith.ZArith <> <> lib
+R195:209 Loventre_Core.Loventre_Kernel <> <> lib
+R303:319 Loventre_Core.Loventre_Kernel Loventre_Geometry <> mod
+def 381:387 <> kappa_L
+R394:394 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 390:390 <> x:1
+R399:399 Corelib.Numbers.BinNums <> Z ind
+R406:410 Loventre_Core.Loventre_Kernel Loventre_Geometry kappa defax
+R412:412 Loventre_Advanced.Loventre_Curvature_Field <> x:1 var
+def 427:435 <> alpha_c_L
+R439:439 Corelib.Numbers.BinNums <> Z ind
+R446:452 Loventre_Core.Loventre_Kernel Loventre_Geometry alpha_c defax
+def 467:487 <> curvature_subcritical
+R494:494 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 490:490 <> x:2
+R509:519 Loventre_Core.Loventre_Kernel Loventre_Geometry subcritical def
+R521:521 Loventre_Advanced.Loventre_Curvature_Field <> x:2 var
+def 536:558 <> curvature_supercritical
+R565:565 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 561:561 <> x:3
+R580:592 Loventre_Core.Loventre_Kernel Loventre_Geometry supercritical def
+R594:594 Loventre_Advanced.Loventre_Curvature_Field <> x:3 var
+prf 604:628 <> curvature_subcritical_iff
+R645:645 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 641:641 <> x:4
+R675:679 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R652:672 Loventre_Advanced.Loventre_Curvature_Field <> curvature_subcritical def
+R674:674 Loventre_Advanced.Loventre_Curvature_Field <> x:4 var
+R690:692 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<'_x not
+R681:687 Loventre_Advanced.Loventre_Curvature_Field <> kappa_L def
+R689:689 Loventre_Advanced.Loventre_Curvature_Field <> x:4 var
+R693:701 Loventre_Advanced.Loventre_Curvature_Field <> alpha_c_L def
+R734:754 Loventre_Advanced.Loventre_Curvature_Field <> curvature_subcritical def
+R757:763 Loventre_Advanced.Loventre_Curvature_Field <> kappa_L def
+R766:774 Loventre_Advanced.Loventre_Curvature_Field <> alpha_c_L def
+R777:787 Loventre_Core.Loventre_Kernel Loventre_Geometry subcritical def
+prf 811:837 <> curvature_supercritical_iff
+R854:854 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 850:850 <> x:5
+R886:890 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R861:883 Loventre_Advanced.Loventre_Curvature_Field <> curvature_supercritical def
+R885:885 Loventre_Advanced.Loventre_Curvature_Field <> x:5 var
+R901:904 Stdlib.ZArith.BinInt <> ::Z_scope:x_'>='_x not
+R892:898 Loventre_Advanced.Loventre_Curvature_Field <> kappa_L def
+R900:900 Loventre_Advanced.Loventre_Curvature_Field <> x:5 var
+R905:913 Loventre_Advanced.Loventre_Curvature_Field <> alpha_c_L def
+R946:968 Loventre_Advanced.Loventre_Curvature_Field <> curvature_supercritical def
+R971:977 Loventre_Advanced.Loventre_Curvature_Field <> kappa_L def
+R980:988 Loventre_Advanced.Loventre_Curvature_Field <> alpha_c_L def
+R991:1003 Loventre_Core.Loventre_Kernel Loventre_Geometry supercritical def

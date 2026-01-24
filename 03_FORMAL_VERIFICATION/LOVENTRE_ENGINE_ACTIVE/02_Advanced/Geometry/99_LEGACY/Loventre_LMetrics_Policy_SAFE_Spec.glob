@@ -1,0 +1,7 @@
+DIGEST 68db41a9891c1441e2cfaa1d444ee5c2
+FLoventre_LMetrics_Policy_SAFE_Spec
+R695:704 Corelib.Init.Logic <> <> lib
+prf 714:753 <> Loventre_LMetrics_Policy_SAFE_Spec_dummy
+R757:760 Corelib.Init.Logic <> True ind
+R776:776 Corelib.Init.Logic <> I constr
+R776:776 Corelib.Init.Logic <> I constr

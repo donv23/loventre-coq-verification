@@ -1,0 +1,38 @@
+DIGEST 0e8fb870eb1330d3755db2d9fb6e83d6
+FLoventre_Advanced.Loventre_Risk_Level
+R184:189 Stdlib.ZArith.ZArith <> <> lib
+R229:243 Loventre_Core.Loventre_Kernel <> <> lib
+R247:272 Loventre_Core.Loventre_Foundation_Params <> <> lib
+R316:339 Loventre_Advanced.Loventre_Tunneling_Model <> <> lib
+R343:364 Loventre_Advanced.Loventre_Barrier_Model <> <> lib
+R458:474 Loventre_Core.Loventre_Kernel Loventre_Geometry <> mod
+ind 696:705 <> Risk_Level
+constr 718:725 <> RISK_LOW
+constr 729:739 <> RISK_MEDIUM
+constr 743:751 <> RISK_HIGH
+scheme 696:705 <> Risk_Level_rect
+scheme 696:705 <> Risk_Level_ind
+scheme 696:705 <> Risk_Level_rec
+scheme 696:705 <> Risk_Level_sind
+def 975:982 <> risk_low
+R989:989 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 985:985 <> x:3
+R1004:1005 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R1006:1023 Loventre_Advanced.Loventre_Tunneling_Model <> eventual_tunneling def
+R1025:1025 Loventre_Advanced.Loventre_Risk_Level <> x:3 var
+def 1040:1050 <> risk_medium
+R1057:1057 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 1053:1053 <> x:4
+R1072:1089 Loventre_Advanced.Loventre_Tunneling_Model <> eventual_tunneling def
+R1091:1091 Loventre_Advanced.Loventre_Risk_Level <> x:4 var
+def 1106:1114 <> risk_high
+R1121:1121 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 1117:1117 <> x:5
+R1136:1142 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1150:1151 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1147:1149 Corelib.Init.Datatypes <> nat ind
+binder 1143:1143 <> n:6
+R1152:1163 Loventre_Advanced.Loventre_Barrier_Model <> over_barrier def
+R1166:1169 Loventre_Core.Loventre_Kernel Loventre_Geometry Flow defax
+R1173:1173 Loventre_Advanced.Loventre_Risk_Level <> x:5 var
+R1171:1171 Loventre_Advanced.Loventre_Risk_Level <> n:6 var

@@ -1,0 +1,50 @@
+DIGEST 09b29cb8298b4f69239a48280b959f5f
+FLoventre_Advanced.Loventre_Tunneling_Model
+R152:156 Stdlib.Arith.Arith <> <> lib
+R158:163 Stdlib.ZArith.ZArith <> <> lib
+R203:217 Loventre_Core.Loventre_Kernel <> <> lib
+R221:246 Loventre_Core.Loventre_Foundation_Params <> <> lib
+R290:311 Loventre_Advanced.Loventre_Barrier_Model <> <> lib
+R405:421 Loventre_Core.Loventre_Kernel Loventre_Geometry <> mod
+def 665:669 <> State
+R674:692 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+def 915:924 <> can_tunnel
+R931:935 Loventre_Advanced.Loventre_Tunneling_Model <> State def
+binder 927:927 <> x:1
+R955:957 Corelib.Init.Datatypes <> nat ind
+binder 939:945 <> n_start:2
+binder 947:951 <> n_end:3
+R1004:1009 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R990:993 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R980:982 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R973:979 Loventre_Advanced.Loventre_Tunneling_Model <> n_start:2 var
+R983:989 Loventre_Core.Loventre_Foundation_Params <> a_min_L defax
+R994:998 Loventre_Advanced.Loventre_Tunneling_Model <> n_end:3 var
+R1010:1016 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1024:1029 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1021:1023 Corelib.Init.Datatypes <> nat ind
+binder 1017:1017 <> n:4
+R1057:1064 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R1038:1041 Corelib.Init.Peano <> ::nat_scope:x_'<='_x_'<='_x not
+R1043:1046 Corelib.Init.Peano <> ::nat_scope:x_'<='_x_'<='_x not
+R1031:1037 Loventre_Advanced.Loventre_Tunneling_Model <> n_start:2 var
+R1042:1042 Loventre_Advanced.Loventre_Tunneling_Model <> n:4 var
+R1042:1042 Loventre_Advanced.Loventre_Tunneling_Model <> n:4 var
+R1047:1051 Loventre_Advanced.Loventre_Tunneling_Model <> n_end:3 var
+R1065:1077 Loventre_Advanced.Loventre_Barrier_Model <> under_barrier def
+R1080:1083 Loventre_Core.Loventre_Kernel Loventre_Geometry Flow defax
+R1087:1087 Loventre_Advanced.Loventre_Tunneling_Model <> x:1 var
+R1085:1085 Loventre_Advanced.Loventre_Tunneling_Model <> n:4 var
+def 1103:1120 <> eventual_tunneling
+R1127:1131 Loventre_Advanced.Loventre_Tunneling_Model <> State def
+binder 1123:1123 <> x:5
+R1146:1152 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1172:1177 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R1169:1171 Corelib.Init.Datatypes <> nat ind
+binder 1153:1159 <> n_start:6
+R1169:1171 Corelib.Init.Datatypes <> nat ind
+binder 1161:1165 <> n_end:7
+R1178:1187 Loventre_Advanced.Loventre_Tunneling_Model <> can_tunnel def
+R1199:1203 Loventre_Advanced.Loventre_Tunneling_Model <> n_end:7 var
+R1191:1197 Loventre_Advanced.Loventre_Tunneling_Model <> n_start:6 var
+R1189:1189 Loventre_Advanced.Loventre_Tunneling_Model <> x:5 var

@@ -1,0 +1,142 @@
+DIGEST dad8685e403c89e3ee5af7654bb527b5
+FLoventre_Metrics_Bus
+R919:923 Stdlib.Reals.Reals <> <> lib
+R950:958 Stdlib.Bool.Bool <> <> lib
+ind 1021:1030 <> TimeRegime
+constr 1039:1052 <> time_euclidean
+constr 1095:1108 <> time_threshold
+constr 1153:1167 <> time_hyperbolic
+scheme 1021:1030 <> TimeRegime_rect
+scheme 1021:1030 <> TimeRegime_ind
+scheme 1021:1030 <> TimeRegime_rec
+scheme 1021:1030 <> TimeRegime_sind
+ind 1255:1263 <> RiskClass
+constr 1272:1279 <> risk_low
+constr 1327:1337 <> risk_medium
+constr 1381:1400 <> risk_np_like_critico
+constr 1452:1474 <> risk_np_like_black_hole
+constr 1507:1518 <> risk_unknown
+scheme 1255:1263 <> RiskClass_rect
+scheme 1255:1263 <> RiskClass_ind
+scheme 1255:1263 <> RiskClass_rec
+scheme 1255:1263 <> RiskClass_sind
+ind 1816:1824 <> MetaLabel
+constr 1833:1848 <> meta_P_like_like
+constr 1854:1873 <> meta_NP_like_critico
+constr 1879:1901 <> meta_NP_like_black_hole
+constr 1907:1918 <> meta_unknown
+scheme 1816:1824 <> MetaLabel_rect
+scheme 1816:1824 <> MetaLabel_ind
+scheme 1816:1824 <> MetaLabel_rec
+scheme 1816:1824 <> MetaLabel_sind
+ind 2180:2193 <> GlobalDecision
+constr 2202:2208 <> GD_safe
+constr 2214:2226 <> GD_borderline
+constr 2232:2242 <> GD_critical
+constr 2248:2257 <> GD_invalid
+scheme 2180:2193 <> GlobalDecision_rect
+scheme 2180:2193 <> GlobalDecision_ind
+scheme 2180:2193 <> GlobalDecision_rec
+scheme 2180:2193 <> GlobalDecision_sind
+ind 2594:2604 <> GlobalColor
+constr 2613:2620 <> GC_green
+constr 2626:2633 <> GC_amber
+constr 2639:2644 <> GC_red
+constr 2650:2659 <> GC_unknown
+scheme 2594:2604 <> GlobalColor_rect
+scheme 2594:2604 <> GlobalColor_ind
+scheme 2594:2604 <> GlobalColor_rec
+scheme 2594:2604 <> GlobalColor_sind
+rec 3944:3951 <> LMetrics
+proj 3960:3968 <> kappa_eff
+proj 3977:3987 <> entropy_eff
+proj 3996:3997 <> V0
+proj 4006:4010 <> a_min
+proj 4020:4027 <> p_tunnel
+proj 4036:4044 <> P_success
+proj 4054:4067 <> gamma_dilation
+proj 4076:4086 <> time_regime
+proj 4105:4112 <> mass_eff
+proj 4121:4132 <> inertial_idx
+proj 4142:4151 <> risk_index
+proj 4160:4169 <> risk_class
+proj 4187:4196 <> meta_label
+proj 4214:4228 <> chi_compactness
+proj 4237:4248 <> horizon_flag
+proj 4261:4284 <> loventre_global_decision
+proj 4306:4326 <> loventre_global_color
+proj 4345:4365 <> loventre_global_score
+R3972:3972 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R3991:3991 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R4001:4001 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R4014:4014 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R4031:4031 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R4048:4048 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R4071:4071 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R4090:4099 Loventre_Metrics_Bus <> TimeRegime ind
+R4116:4116 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R4136:4136 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R4155:4155 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R4173:4181 Loventre_Metrics_Bus <> RiskClass ind
+R4200:4208 Loventre_Metrics_Bus <> MetaLabel ind
+R4232:4232 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+R4252:4255 Corelib.Init.Datatypes <> bool ind
+R4288:4301 Loventre_Metrics_Bus <> GlobalDecision ind
+R4330:4340 Loventre_Metrics_Bus <> GlobalColor ind
+R4369:4369 Stdlib.Reals.Rdefinitions RbaseSymbolsImpl R defax
+def 4578:4591 <> is_subcritical
+R4598:4605 Loventre_Metrics_Bus <> LMetrics rec
+binder 4594:4594 <> m:30
+R4632:4634 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4620:4629 Loventre_Metrics_Bus <> risk_class proj
+R4631:4631 Loventre_Metrics_Bus <> m:30 var
+R4635:4642 Loventre_Metrics_Bus <> risk_low constr
+def 4657:4679 <> is_precritical_or_mixed
+R4686:4693 Loventre_Metrics_Bus <> LMetrics rec
+binder 4682:4682 <> m:31
+R4720:4722 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4708:4717 Loventre_Metrics_Bus <> risk_class proj
+R4719:4719 Loventre_Metrics_Bus <> m:31 var
+R4723:4733 Loventre_Metrics_Bus <> risk_medium constr
+def 4748:4766 <> is_np_like_critical
+R4773:4780 Loventre_Metrics_Bus <> LMetrics rec
+binder 4769:4769 <> m:32
+R4807:4809 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4795:4804 Loventre_Metrics_Bus <> risk_class proj
+R4806:4806 Loventre_Metrics_Bus <> m:32 var
+R4810:4829 Loventre_Metrics_Bus <> risk_np_like_critico constr
+def 4844:4861 <> is_black_hole_like
+R4868:4875 Loventre_Metrics_Bus <> LMetrics rec
+binder 4864:4864 <> m:33
+R4902:4904 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4890:4899 Loventre_Metrics_Bus <> risk_class proj
+R4901:4901 Loventre_Metrics_Bus <> m:33 var
+R4905:4927 Loventre_Metrics_Bus <> risk_np_like_black_hole constr
+def 4942:4956 <> is_near_horizon
+R4963:4970 Loventre_Metrics_Bus <> LMetrics rec
+binder 4959:4959 <> m:34
+R4999:5001 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4985:4996 Loventre_Metrics_Bus <> horizon_flag proj
+R4998:4998 Loventre_Metrics_Bus <> m:34 var
+R5002:5005 Corelib.Init.Datatypes <> true constr
+def 5020:5035 <> is_globally_safe
+R5042:5049 Loventre_Metrics_Bus <> LMetrics rec
+binder 5038:5038 <> m:35
+R5090:5092 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5064:5087 Loventre_Metrics_Bus <> loventre_global_decision proj
+R5089:5089 Loventre_Metrics_Bus <> m:35 var
+R5093:5099 Loventre_Metrics_Bus <> GD_safe constr
+def 5114:5133 <> is_globally_critical
+R5140:5147 Loventre_Metrics_Bus <> LMetrics rec
+binder 5136:5136 <> m:36
+R5188:5190 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5162:5185 Loventre_Metrics_Bus <> loventre_global_decision proj
+R5187:5187 Loventre_Metrics_Bus <> m:36 var
+R5191:5201 Loventre_Metrics_Bus <> GD_critical constr
+def 5216:5234 <> is_globally_invalid
+R5241:5248 Loventre_Metrics_Bus <> LMetrics rec
+binder 5237:5237 <> m:37
+R5289:5291 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5263:5286 Loventre_Metrics_Bus <> loventre_global_decision proj
+R5288:5288 Loventre_Metrics_Bus <> m:37 var
+R5292:5301 Loventre_Metrics_Bus <> GD_invalid constr

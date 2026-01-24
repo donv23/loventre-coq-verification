@@ -1,0 +1,11 @@
+DIGEST 41c826e1aa1380a3cb4c8ee6d55f385c
+FLoventre_Core.Loventre_Foundation_Params
+R141:146 Stdlib.ZArith.ZArith <> <> lib
+R186:200 Loventre_Core.Loventre_Kernel <> <> lib
+R315:331 Loventre_Core.Loventre_Kernel Loventre_Geometry <> mod
+ax 589:595 <> alpha_L
+R599:599 Corelib.Numbers.BinNums <> Z ind
+ax 612:617 <> beta_L
+R622:622 Corelib.Numbers.BinNums <> Z ind
+ax 683:689 <> a_min_L
+R693:695 Corelib.Init.Datatypes <> nat ind

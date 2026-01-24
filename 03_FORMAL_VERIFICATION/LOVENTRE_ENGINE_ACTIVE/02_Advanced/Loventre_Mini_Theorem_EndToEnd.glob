@@ -1,0 +1,32 @@
+DIGEST 8c2a2bb33450658de8aa28b0cec28a14
+FLoventre_Advanced.Loventre_Mini_Theorem_EndToEnd
+R277:282 Stdlib.ZArith.ZArith <> <> lib
+R322:336 Loventre_Core.Loventre_Kernel <> <> lib
+R340:364 Loventre_Core.Loventre_Foundation_Types <> <> lib
+R408:426 Loventre_Advanced.Loventre_Risk_Level <> <> lib
+R430:455 Loventre_Advanced.Loventre_Risk_Level_Bridge <> <> lib
+R459:480 Loventre_Advanced.Loventre_Policy_Bridge <> <> lib
+R484:508 Loventre_Advanced.Loventre_Witness_EndToEnd <> <> lib
+R602:618 Loventre_Core.Loventre_Kernel Loventre_Geometry <> mod
+prf 837:866 <> Loventre_Mini_Theorem_EndToEnd
+R872:879 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R970:976 Corelib.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R885:885 Loventre_Core.Loventre_Kernel Loventre_Geometry M defax
+binder 880:880 <> x:1
+R903:912 Loventre_Advanced.Loventre_Risk_Level <> Risk_Level ind
+binder 898:899 <> rl:2
+R930:938 Loventre_Core.Loventre_Foundation_Types <> RiskClass ind
+binder 925:926 <> rc:3
+R956:969 Loventre_Advanced.Loventre_Policy_Bridge <> GlobalDecision ind
+binder 951:951 <> d:4
+R1007:1014 Corelib.Init.Logic <> ::type_scope:x_'/\'_x not
+R1002:1004 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R977:998 Loventre_Advanced.Loventre_Risk_Level_Bridge <> RiskLevel_to_RiskClass def
+R1000:1001 Loventre_Advanced.Loventre_Mini_Theorem_EndToEnd <> rl:2 var
+R1005:1006 Loventre_Advanced.Loventre_Mini_Theorem_EndToEnd <> rc:3 var
+R1039:1041 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1015:1035 Loventre_Advanced.Loventre_Policy_Bridge <> RiskClass_to_Decision def
+R1037:1038 Loventre_Advanced.Loventre_Mini_Theorem_EndToEnd <> rc:3 var
+R1042:1042 Loventre_Advanced.Loventre_Mini_Theorem_EndToEnd <> d:4 var
+R1060:1085 Loventre_Advanced.Loventre_Witness_EndToEnd <> exists_end_to_end_decision thm
+R1060:1085 Loventre_Advanced.Loventre_Witness_EndToEnd <> exists_end_to_end_decision thm
