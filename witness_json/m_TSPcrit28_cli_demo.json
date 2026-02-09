@@ -1,0 +1,31 @@
+{
+  "lm_id": "m_TSPcrit28_cli_demo",
+  "role": "NP_like_black_hole_TSP",
+  "source": "loventre_engine_clean_seed_v3",
+  "metrics": {
+    "kappa_eff": null,
+    "entropy_eff": null,
+    "V0": null,
+    "a_min": null,
+    "p_tunnel": 1.5e-07,
+    "P_success": null,
+    "gamma_dilation": null,
+    "time_regime": "time_hyperbolic",
+    "mass_eff": null,
+    "inertial_idx": null,
+    "risk_index": 9.5,
+    "risk_class": "NP_like_black_hole",
+    "chi_compactness": 0.95,
+    "horizon_flag": true,
+    "meta_label": "NP_like_black_hole",
+    "loventre_global_decision": null,
+    "loventre_global_color": null
+  },
+  "tags": {
+    "family": "TSP_crit_n",
+    "kind": "NP_like_black_hole",
+    "n_cities": 28,
+    "note": "TSP_crit_n demo / NP_like-black-hole",
+    "metrics_json_source": "metrics_TSP_crit28_demo.json"
+  }
+}

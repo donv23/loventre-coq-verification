@@ -1,0 +1,19 @@
+{
+  "P_success": 0.0,
+  "V0": 0.0,
+  "a_min": 1.0,
+  "chi_compactness": 0.0,
+  "entropy_eff": 0.0,
+  "flag_NP_bh": false,
+  "flag_P": false,
+  "flag_P_acc": false,
+  "gamma_dilation": 1.0,
+  "horizon_flag": false,
+  "inertial_idx": 1.0,
+  "kappa_eff": 0.0,
+  "mass_eff": 1.0,
+  "p_tunnel": 1.0,
+  "risk_class": "LOW",
+  "risk_index": 0.0,
+  "time_regime": "time_euclidean"
+}

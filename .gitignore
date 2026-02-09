@@ -1,0 +1,49 @@
+# Loventre Engine — .gitignore
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.dylib
+
+# venv
+.venv/
+venv/
+.env
+
+# build / packaging
+build/
+dist/
+*.egg-info/
+
+# logs / tmp
+*.log
+*.tmp
+
+# Editors / backups
+*~
+*.swp
+*.swo
+*.save
+*.save.*
+*.bak
+
+# Coq artifacts (generated)
+*.vo
+*.vos
+*.vok
+*.glob
+*.aux
+.lia.cache
+
+# Loventre generated outputs (safe to ignore)
+*.loventrew
+*.loventrecoq
+
+# Loventre: backup buckets
+99_LEGACY/BACKUP_MANUAL_*/
+99_LEGACY/**/BACKUP_MANUAL_*/

@@ -1,0 +1,13 @@
+{
+  "kappa_eff": 0.4,
+  "entropy_eff": 0.5,
+  "mass_eff": 0.45,
+  "inertial_idx": 0.42500000000000004,
+  "risk_index": 1.0,
+  "risk_class": "HIGH",
+  "loventre_global_decision": "UNSAFE",
+  "loventre_global_color": "RED",
+  "loventre_global_score": 0.15,
+  "meta_label": 3,
+  "source_file": "tiny_03.cnf"
+}

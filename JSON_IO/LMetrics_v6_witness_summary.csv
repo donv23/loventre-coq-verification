@@ -1,0 +1,5 @@
+loventre_global_decision,risk_class,count
+BLACKHOLE,HIGH,7
+BLACKHOLE,LOW,2
+SAFE,HIGH,6
+SAFE,LOW,48

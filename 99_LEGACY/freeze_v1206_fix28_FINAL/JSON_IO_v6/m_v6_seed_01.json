@@ -1,0 +1,16 @@
+{
+  "kappa_eff": 0.2,
+  "entropy_eff": 0.33,
+  "mass_eff": 0.27,
+  "inertial_idx": 0.25,
+  "risk_index": 0.18,
+  "risk_class": "LOW",
+  "loventre_global_decision": "SAFE",
+  "loventre_global_color": "GREEN",
+  "loventre_global_score": 0.77,
+  "meta_label": 1,
+  "source_file": "m_v6_seed_01.json",
+  "soft_flag": "HARD",
+  "severity_tag": "LOW_SAFE",
+  "barrier_zone": "GREEN_PASS"
+}

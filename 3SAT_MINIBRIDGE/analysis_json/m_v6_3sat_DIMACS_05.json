@@ -1,0 +1,13 @@
+{
+  "kappa_eff": 0.4,
+  "entropy_eff": 0.7,
+  "mass_eff": 0.55,
+  "inertial_idx": 0.42000000000000004,
+  "risk_index": 0.5,
+  "risk_class": "MEDIUM",
+  "loventre_global_decision": "SAFE",
+  "loventre_global_color": "YELLOW",
+  "loventre_global_score": 0.45,
+  "meta_label": 5,
+  "source_file": "m_v6_3sat_DIMACS_05.json"
+}

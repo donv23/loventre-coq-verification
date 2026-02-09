@@ -1,0 +1,18 @@
+{
+  "kappa_eff": 0.33,
+  "entropy_eff": 0.0,
+  "V0": 0.0,
+  "a_min": 0.0,
+  "p_tunnel": 0.015,
+  "P_success": 1.0,
+  "gamma_dilation": 1.0,
+  "time_regime": "static",
+  "mass_eff": 1.0,
+  "inertial_idx": 0.33,
+  "risk_index": 0.33,
+  "risk_class": "LOW",
+  "chi_compactness": 0.0,
+  "horizon_flag": false,
+  "global_decision_tag": "SAFE",
+  "meta_label": "meta_seed33_v10"
+}

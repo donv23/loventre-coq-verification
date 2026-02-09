@@ -1,0 +1,483 @@
+[
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:08.493566",
+      "param": 1,
+      "factor": 2,
+      "kappa_eff": 0.3209,
+      "entropy_eff": 0.2869,
+      "V0": 0.2886,
+      "p_tunnel": 0.277
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:08.493846.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:08.525332",
+      "param": 4,
+      "factor": 2,
+      "kappa_eff": 0.6697,
+      "entropy_eff": 0.5475,
+      "V0": 0.5916,
+      "p_tunnel": 0.8284
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:08.525453.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:08.558305",
+      "param": 3,
+      "factor": 4,
+      "kappa_eff": 0.8143,
+      "entropy_eff": 0.485,
+      "V0": 0.6839,
+      "p_tunnel": 0.4943
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:08.558460.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:08.589549",
+      "param": 4,
+      "factor": 1,
+      "kappa_eff": 0.5853,
+      "entropy_eff": 0.3329,
+      "V0": 0.5421,
+      "p_tunnel": 0.4701
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:08.589662.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:08.623634",
+      "param": 2,
+      "factor": 1,
+      "kappa_eff": 0.3361,
+      "entropy_eff": 0.2442,
+      "V0": 0.308,
+      "p_tunnel": 0.4284
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:08.623766.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:08.655309",
+      "param": 3,
+      "factor": 1,
+      "kappa_eff": 0.3592,
+      "entropy_eff": 0.322,
+      "V0": 0.2909,
+      "p_tunnel": 0.1357
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:08.655433.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:08.687159",
+      "param": 1,
+      "factor": 3,
+      "kappa_eff": 0.3745,
+      "entropy_eff": 0.3754,
+      "V0": 0.307,
+      "p_tunnel": 0.2323
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:08.687279.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:08.719282",
+      "param": 1,
+      "factor": 4,
+      "kappa_eff": 0.4761,
+      "entropy_eff": 0.4513,
+      "V0": 0.4169,
+      "p_tunnel": 0.5674
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:08.719402.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:08.751786",
+      "param": 4,
+      "factor": 3,
+      "kappa_eff": 0.679,
+      "entropy_eff": 0.561,
+      "V0": 0.6239,
+      "p_tunnel": 0.4349
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:08.751933.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:08.885746",
+      "param": 2,
+      "factor": 4,
+      "kappa_eff": 0.7036,
+      "entropy_eff": 0.5223,
+      "V0": 0.6576,
+      "p_tunnel": 0.8616
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:08.885900.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:08.919912",
+      "param": 3,
+      "factor": 1,
+      "kappa_eff": 0.3609,
+      "entropy_eff": 0.3573,
+      "V0": 0.3648,
+      "p_tunnel": 0.2492
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:08.920050.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:08.993370",
+      "param": 2,
+      "factor": 4,
+      "kappa_eff": 0.5541,
+      "entropy_eff": 0.4114,
+      "V0": 0.5164,
+      "p_tunnel": 0.4754
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:08.993656.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:09.031974",
+      "param": 4,
+      "factor": 3,
+      "kappa_eff": 0.7821,
+      "entropy_eff": 0.4819,
+      "V0": 0.7543,
+      "p_tunnel": 0.8158
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:09.032145.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:09.072987",
+      "param": 1,
+      "factor": 1,
+      "kappa_eff": 0.2438,
+      "entropy_eff": 0.176,
+      "V0": 0.24,
+      "p_tunnel": 0.29
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:09.073249.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:09.118420",
+      "param": 4,
+      "factor": 1,
+      "kappa_eff": 0.5611,
+      "entropy_eff": 0.3857,
+      "V0": 0.5781,
+      "p_tunnel": 0.208
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:09.118578.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:09.189403",
+      "param": 4,
+      "factor": 2,
+      "kappa_eff": 0.5612,
+      "entropy_eff": 0.4212,
+      "V0": 0.5161,
+      "p_tunnel": 0.6572
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:09.189534.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:09.257393",
+      "param": 1,
+      "factor": 4,
+      "kappa_eff": 0.6413,
+      "entropy_eff": 0.4236,
+      "V0": 0.6751,
+      "p_tunnel": 0.8398
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:09.257536.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:09.292179",
+      "param": 4,
+      "factor": 1,
+      "kappa_eff": 0.489,
+      "entropy_eff": 0.4229,
+      "V0": 0.4183,
+      "p_tunnel": 0.6213
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:09.292364.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:09.326807",
+      "param": 3,
+      "factor": 1,
+      "kappa_eff": 0.3658,
+      "entropy_eff": 0.3102,
+      "V0": 0.3392,
+      "p_tunnel": 0.2987
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:09.326977.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:09.397552",
+      "param": 4,
+      "factor": 1,
+      "kappa_eff": 0.4861,
+      "entropy_eff": 0.4594,
+      "V0": 0.4008,
+      "p_tunnel": 0.5823
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:09.397719.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:09.430216",
+      "param": 1,
+      "factor": 2,
+      "kappa_eff": 0.4365,
+      "entropy_eff": 0.2661,
+      "V0": 0.3474,
+      "p_tunnel": 0.3499
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:09.430334.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:09.462221",
+      "param": 4,
+      "factor": 4,
+      "kappa_eff": 0.8977,
+      "entropy_eff": 0.6009,
+      "V0": 0.8822,
+      "p_tunnel": 0.3347
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:09.462351.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:09.494170",
+      "param": 4,
+      "factor": 4,
+      "kappa_eff": 0.7869,
+      "entropy_eff": 0.6099,
+      "V0": 0.7506,
+      "p_tunnel": 0.6474
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:09.494294.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:09.559145",
+      "param": 4,
+      "factor": 4,
+      "kappa_eff": 0.8799,
+      "entropy_eff": 0.6009,
+      "V0": 0.8233,
+      "p_tunnel": 0.4964
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:09.559335.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:09.592529",
+      "param": 1,
+      "factor": 3,
+      "kappa_eff": 0.4713,
+      "entropy_eff": 0.2835,
+      "V0": 0.3956,
+      "p_tunnel": 0.285
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:09.592668.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:09.624153",
+      "param": 2,
+      "factor": 1,
+      "kappa_eff": 0.3396,
+      "entropy_eff": 0.3216,
+      "V0": 0.3173,
+      "p_tunnel": 0.4167
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:09.624278.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:09.659127",
+      "param": 3,
+      "factor": 1,
+      "kappa_eff": 0.4091,
+      "entropy_eff": 0.3646,
+      "V0": 0.3875,
+      "p_tunnel": 0.3074
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:09.659254.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:09.690656",
+      "param": 2,
+      "factor": 4,
+      "kappa_eff": 0.6982,
+      "entropy_eff": 0.5069,
+      "V0": 0.6707,
+      "p_tunnel": 0.4385
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:09.690785.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:09.726998",
+      "param": 2,
+      "factor": 3,
+      "kappa_eff": 0.5549,
+      "entropy_eff": 0.33,
+      "V0": 0.4548,
+      "p_tunnel": 0.2739
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:09.727131.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:09.759133",
+      "param": 3,
+      "factor": 1,
+      "kappa_eff": 0.427,
+      "entropy_eff": 0.3538,
+      "V0": 0.4426,
+      "p_tunnel": 0.5388
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:09.759257.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:09.793975",
+      "param": 4,
+      "factor": 1,
+      "kappa_eff": 0.5477,
+      "entropy_eff": 0.3955,
+      "V0": 0.5152,
+      "p_tunnel": 0.3988
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:09.794114.json"
+  },
+  {
+    "label": "ACCESS",
+    "point": {
+      "timestamp": "2026-01-12T10:51:09.827041",
+      "param": 2,
+      "factor": 2,
+      "kappa_eff": 0.4777,
+      "entropy_eff": 0.2809,
+      "V0": 0.4753,
+      "p_tunnel": 0.181
+    },
+    "file": "witness_ACCESS_2026-01-12T10:51:09.827174.json"
+  },
+  {
+    "label": "BH",
+    "point": {
+      "timestamp": "2026-01-12T10:51:08.784214",
+      "param": 3,
+      "factor": 4,
+      "kappa_eff": 0.7104,
+      "entropy_eff": 0.6151,
+      "V0": 0.6414,
+      "p_tunnel": 0.9934
+    },
+    "file": "witness_BH_2026-01-12T10:51:08.784350.json"
+  },
+  {
+    "label": "BH",
+    "point": {
+      "timestamp": "2026-01-12T10:51:08.817243",
+      "param": 4,
+      "factor": 4,
+      "kappa_eff": 0.7999,
+      "entropy_eff": 0.6825,
+      "V0": 0.7881,
+      "p_tunnel": 1.0
+    },
+    "file": "witness_BH_2026-01-12T10:51:08.817367.json"
+  },
+  {
+    "label": "BH",
+    "point": {
+      "timestamp": "2026-01-12T10:51:08.956129",
+      "param": 4,
+      "factor": 4,
+      "kappa_eff": 0.7977,
+      "entropy_eff": 0.6107,
+      "V0": 0.7257,
+      "p_tunnel": 0.9017
+    },
+    "file": "witness_BH_2026-01-12T10:51:08.956277.json"
+  },
+  {
+    "label": "BH",
+    "point": {
+      "timestamp": "2026-01-12T10:51:09.155405",
+      "param": 4,
+      "factor": 3,
+      "kappa_eff": 0.7341,
+      "entropy_eff": 0.6015,
+      "V0": 0.7132,
+      "p_tunnel": 1.0
+    },
+    "file": "witness_BH_2026-01-12T10:51:09.155577.json"
+  },
+  {
+    "label": "BH",
+    "point": {
+      "timestamp": "2026-01-12T10:51:09.527399",
+      "param": 4,
+      "factor": 4,
+      "kappa_eff": 0.9079,
+      "entropy_eff": 0.688,
+      "V0": 0.8058,
+      "p_tunnel": 0.8282
+    },
+    "file": "witness_BH_2026-01-12T10:51:09.527524.json"
+  }
+]

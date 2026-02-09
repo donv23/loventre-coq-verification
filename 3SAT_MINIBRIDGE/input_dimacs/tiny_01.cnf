@@ -1,0 +1,5 @@
+c test tiny sat
+p cnf 3 2
+1 -2 3 0
+-1 2 3 0
+

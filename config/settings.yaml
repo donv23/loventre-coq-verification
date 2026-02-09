@@ -1,0 +1,21 @@
+# Loventre Engine Configuration
+
+engine:
+  name: "Loventre Python Engine"
+  version: "1.0.0"
+  author: "Vincenzo Loventre"
+
+paths:
+  coq_binary: "/usr/local/bin/coqc"
+  output_dir: "data/results"
+  logs_dir: "data/logs"
+
+metrics:
+  p_np_threshold: 1.6180339887
+  max_iterations: 10000
+  precision: 0.000001
+
+visualization:
+  default_theme: "plotly_white"
+  save_format: "html"
+  interactive: true

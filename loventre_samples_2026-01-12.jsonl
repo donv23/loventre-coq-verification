@@ -1,0 +1,1 @@
+{"timestamp": "2026-01-12T10:41:51.167564", "cycle": 25, "metrics": {"timestamp": "2026-01-12T10:41:51.167475", "status": "ok", "payload": {"dummy": true, "msg": "core engine non trovato, fallback attivo"}}, "SAFE": 25, "ACCESS": 0, "BH": 0}

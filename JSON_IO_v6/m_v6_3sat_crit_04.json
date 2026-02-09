@@ -1,0 +1,16 @@
+{
+  "kappa_eff": 0.91,
+  "entropy_eff": 0.84,
+  "mass_eff": 0.77,
+  "inertial_idx": 0.89,
+  "risk_index": 0.92,
+  "risk_class": "HIGH",
+  "loventre_global_decision": "UNSAFE",
+  "loventre_global_color": "RED",
+  "loventre_global_score": 0.11,
+  "meta_label": 4,
+  "source_file": "m_v6_3sat_crit_04.json",
+  "soft_flag": "SOFT",
+  "severity_tag": "SOFT_ZONE",
+  "barrier_zone": "RED_WALL"
+}

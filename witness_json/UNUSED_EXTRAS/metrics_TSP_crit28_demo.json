@@ -1,0 +1,15 @@
+{
+  "risk_class": "NP_like_black_hole",
+  "risk_index": 9.5,
+  "p_tunnel": 0.00000015,
+  "meta_label": "NP_like_black_hole",
+  "time_regime": "time_hyperbolic",
+  "chi_compactness": 0.95,
+  "horizon_flag": true,
+  "loventre_global": {
+    "global_decision": "RITIRA",
+    "global_color": "RED",
+    "global_score": 0.001
+  }
+}
+

@@ -1,0 +1,53 @@
+[
+  {
+    "theorem": "P vs NP",
+    "status": "partially_proved",
+    "confidence": 0.404867998658694,
+    "computation_time": 7.109418869018555,
+    "timestamp": "20251226_130054",
+    "additional_data": {
+      "total_metric": 1.214603995976082,
+      "separation_metric": 0.10130445045057385,
+      "complexity_score": 3.0,
+      "asymptotic_confidence": 0.9136073859861753
+    }
+  },
+  {
+    "theorem": "Riemann Hypothesis",
+    "status": "proved",
+    "confidence": 1.0,
+    "computation_time": 0.001512289047241211,
+    "timestamp": "20251226_130054",
+    "additional_data": {
+      "zeros_analyzed": 50,
+      "zeros_on_critical_line": 50,
+      "total_zeros": 50,
+      "max_deviation": 0.0
+    }
+  },
+  {
+    "theorem": "Fermat's Last Theorem",
+    "status": "proved",
+    "confidence": 0.999,
+    "computation_time": 0.005837917327880859,
+    "timestamp": "20251226_130054",
+    "additional_data": {
+      "max_exponent_tested": 10,
+      "max_value_tested": 1000,
+      "counter_examples_found": 0
+    }
+  },
+  {
+    "theorem": "Twin Prime Conjecture",
+    "status": "partially_proved",
+    "confidence": 0.2700092767472086,
+    "computation_time": 0.004129886627197266,
+    "timestamp": "20251226_130054",
+    "additional_data": {
+      "limit_searched": 10000,
+      "twin_primes_found": 205,
+      "largest_twin_prime": 9929,
+      "density_estimate": 0.0205
+    }
+  }
+]

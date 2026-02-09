@@ -1,0 +1,12 @@
+{
+  "kappa_eff": -1.8,
+  "entropy_eff": null,
+  "mass_eff": 1.0,
+  "inertial_idx": 1.8,
+  "risk_index": 1.8,
+  "risk_class": "HIGH",
+  "loventre_global_decision": "BLACKHOLE",
+  "loventre_global_color": "RED",
+  "loventre_global_score": 0.0,
+  "meta_label": "meta_v6_seed"
+}

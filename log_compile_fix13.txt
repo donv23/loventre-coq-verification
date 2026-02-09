@@ -1,0 +1,8 @@
+./compile_lmetrics_v6_v1200_fix13.sh:4: no matches found: Coq_IO/LMetrics_v6/*.vio
+File "./Coq_IO/LMetrics_v6/LMetrics_v6_types.v", line 2, characters 0-39:
+Warning: "From Coq" has been replaced by "From Stdlib".
+[deprecated-from-Coq,deprecated-since-9.0,deprecated,default]
+File "./Coq_IO/LMetrics_v6/witness_v6_minimal.v", line 1, characters 15-32:
+Error: Unable to locate library
+LMetrics_v6_types (while searching for a .vos file).
+

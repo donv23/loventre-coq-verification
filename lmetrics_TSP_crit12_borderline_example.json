@@ -1,0 +1,20 @@
+{
+  "P_success": 0.9957,
+  "V0": 1.5876,
+  "a_min": 2.5,
+  "chi_compactness": 0.7,
+  "entropy_eff": 0.75,
+  "gamma_dilation": 6.21,
+  "horizon_flag": false,
+  "inertial_idx": 11.963,
+  "kappa_eff": 0.55,
+  "loventre_global_color": "GC_amber",
+  "loventre_global_decision": "GD_borderline",
+  "loventre_global_score": 0.269,
+  "mass_eff": 1.925,
+  "meta_label": "NP_like_critico",
+  "p_tunnel": 0.005438,
+  "risk_class": "NP_like_critico",
+  "risk_index": 6.0,
+  "time_regime": "time_hyperbolic"
+}

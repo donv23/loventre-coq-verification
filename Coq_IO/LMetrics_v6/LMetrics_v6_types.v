@@ -1,0 +1,21 @@
+From Stdlib Require Import Reals.
+From Stdlib Require Import String.
+
+Inductive RiskClass := LOW | MEDIUM | HIGH.
+Inductive LoventreDecision := SAFE | UNSAFE.
+Inductive Color := RED | YELLOW | GREEN.
+
+Record LMetrics := mkLMetrics {
+  kappa_eff              : R;
+  entropy_eff            : R;
+  mass_eff               : R;
+  inertial_idx           : R;
+  risk_index             : R;
+  risk_class             : RiskClass;
+  loventre_global_decision : LoventreDecision;
+  loventre_global_color  : Color;
+  loventre_global_score  : R;
+  meta_label             : nat;
+  source_file            : string
+}.
+

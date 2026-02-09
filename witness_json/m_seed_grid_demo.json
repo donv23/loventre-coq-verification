@@ -1,0 +1,30 @@
+{
+  "lm_id": "m_seed_grid_demo",
+  "role": "P_like_accessible_borderline",
+  "source": "loventre_engine_clean_seed_v3",
+  "metrics": {
+    "kappa_eff": 0.0,
+    "entropy_eff": 0.0,
+    "V0": 0.0,
+    "a_min": 1.0,
+    "p_tunnel": 1.0,
+    "P_success": 0.0,
+    "gamma_dilation": 1.0,
+    "time_regime": "time_euclidean",
+    "mass_eff": 1.0,
+    "inertial_idx": 1.0,
+    "risk_index": 0.0,
+    "risk_class": "LOW",
+    "chi_compactness": 0.0,
+    "horizon_flag": false,
+    "meta_label": "P_like_accessibile",
+    "loventre_global_decision": null,
+    "loventre_global_color": null
+  },
+  "tags": {
+    "family": "seed_grid",
+    "kind": "P_like_accessible",
+    "note": "Seed grid demo / P_like_accessibile borderline",
+    "metrics_json_source": "metrics_seed_grid_demo_global.json"
+  }
+}

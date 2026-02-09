@@ -1,0 +1,18 @@
+{
+  "kappa_eff": -0.8,
+  "entropy_eff": 3.0,
+  "V0": 1.0,
+  "a_min": 0.1,
+  "p_tunnel": 0.2,
+  "P_success": 0.2,
+  "gamma_dilation": 1.5,
+  "time_regime": "critical",
+  "mass_eff": 1.2,
+  "inertial_idx": 0.8,
+  "risk_index": 0.8,
+  "risk_class": "HIGH",
+  "chi_compactness": 0.5,
+  "horizon_flag": true,
+  "global_decision_tag": "BLOCK",
+  "meta_label": "meta_TSPcrit80_v10"
+}

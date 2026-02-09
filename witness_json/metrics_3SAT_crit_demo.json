@@ -1,0 +1,23 @@
+{
+  "lm_id": "m_3SAT_crit_demo",
+  "family": "3SAT",
+  "regime": "crit",
+  "kappa_eff": 0.92,
+  "entropy_eff": 0.78,
+  "V0": 0.49,
+  "a_min": 1.0,
+  "p_tunnel": 0.00034,
+  "P_success": 0.001,
+  "gamma_dilation": 1.5,
+  "time_regime": "time_hyperbolic",
+  "mass_eff": 2.3,
+  "inertial_idx": 1.8,
+  "risk_index": 9.0,
+  "risk_class": "risk_NP_like_black_hole",
+  "meta_label": "meta_NP_like_black_hole",
+  "chi_compactness": 0.93,
+  "horizon_flag": true,
+  "loventre_global_decision": "GD_critical",
+  "loventre_global_color": "GC_red",
+  "loventre_global_score": 0.001
+}

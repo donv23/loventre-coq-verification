@@ -1,0 +1,15 @@
+{
+  "seed": {
+    "param": 2,
+    "factor": 2
+  },
+  "LMetrics": {
+    "kappa_eff": 2.0,
+    "entropy_eff": 2.0,
+    "V0": 4.0,
+    "p_tunnel": 0.2,
+    "P_success": 0.6000000000000001
+  },
+  "decision": "BLACKHOLE",
+  "mode": "CANON_V2"
+}

@@ -1,0 +1,13 @@
+{
+  "kappa_eff": 2.0,
+  "entropy_eff": 4.0,
+  "curvature_grad": 0.2,
+  "entropy_local": 0.2,
+  "bh_escape_score": null,
+  "meta_label_v12": "LAB_v12_policy",
+  "alpha": 0.5,
+  "beta": 0.5,
+  "U": 3.0,
+  "bus_state": "P_ACC-ish",
+  "policy_hint_v12": "promote_stability"
+}

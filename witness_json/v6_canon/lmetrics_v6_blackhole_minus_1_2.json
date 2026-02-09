@@ -1,0 +1,33 @@
+{
+  "C_regime": "undefined",
+  "P_success": null,
+  "V0": null,
+  "a_min": null,
+  "anomaly_detected": false,
+  "chi_compactness": null,
+  "entropy": null,
+  "entropy_eff": null,
+  "gamma_dilation": null,
+  "gct_barrier": null,
+  "horizon_flag": null,
+  "hysteresis_detected": false,
+  "inertial_idx": 0.0,
+  "kappa": -1.2,
+  "kappa_eff": 0.0,
+  "loventre_global": {
+    "global_color": "GREEN",
+    "global_decision": "SAFE",
+    "global_score": 1.0
+  },
+  "loventre_global_color": "GREEN",
+  "loventre_global_decision": "SAFE",
+  "loventre_global_score": 1.0,
+  "mass": null,
+  "mass_eff": 1.0,
+  "meta_label": "meta_v6_seed",
+  "p_tunnel": null,
+  "risk_class": "LOW",
+  "risk_index": 0.0,
+  "strategy_hint": "no_action",
+  "time_regime": null
+}

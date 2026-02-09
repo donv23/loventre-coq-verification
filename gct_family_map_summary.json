@@ -1,0 +1,17 @@
+{
+  "2SAT_crit": {
+    "GCT_INCONCLUSIVE": 1
+  },
+  "2SAT_easy": {
+    "GCT_INCONCLUSIVE": 1
+  },
+  "SATcrit16": {
+    "GCT_INCONCLUSIVE": 1
+  },
+  "TSPcrit28": {
+    "GCT_INCONCLUSIVE": 1
+  },
+  "seed_grid": {
+    "GCT_CONDUCTANCE_COLLAPSE": 1
+  }
+}

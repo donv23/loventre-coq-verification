@@ -1,0 +1,77 @@
+{
+  "axis": "F",
+  "status": "LAB_ONLY",
+  "note": "Purely descriptive aggregation. No claims.",
+  "total_files": 9,
+  "records": [
+    {
+      "file": "m_2SAT_crit_demo.json",
+      "NP_classical": "unknown",
+      "NP_instance_profile": "unknown",
+      "NP_structural_regime": "unknown"
+    },
+    {
+      "file": "m_2SAT_easy_demo.json",
+      "NP_classical": "unknown",
+      "NP_instance_profile": "unknown",
+      "NP_structural_regime": "unknown"
+    },
+    {
+      "file": "m_3SAT_crit_demo.json",
+      "NP_classical": "unknown",
+      "NP_instance_profile": "unknown",
+      "NP_structural_regime": "unknown"
+    },
+    {
+      "file": "m_3SAT_easy_demo.json",
+      "NP_classical": "unknown",
+      "NP_instance_profile": "unknown",
+      "NP_structural_regime": "unknown"
+    },
+    {
+      "file": "m_SATcrit16_cli_demo.json",
+      "NP_classical": "unknown",
+      "NP_instance_profile": "unknown",
+      "NP_structural_regime": "unknown"
+    },
+    {
+      "file": "m_TSPcrit28_cli_demo.json",
+      "NP_classical": "unknown",
+      "NP_instance_profile": "unknown",
+      "NP_structural_regime": "unknown"
+    },
+    {
+      "file": "m_seed11_cli_demo.json",
+      "NP_classical": "unknown",
+      "NP_instance_profile": "unknown",
+      "NP_structural_regime": "unknown"
+    },
+    {
+      "file": "m_seed_grid_demo.json",
+      "NP_classical": "unknown",
+      "NP_instance_profile": "easy",
+      "NP_structural_regime": "unknown"
+    },
+    {
+      "file": "metrics_3SAT_crit_demo.json",
+      "NP_classical": "unknown",
+      "NP_instance_profile": "unknown",
+      "NP_structural_regime": "unknown"
+    }
+  ],
+  "statistics": {
+    "by_NP_classical": {
+      "unknown": 9
+    },
+    "by_instance_profile": {
+      "unknown": 8,
+      "easy": 1
+    },
+    "by_structural_regime": {
+      "unknown": 9
+    },
+    "cross_classical_vs_structural": {
+      "unknown | unknown": 9
+    }
+  }
+}

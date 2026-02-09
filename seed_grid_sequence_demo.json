@@ -1,0 +1,43 @@
+[
+  {
+    "C_regime": "stable",
+    "risk_index": 0.2,
+    "chi_compactness": 0.10,
+    "p_tunnel": 0.90,
+    "informational_potential": 0.30,
+    "informational_inertia": 0.25,
+    "horizon_flag": false,
+    "meta_label": "meta_P_like_like"
+  },
+  {
+    "C_regime": "stable",
+    "risk_index": 0.4,
+    "chi_compactness": 0.25,
+    "p_tunnel": 0.70,
+    "informational_potential": 0.45,
+    "informational_inertia": 0.33,
+    "horizon_flag": false,
+    "meta_label": "meta_P_like_like"
+  },
+  {
+    "C_regime": "stable",
+    "risk_index": 0.7,
+    "chi_compactness": 0.45,
+    "p_tunnel": 0.40,
+    "informational_potential": 0.80,
+    "informational_inertia": 0.50,
+    "horizon_flag": false,
+    "meta_label": "meta_P_like_accessible"
+  },
+  {
+    "C_regime": "stable",
+    "risk_index": 0.9,
+    "chi_compactness": 0.70,
+    "p_tunnel": 0.15,
+    "informational_potential": 1.30,
+    "informational_inertia": 0.65,
+    "horizon_flag": true,
+    "meta_label": "meta_NP_like_black_hole"
+  }
+]
+

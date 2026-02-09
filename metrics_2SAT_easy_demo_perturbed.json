@@ -1,0 +1,35 @@
+{
+  "problem_family": "2-SAT",
+  "instance_label": "easy_demo_perturbed_heavy",
+  "n_vars": 40,
+  "n_clauses": 80,
+
+  "kappa_eff": 0.339,
+  "entropy_eff": 0.435,
+  "chi_compactness": 0.2,
+
+  "time_regime": "time_euclidean",
+  "regime_hint": "easy_subcritical",
+
+  "V0": 0.774,
+  "a_min": 0.12,
+
+  "p_tunnel": 0.015,
+  "expected_attempts": 66.02,
+
+  "horizon_flag": false,
+
+  "risk_index": 2.0,
+  "risk_class": "LOW",
+
+  "P_success": 1.0,
+
+  "meta_label": "meta_P_like_like",
+
+  "loventre_global": {
+    "global_decision": "SAFE",
+    "global_color": "GREEN",
+    "global_score": 1.0
+  }
+}
+

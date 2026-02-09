@@ -1,0 +1,13 @@
+{
+  "kappa_eff": -0.9,
+  "entropy_eff": 4.0,
+  "mass_eff": 1.0,
+  "inertial_idx": 0.9,
+  "risk_index": 0.9,
+  "risk_class": "LOW",
+  "loventre_global_decision": "SAFE",
+  "loventre_global_color": "GREEN",
+  "loventre_global_score": 1.0,
+  "meta_label": "meta_v6_seed",
+  "source_file": "lmetrics_v6_cli_case_56.json"
+}

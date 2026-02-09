@@ -1,0 +1,30 @@
+{
+  "lm_id": "m_seed11_cli_demo",
+  "role": "P_like_SAFE_low",
+  "source": "loventre_engine_clean_seed_v3",
+  "metrics": {
+    "kappa_eff": null,
+    "entropy_eff": null,
+    "V0": null,
+    "a_min": null,
+    "p_tunnel": 0.02,
+    "P_success": null,
+    "gamma_dilation": null,
+    "time_regime": "time_euclidean",
+    "mass_eff": null,
+    "inertial_idx": null,
+    "risk_index": 2.0,
+    "risk_class": "LOW",
+    "chi_compactness": 0.2,
+    "horizon_flag": false,
+    "meta_label": "P_like_like",
+    "loventre_global_decision": null,
+    "loventre_global_color": null
+  },
+  "tags": {
+    "family": "seed",
+    "kind": "P_like",
+    "note": "CLI demo seed11 / P_like SAFE/LOW",
+    "metrics_json_source": "metrics_seed11_cli_demo.json"
+  }
+}

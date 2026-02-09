@@ -1,0 +1,20 @@
+{
+  "P_success": 0.0003754,
+  "V0": 3.4596,
+  "a_min": 4.3,
+  "chi_compactness": 0.73,
+  "entropy_eff": 0.93,
+  "gamma_dilation": 15.79,
+  "horizon_flag": true,
+  "inertial_idx": 37.829,
+  "kappa_eff": 0.93,
+  "loventre_global_color": "GC_red",
+  "loventre_global_decision": "GD_critical",
+  "loventre_global_score": 0.001,
+  "mass_eff": 2.395,
+  "meta_label": "NP_like_black_hole",
+  "p_tunnel": 3.755e-07,
+  "risk_class": "NP_like_black_hole",
+  "risk_index": 9.3,
+  "time_regime": "time_hyperbolic"
+}

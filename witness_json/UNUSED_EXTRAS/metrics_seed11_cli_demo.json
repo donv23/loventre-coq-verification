@@ -1,0 +1,15 @@
+{
+  "chi_compactness": 0.2,
+  "horizon_flag": false,
+  "loventre_global": {
+    "global_decision": "INSISTI",
+    "global_color": "GREEN",
+    "global_score": 0.82
+  },
+  "meta_label": "P_like_like",
+  "p_tunnel": 0.02,
+  "risk_class": "LOW",
+  "risk_index": 2.0,
+  "time_regime": "time_euclidean"
+}
+

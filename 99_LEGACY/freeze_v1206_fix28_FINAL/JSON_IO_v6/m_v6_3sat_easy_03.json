@@ -1,0 +1,16 @@
+{
+  "kappa_eff": 0.32,
+  "entropy_eff": 0.41,
+  "mass_eff": 0.28,
+  "inertial_idx": 0.3,
+  "risk_index": 0.22,
+  "risk_class": "LOW",
+  "loventre_global_decision": "SAFE",
+  "loventre_global_color": "GREEN",
+  "loventre_global_score": 0.81,
+  "meta_label": 3,
+  "source_file": "m_v6_3sat_easy_03.json",
+  "soft_flag": "HARD",
+  "severity_tag": "LOW_SAFE",
+  "barrier_zone": "GREEN_PASS"
+}

@@ -1,0 +1,14 @@
+{
+  "kappa_eff": 0.10,
+  "entropy_eff": 0.20,
+  "mass_eff": 0.30,
+  "inertial_idx": 0.40,
+  "risk_index": 0.50,
+  "risk_class": "LOW",
+  "loventre_global_decision": "SAFE",
+  "loventre_global_color": "GREEN",
+  "loventre_global_score": 0.60,
+  "meta_label": 1,
+  "source_file": "m_v6_seed_01"
+}
+

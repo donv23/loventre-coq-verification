@@ -1,0 +1,38 @@
+[
+  {
+    "meta_label": "meta_P_like_like",
+    "horizon_flag": false,
+    "chi_compactness": 0.25,
+    "informational_potential": 0.45,
+    "p_tunnel": 0.70
+  },
+  {
+    "meta_label": "meta_P_like_accessible",
+    "horizon_flag": false,
+    "chi_compactness": 0.40,
+    "informational_potential": 0.75,
+    "p_tunnel": 0.45
+  },
+  {
+    "meta_label": "meta_P_like_accessible",
+    "horizon_flag": false,
+    "chi_compactness": 0.55,
+    "informational_potential": 1.00,
+    "p_tunnel": 0.30
+  },
+  {
+    "meta_label": "meta_P_like_accessible",
+    "horizon_flag": false,
+    "chi_compactness": 0.65,
+    "informational_potential": 1.15,
+    "p_tunnel": 0.22
+  },
+  {
+    "meta_label": "meta_NP_like_black_hole",
+    "horizon_flag": true,
+    "chi_compactness": 0.80,
+    "informational_potential": 1.45,
+    "p_tunnel": 0.10
+  }
+]
+

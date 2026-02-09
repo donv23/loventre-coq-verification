@@ -1,0 +1,16 @@
+{
+  "kappa_l1": 1.0,
+  "status": "SAFE",
+  "kappa_eff": 1.0,
+  "entropy_eff": null,
+  "alpha": 0.5,
+  "beta": 0.5,
+  "U": 0.5,
+  "meta_label_v12": "LAB_v12_entrypoint_FULL",
+  "bus_state": "P_ACC-ish",
+  "policy_hint_v12": "WAIT_AND_MONITOR",
+  "decision_v12": "SAFE_ACCESSIBLE",
+  "bridge_decision_v12": "SAFE_ACCESSIBLE",
+  "bridge_color_v12": "BLUE",
+  "bridge_score_v12": 1.0
+}

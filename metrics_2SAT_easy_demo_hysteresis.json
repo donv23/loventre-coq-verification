@@ -1,0 +1,42 @@
+{
+  "problem_family": "2SAT",
+  "instance_id": "2SAT_easy_blackhole_demo",
+  "n_vars": 40,
+  "n_clauses": 80,
+  "clause_ratio": 2.0,
+
+  "kappa_eff": 0.08,
+  "entropy_eff": 0.88,
+  "V0": 1.35,
+
+  "a_min": 0.32,
+  "p_tunnel": 0.004,
+  "expected_attempts": 950.0,
+  "P_success": 0.12,
+
+  "chi_compactness": 0.62,
+  "horizon_flag": true,
+
+  "risk_index": 9.6,
+  "risk_class": "HIGH",
+
+  "time_regime": "time_dilated",
+  "regime_hint": "post_critical_blackhole",
+
+  "meta_label": "meta_NP_like_black_hole",
+
+  "loventre_global": {
+    "global_decision": "BLACKHOLE",
+    "global_color": "RED",
+    "global_score": 0.15
+  },
+
+  "notes": {
+    "test_type": "safe_to_blackhole_capstone",
+    "origin": "metrics_2SAT_easy_demo.json",
+    "purpose": "verify irreversible collapse into computational horizon with no return path",
+    "expected_behavior": "no SAFE or ACCESSIBLE recovery even under partial parameter rollback",
+    "theoretical_meaning": "existence of a computational event horizon induced by curvature and entropy"
+  }
+}
+

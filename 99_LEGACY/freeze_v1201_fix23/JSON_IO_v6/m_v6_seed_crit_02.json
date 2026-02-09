@@ -1,0 +1,14 @@
+{
+  "kappa_eff": 0.90,
+  "entropy_eff": 0.85,
+  "mass_eff": 1.00,
+  "inertial_idx": 1.10,
+  "risk_index": 1.80,
+  "risk_class": "HIGH",
+  "loventre_global_decision": "UNSAFE",
+  "loventre_global_color": "RED",
+  "loventre_global_score": 0.95,
+  "meta_label": 2,
+  "source_file": "m_v6_seed_crit_02"
+}
+

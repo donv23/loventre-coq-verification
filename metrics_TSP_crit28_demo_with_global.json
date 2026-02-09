@@ -1,0 +1,17 @@
+{
+  "chi_compactness": 0.95,
+  "horizon_flag": true,
+  "loventre_global": {
+    "global_color": "RED",
+    "global_decision": "RITIRA",
+    "global_score": 0.001
+  },
+  "loventre_global_color": "GC_red",
+  "loventre_global_decision": "GD_withdraw",
+  "loventre_global_score": 0.0,
+  "meta_label": "NP_like_black_hole",
+  "p_tunnel": 1.5e-07,
+  "risk_class": "NP_like_black_hole",
+  "risk_index": 9.5,
+  "time_regime": "time_hyperbolic"
+}
