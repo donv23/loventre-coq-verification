@@ -1,0 +1,37 @@
+===== COMPILE 01_Core/Loventre_Core_Prelude.v =====
+Warning:
+/Volumes/Extreme SSD/RICERCA/TUTTA LA RICERCA/02_VINCIT_R_D/loventre-coq-cycle11-lab/02_Advanced/Geometry
+was previously bound to Loventre_Advanced.Geometry; it is remapped to
+Loventre_Geometry [overriding-logical-loadpath,filesystem,default]
+STATUS=
+===== COMPILE 02_Advanced/Geometry/Loventre_Metrics_Bus.v =====
+Warning:
+/Volumes/Extreme SSD/RICERCA/TUTTA LA RICERCA/02_VINCIT_R_D/loventre-coq-cycle11-lab/02_Advanced/Geometry
+was previously bound to Loventre_Advanced.Geometry; it is remapped to
+Loventre_Geometry [overriding-logical-loadpath,filesystem,default]
+File "./02_Advanced/Geometry/Loventre_Metrics_Bus.v", line 20, characters 0-30:
+Warning: "From Coq" has been replaced by "From Stdlib".
+[deprecated-from-Coq,deprecated-since-9.0,deprecated,default]
+File "./02_Advanced/Geometry/Loventre_Metrics_Bus.v", line 21, characters 0-34:
+Warning: "From Coq" has been replaced by "From Stdlib".
+[deprecated-from-Coq,deprecated-since-9.0,deprecated,default]
+STATUS=
+===== COMPILE 02_Advanced/Geometry/Loventre_LMetrics_JSON_Witness.v =====
+Warning:
+/Volumes/Extreme SSD/RICERCA/TUTTA LA RICERCA/02_VINCIT_R_D/loventre-coq-cycle11-lab/02_Advanced/Geometry
+was previously bound to Loventre_Advanced.Geometry; it is remapped to
+Loventre_Geometry [overriding-logical-loadpath,filesystem,default]
+File "./02_Advanced/Geometry/Loventre_LMetrics_JSON_Witness.v", line 23, characters 38-68:
+Error: Unable to locate library
+Loventre_LMetrics_JSON_Witness with prefix Loventre_Geometry (while searching for a .vos file).
+
+STATUS=
+===== COMPILE 02_Advanced/Loventre_Metrics_Bus.v =====
+Warning:
+/Volumes/Extreme SSD/RICERCA/TUTTA LA RICERCA/02_VINCIT_R_D/loventre-coq-cycle11-lab/02_Advanced/Geometry
+was previously bound to Loventre_Advanced.Geometry; it is remapped to
+Loventre_Geometry [overriding-logical-loadpath,filesystem,default]
+File "./02_Advanced/Loventre_Metrics_Bus.v", line 15, characters 0-35:
+Warning: "From Coq" has been replaced by "From Stdlib".
+[deprecated-from-Coq,deprecated-since-9.0,deprecated,default]
+STATUS=

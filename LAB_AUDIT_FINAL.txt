@@ -1,0 +1,18 @@
+=== AUDIT LAB — filesystem ===
+Mar  6 Gen 2026 00:32:55 CET
+
+LAB directories:
+LAB
+LAB/LAB_12_4
+LAB/LAB_12_5
+LAB/LAB_12_6
+
+LAB source files (.v, .md):
+LAB/LAB_12_4/LAB_12_4_GlobalRigid_Reachability.v
+LAB/LAB_12_4/TEST_LAB_12_4_Consistency.v
+LAB/LAB_12_4/TEST_LAB_12_4_Not_Tautological.v
+LAB/LAB_12_5/LAB_12_5_Conditional_Global_Rigidity.v
+LAB/LAB_12_5/TEST_LAB_12_5_Not_Tautological.v
+LAB/LAB_12_6/LAB_12_6_Structured_Global_Rigidity.v
+LAB/LAB_12_6/TEST_LAB_12_6_Failure_Mode_IV.v
+LAB/LAB_12_6/TEST_LAB_12_6_Not_Tautological.v

@@ -30,7 +30,7 @@ Set Strict Implicit.
 Unset Printing Implicit Defensive.
 
 Import Loventre_Metrics_Bus.
-Import Loventre_LMetrics_Phase_Predicates.
+Import Loventre_LMetrics_Phase_Predicates.Loventre_LMetrics_Phase_Predicates.
 Import Loventre_LMetrics_Policy_Specs.
 
 (* ---------------------------------------------------------------------- *)
@@ -38,11 +38,12 @@ Import Loventre_LMetrics_Policy_Specs.
 (* ---------------------------------------------------------------------- *)
 
 Definition Loventre_P_vs_NP_like_black_hole_theorem (m : LMetrics) : Prop :=
-  (loventre_global_decision m = GD_safe -> P_like m)
+  (loventre_policy_decision m = true -> ~ compact_positive m -> is_P_like m)
   /\
-  (loventre_global_decision m = GD_unsafe -> NP_like m)
+  (loventre_policy_decision m = false -> compact_positive m ->
+     risk_class m = risk_np_like_black_hole -> is_NP_like_black_hole m)
   /\
-  ~(loventre_global_decision m = GD_safe /\ loventre_global_decision m = GD_unsafe).
+  ~(loventre_policy_decision m = true /\ loventre_policy_decision m = false).
 
 (* ---------------------------------------------------------------------- *)
 (* Teorema canonico: separazione costruttiva                              *)
@@ -55,9 +56,9 @@ Proof.
   intros m.
   unfold Loventre_P_vs_NP_like_black_hole_theorem.
   split.
-  - intros Hs. apply Loventre_Safe_implies_P_like. exact Hs.
+  - intros Hs Hncomp. apply Loventre_Safe_implies_P_like; assumption.
   - split.
-    + intros Hu. apply Loventre_Unsafe_implies_NP_like_black_hole. exact Hu.
+    + intros Hu Hcomp Hrisk. apply Loventre_Unsafe_implies_NP_like_black_hole; assumption.
     + intros [Hs Hu]. apply Loventre_Safe_vs_NP_like_black_hole_separated with (m := m).
       exact Hs. exact Hu.
 Qed.

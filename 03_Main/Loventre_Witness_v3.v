@@ -5,6 +5,8 @@ From Loventre_Geometry Require Import
   Loventre_LMetrics_Existence_Summary
   Loventre_LMetrics_Phase_Predicates.
 
+Import Loventre_LMetrics_Phase_Predicates.Loventre_LMetrics_Phase_Predicates.
+
 From Loventre_Main Require Import
   Loventre_Phase_Separation_v3.
 

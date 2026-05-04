@@ -1,28 +1,30 @@
 (**
-  Loventre_LMetrics_JSON_Witness.v (livello Main)
+  Loventre_LMetrics_JSON_Witness.v
   ===============================================
 
-  Questo modulo NON introduce nuovi witness e NON ridefinisce LMetrics.
+  Geometry-level witness declarations for the Loventre v3 stack.
 
-  Scopo:
-  - Fornire un semplice wrapper/alias a livello Loventre_Main
-    per il modulo Geometry che contiene i witness astratti,
-    definiti in:
+  This file must NOT import itself.
 
-        02_Advanced/Geometry/Loventre_LMetrics_JSON_Witness.v
-
-  - Mantenere il modello v3 in cui:
-      * LMetrics è un tipo astratto;
-      * i witness m_seed11_cli_demo, m_seed_grid_demo,
-        m_TSPcrit28_cli_demo, m_SATcrit16_cli_demo
-        sono parametri dichiarati nel modulo Geometry.
-
-  Tutta la matematica reale resta nel modulo Geometry.
+  It provides the abstract JSON/metrics witness constants used by:
+  - Loventre_LMetrics_Existence_Summary
+  - Loventre_LMetrics_Phase_Predicates
+  - Loventre_Witness_v3
+  - Loventre_Phase_Separation_v3
 *)
 
-From Loventre_Geometry Require Import Loventre_LMetrics_JSON_Witness.
+From Stdlib Require Import Reals.
 
-(* Nessuna definizione aggiuntiva qui.
-   Usiamo solo il namespace Loventre_Main.Loventre_LMetrics_JSON_Witness
-   come "facade" verso Loventre_Geometry.Loventre_LMetrics_JSON_Witness. *)
+From Loventre_Geometry Require Import
+  Loventre_Metrics_Bus.
 
+Import Loventre_Metrics_Bus.
+
+Set Implicit Arguments.
+Set Strict Implicit.
+Unset Printing Implicit Defensive.
+
+Parameter m_seed11_cli_demo : LMetrics.
+Parameter m_seed_grid_demo : LMetrics.
+Parameter m_TSPcrit28_cli_demo : LMetrics.
+Parameter m_SATcrit16_cli_demo : LMetrics.

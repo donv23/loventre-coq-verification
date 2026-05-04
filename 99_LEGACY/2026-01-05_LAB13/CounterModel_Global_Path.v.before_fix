@@ -1,0 +1,83 @@
+(*
+  LAB-13.2 — CounterModel_Global_Path.v
+
+  Contromodello che mostra che la rigidità globale
+  definita tramite cammini (GlobalRigid_Path)
+  NON è forzata dalle assunzioni minime sui cammini.
+
+  In particolare:
+  - esiste un cammino non banale x ~> y
+  - esiste anche un cammino non banale y ~> x
+  - quindi la rigidità globale per cammini fallisce
+*)
+
+Require Import
+  Loventre_Advanced.LAB_13_Global_Rigidity.L13_1_Core.Core_Global_Path.
+
+Set Implicit Arguments.
+Unset Strict Implicit.
+Unset Printing Implicit Defensive.
+
+(* === Configurazioni concrete === *)
+
+Inductive ConfigC : Type :=
+| a
+| b
+| c.
+
+Definition Config := ConfigC.
+
+(* === Relazione di transizione === *)
+
+Inductive step : Config -> Config -> Prop :=
+| Hab : step a b
+| Hbc : step b c
+| Hca : step c a.
+
+(* === Istanziazione del path astratto === *)
+
+Inductive pathC : Config -> Config -> Prop :=
+| path_refl : forall x, pathC x x
+| path_step : forall x y z,
+    step x y ->
+    pathC y z ->
+    pathC x z.
+
+Definition path := pathC.
+
+(* === Non trivialità del cammino === *)
+
+Definition nontrivial_path (x y : Config) : Prop :=
+  x <> y /\ path x y.
+
+(* === Fallimento della rigidità globale === *)
+
+Lemma cycle_exists :
+  nontrivial_path a b /\ nontrivial_path b a.
+Proof.
+  split.
+  - split.
+    + discriminate.
+    + apply path_step with (y := b).
+      * exact Hab.
+      * apply path_refl.
+  - split.
+    + discriminate.
+    + apply path_step with (y := c).
+      * exact Hbc.
+      * apply path_step with (y := a).
+        -- exact Hca.
+        -- apply path_refl.
+Qed.
+
+Lemma not_GlobalRigid_Path :
+  ~ GlobalRigid_Path.
+Proof.
+  unfold GlobalRigid_Path.
+  intro H.
+  destruct cycle_exists as [[Hab_nt Hab_p] [Hba_nt Hba_p]].
+  specialize (H a b Hab_p).
+  apply H.
+  exact Hba_p.
+Qed.
+

@@ -1,0 +1,26 @@
+02_Advanced/LAB_12_Minimal_Rigidity/L12_2_Pairwise/CounterModel_Pairwise.v:60:Axiom IrrevLocal :
+02_Advanced/LAB_12_Minimal_Rigidity/L12_2_Pairwise/CounterModel_Pairwise.v:64:Axiom terminal_isolated :
+02_Advanced/LAB_12_Minimal_Rigidity/L12_2_Pairwise/Core_Pairwise.v:26:Axiom IrrevLocal :
+02_Advanced/LAB_12_Minimal_Rigidity/L12_2_Pairwise/Core_Pairwise.v:32:Axiom terminal_isolated :
+02_Advanced/LAB_12_Minimal_Rigidity/L12_3_Triplet/Core_Triplet.v:18:Axiom R1R2_excl : forall x, ~(R1 x /\ R2 x).
+02_Advanced/LAB_12_Minimal_Rigidity/L12_3_Triplet/Core_Triplet.v:19:Axiom R2R3_excl : forall x, ~(R2 x /\ R3 x).
+02_Advanced/LAB_12_Minimal_Rigidity/L12_3_Triplet/Core_Triplet.v:20:Axiom R1R3_excl : forall x, ~(R1 x /\ R3 x).
+02_Advanced/LAB_12_Minimal_Rigidity/L12_3_Triplet/CounterModel_Triplet.v:19:Axiom distinct_ab : a <> b.
+02_Advanced/LAB_12_Minimal_Rigidity/L12_3_Triplet/CounterModel_Triplet.v:20:Axiom distinct_bc : b <> c.
+02_Advanced/LAB_12_Minimal_Rigidity/L12_3_Triplet/CounterModel_Triplet.v:21:Axiom distinct_ac : a <> c.
+02_Advanced/LAB_12_Minimal_Rigidity/L12_3_Triplet/CounterModel_Triplet.v:25:Axiom R1_a : R1 a.
+02_Advanced/LAB_12_Minimal_Rigidity/L12_3_Triplet/CounterModel_Triplet.v:26:Axiom R2_b : R2 b.
+02_Advanced/LAB_12_Minimal_Rigidity/L12_3_Triplet/CounterModel_Triplet.v:28:Axiom R1_only_a : forall x : Config, R1 x -> x = a.
+02_Advanced/LAB_12_Minimal_Rigidity/L12_3_Triplet/CounterModel_Triplet.v:29:Axiom R2_only_b : forall x : Config, R2 x -> x = b.
+02_Advanced/LAB_12_Minimal_Rigidity/L12_3_Triplet/CounterModel_Triplet.v:30:Axiom R3_empty  : forall x : Config, R3 x -> False.
+02_Advanced/LAB_12_Minimal_Rigidity/L12_1_MinCore/Core_Minimal.v:31:Axiom local_irreversibility :
+02_Advanced/LAB_12_Minimal_Rigidity/L12_1_MinCore/CounterModel_NoGlobalRigidity.v:23:Axiom Hab : trans a b.
+02_Advanced/LAB_12_Minimal_Rigidity/L12_1_MinCore/CounterModel_NoGlobalRigidity.v:24:Axiom Hba : trans b a.
+02_Advanced/LAB_12_Minimal_Rigidity/L12_1_MinCore/CounterModel_NoGlobalRigidity.v:25:Axiom Hbc : trans b c.
+02_Advanced/LAB_12_Minimal_Rigidity/L12_1_MinCore/CounterModel_NoGlobalRigidity.v:29:Axiom Iso_c : Isolating c.
+02_Advanced/LAB_12_Minimal_Rigidity/L12_1_MinCore/CounterModel_NoGlobalRigidity.v:30:Axiom NotIso_a : ~ Isolating a.
+02_Advanced/LAB_12_Minimal_Rigidity/L12_1_MinCore/CounterModel_NoGlobalRigidity.v:31:Axiom NotIso_b : ~ Isolating b.
+02_Advanced/LAB_12_Minimal_Rigidity/L12_1_MinCore/CounterModel_NoGlobalRigidity.v:35:Axiom no_other :
+02_Advanced/LAB_12_Minimal_Rigidity/L12_1_MinCore/CounterModel_NoGlobalRigidity.v:58:  - admit.
+02_Advanced/LAB_12_Minimal_Rigidity/L12_1_MinCore/CounterModel_NoGlobalRigidity.v:59:  - admit.
+02_Advanced/LAB_12_Minimal_Rigidity/L12_1_MinCore/CounterModel_NoGlobalRigidity.v:61:Admitted.

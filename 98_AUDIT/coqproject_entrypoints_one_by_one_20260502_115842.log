@@ -1,0 +1,95 @@
+===== COMPILE 03_Main/Loventre_Theorem_v3_Seed.v =====
+Warning:
+/Volumes/Extreme SSD/RICERCA/TUTTA LA RICERCA/02_VINCIT_R_D/loventre-coq-cycle11-lab/02_Advanced/Geometry
+was previously bound to Loventre_Advanced.Geometry; it is remapped to
+Loventre_Geometry [overriding-logical-loadpath,filesystem,default]
+File "./03_Main/Loventre_Theorem_v3_Seed.v", line 6, characters 0-30:
+Warning: "From Coq" has been replaced by "From Stdlib".
+[deprecated-from-Coq,deprecated-since-9.0,deprecated,default]
+File "./03_Main/Loventre_Theorem_v3_Seed.v", line 9, characters 2-22:
+Error: Unable to locate library
+Loventre_Metrics_Bus with prefix Loventre_Geometry (while searching for a .vos file).
+
+STATUS=
+===== COMPILE 03_Main/Loventre_Main_Theorem_v3_Bridge.v =====
+Warning:
+/Volumes/Extreme SSD/RICERCA/TUTTA LA RICERCA/02_VINCIT_R_D/loventre-coq-cycle11-lab/02_Advanced/Geometry
+was previously bound to Loventre_Advanced.Geometry; it is remapped to
+Loventre_Geometry [overriding-logical-loadpath,filesystem,default]
+File "./03_Main/Loventre_Main_Theorem_v3_Bridge.v", line 9, characters 38-58:
+Error: Unable to locate library
+Loventre_Metrics_Bus with prefix Loventre_Advanced (while searching for a .vos file).
+
+STATUS=
+===== COMPILE 03_Main/Loventre_Theorem_v3_P_vs_NP_like.v =====
+Warning:
+/Volumes/Extreme SSD/RICERCA/TUTTA LA RICERCA/02_VINCIT_R_D/loventre-coq-cycle11-lab/02_Advanced/Geometry
+was previously bound to Loventre_Advanced.Geometry; it is remapped to
+Loventre_Geometry [overriding-logical-loadpath,filesystem,default]
+File "./03_Main/Loventre_Theorem_v3_P_vs_NP_like.v", line 17, characters 2-23:
+Error: Unable to locate library
+Loventre_Core_Prelude with prefix Loventre_Core (while searching for a .vos file).
+
+STATUS=
+===== COMPILE 03_Main/Loventre_Phase_Separation_v3.v =====
+Warning:
+/Volumes/Extreme SSD/RICERCA/TUTTA LA RICERCA/02_VINCIT_R_D/loventre-coq-cycle11-lab/02_Advanced/Geometry
+was previously bound to Loventre_Advanced.Geometry; it is remapped to
+Loventre_Geometry [overriding-logical-loadpath,filesystem,default]
+File "./03_Main/Loventre_Phase_Separation_v3.v", line 19, characters 0-30:
+Warning: "From Coq" has been replaced by "From Stdlib".
+[deprecated-from-Coq,deprecated-since-9.0,deprecated,default]
+File "./03_Main/Loventre_Phase_Separation_v3.v", line 22, characters 2-32:
+Error: Unable to locate library
+Loventre_LMetrics_JSON_Witness with prefix Loventre_Geometry (while searching for a .vos file).
+
+STATUS=
+===== COMPILE 03_Main/Loventre_Witness_v3.v =====
+Warning:
+/Volumes/Extreme SSD/RICERCA/TUTTA LA RICERCA/02_VINCIT_R_D/loventre-coq-cycle11-lab/02_Advanced/Geometry
+was previously bound to Loventre_Advanced.Geometry; it is remapped to
+Loventre_Geometry [overriding-logical-loadpath,filesystem,default]
+File "./03_Main/Loventre_Witness_v3.v", line 1, characters 0-30:
+Warning: "From Coq" has been replaced by "From Stdlib".
+[deprecated-from-Coq,deprecated-since-9.0,deprecated,default]
+File "./03_Main/Loventre_Witness_v3.v", line 4, characters 2-32:
+Error: Unable to locate library
+Loventre_LMetrics_JSON_Witness with prefix Loventre_Geometry (while searching for a .vos file).
+
+STATUS=
+===== COMPILE 03_Main/Loventre_Class_Separation_v3.v =====
+Warning:
+/Volumes/Extreme SSD/RICERCA/TUTTA LA RICERCA/02_VINCIT_R_D/loventre-coq-cycle11-lab/02_Advanced/Geometry
+was previously bound to Loventre_Advanced.Geometry; it is remapped to
+Loventre_Geometry [overriding-logical-loadpath,filesystem,default]
+File "./03_Main/Loventre_Class_Separation_v3.v", line 14, characters 0-30:
+Warning: "From Coq" has been replaced by "From Stdlib".
+[deprecated-from-Coq,deprecated-since-9.0,deprecated,default]
+File "./03_Main/Loventre_Class_Separation_v3.v", line 17, characters 2-32:
+Error: Unable to locate library
+Loventre_LMetrics_JSON_Witness with prefix Loventre_Geometry (while searching for a .vos file).
+
+STATUS=
+===== COMPILE 03_Main/Loventre_Mini_Theorem_P_vs_NPbh_Loventre_v3.v =====
+Warning:
+/Volumes/Extreme SSD/RICERCA/TUTTA LA RICERCA/02_VINCIT_R_D/loventre-coq-cycle11-lab/02_Advanced/Geometry
+was previously bound to Loventre_Advanced.Geometry; it is remapped to
+Loventre_Geometry [overriding-logical-loadpath,filesystem,default]
+File "./03_Main/Loventre_Mini_Theorem_P_vs_NPbh_Loventre_v3.v", line 23, characters 0-30:
+Warning: "From Coq" has been replaced by "From Stdlib".
+[deprecated-from-Coq,deprecated-since-9.0,deprecated,default]
+File "./03_Main/Loventre_Mini_Theorem_P_vs_NPbh_Loventre_v3.v", line 26, characters 2-32:
+Error: Unable to locate library
+Loventre_LMetrics_JSON_Witness with prefix Loventre_Geometry (while searching for a .vos file).
+
+STATUS=
+===== COMPILE 03_Main/Test_Loventre_Theorem_v3_All.v =====
+Warning:
+/Volumes/Extreme SSD/RICERCA/TUTTA LA RICERCA/02_VINCIT_R_D/loventre-coq-cycle11-lab/02_Advanced/Geometry
+was previously bound to Loventre_Advanced.Geometry; it is remapped to
+Loventre_Geometry [overriding-logical-loadpath,filesystem,default]
+File "./03_Main/Test_Loventre_Theorem_v3_All.v", line 1, characters 34-66:
+Error: Unable to locate library
+Loventre_Theorem_v3_P_vs_NP_like with prefix Loventre_Main (while searching for a .vos file).
+
+STATUS=

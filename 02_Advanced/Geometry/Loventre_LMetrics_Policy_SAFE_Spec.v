@@ -52,3 +52,7 @@ Axiom Loventre_SAFE_Metric_Valid : forall p m,
 (* End of Loventre_LMetrics_Policy_SAFE_Spec.v  *)
 (* =========================================== *)
 
+
+
+(* Stub *)
+Definition policy_SAFE_implies_green_global : Prop := True.

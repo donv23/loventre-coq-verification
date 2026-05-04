@@ -6,8 +6,8 @@
 
 From Stdlib Require Import Reals.
 
-From Loventre_Advanced Require Import Loventre_Metrics_Bus.
-From Loventre_Advanced.Geometry Require Import
+From Loventre_Geometry Require Import Loventre_Metrics_Bus.
+From Loventre_Geometry Require Import
   Loventre_LMetrics_Phase_Predicates
   Loventre_LMetrics_Existence_Summary.
 

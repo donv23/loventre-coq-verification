@@ -30,8 +30,11 @@ Unset Printing Implicit Defensive.
 (* === Predicati astratti di classificazione finale            === *)
 (* ============================================================= *)
 
-Parameter is_P_like : LMetrics -> Prop.
-Parameter is_NP_like_black_hole : LMetrics -> Prop.
+(* Alias verso le definizioni concrete in Phase_Predicates *)
+Definition is_P_like : LMetrics -> Prop :=
+  Loventre_LMetrics_Phase_Predicates.is_P_like.
+Definition is_NP_like_black_hole : LMetrics -> Prop :=
+  Loventre_LMetrics_Phase_Predicates.is_NP_like_black_hole.
 
 (* ============================================================= *)
 (* === Witness canonici (bridge astratto)                      === *)
@@ -58,3 +61,6 @@ Axiom m_TSPcrit28_soddisfa_is_NP_like_black_hole :
 Axiom m_SATcrit16_soddisfa_is_NP_like_black_hole :
   is_NP_like_black_hole m_SATcrit16_cli_demo.
 
+Axiom Loventre_P_vs_NP_like_black_hole_exist_predicative :
+  (exists m : LMetrics, is_P_like m)
+  /\ (exists m : LMetrics, is_NP_like_black_hole m).

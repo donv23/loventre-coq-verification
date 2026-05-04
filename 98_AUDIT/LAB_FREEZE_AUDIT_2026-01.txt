@@ -1,0 +1,5 @@
+02_Advanced/LAB_A_Independence/A2_NoTrichotomy/Core_NoTrichotomy.v:14:Axiom no_SC : forall x : Config, ~(Stable x /\ Critical x).
+02_Advanced/LAB_A_Independence/A2_NoTrichotomy/Core_NoTrichotomy.v:15:Axiom no_SI : forall x : Config, ~(Stable x /\ Isolating x).
+02_Advanced/LAB_A_Independence/A2_NoTrichotomy/Core_NoTrichotomy.v:16:Axiom no_CI : forall x : Config, ~(Critical x /\ Isolating x).
+02_Advanced/LAB_9_AltFormalization/Alt_Core.v:17:Axiom intrinsic_irreversibility :
+02_Advanced/LAB_9_AltFormalization/Alt_Bridge.v:12:Axiom Barrier_equiv_irreversible :

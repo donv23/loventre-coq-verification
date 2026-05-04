@@ -23,12 +23,16 @@
 From Coq Require Import Reals.
 
 From Loventre_Geometry Require Import
+  Loventre_Metrics_Bus
   Loventre_LMetrics_JSON_Witness
   Loventre_LMetrics_Existence_Summary
   Loventre_LMetrics_Phase_Predicates.
 
 From Loventre_Main Require Import
   Loventre_Class_Separation_v3.
+
+Import Loventre_Metrics_Bus.
+Import Loventre_LMetrics_Phase_Predicates.Loventre_LMetrics_Phase_Predicates.
 
 Set Implicit Arguments.
 Set Strict Implicit.

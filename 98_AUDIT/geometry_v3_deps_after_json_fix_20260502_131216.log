@@ -1,0 +1,57 @@
+===== COMPILE 02_Advanced/Geometry/Loventre_Metrics_Bus.v =====
+Warning:
+/Volumes/Extreme SSD/RICERCA/TUTTA LA RICERCA/02_VINCIT_R_D/loventre-coq-cycle11-lab/02_Advanced/Geometry
+was previously bound to Loventre_Advanced.Geometry; it is remapped to
+Loventre_Geometry [overriding-logical-loadpath,filesystem,default]
+File "./02_Advanced/Geometry/Loventre_Metrics_Bus.v", line 20, characters 0-30:
+Warning: "From Coq" has been replaced by "From Stdlib".
+[deprecated-from-Coq,deprecated-since-9.0,deprecated,default]
+File "./02_Advanced/Geometry/Loventre_Metrics_Bus.v", line 21, characters 0-34:
+Warning: "From Coq" has been replaced by "From Stdlib".
+[deprecated-from-Coq,deprecated-since-9.0,deprecated,default]
+STATUS=
+===== COMPILE 02_Advanced/Geometry/Loventre_LMetrics_JSON_Witness.v =====
+Warning:
+/Volumes/Extreme SSD/RICERCA/TUTTA LA RICERCA/02_VINCIT_R_D/loventre-coq-cycle11-lab/02_Advanced/Geometry
+was previously bound to Loventre_Advanced.Geometry; it is remapped to
+Loventre_Geometry [overriding-logical-loadpath,filesystem,default]
+STATUS=
+===== COMPILE 02_Advanced/Geometry/Loventre_LMetrics_Existence_Summary.v =====
+Warning:
+/Volumes/Extreme SSD/RICERCA/TUTTA LA RICERCA/02_VINCIT_R_D/loventre-coq-cycle11-lab/02_Advanced/Geometry
+was previously bound to Loventre_Advanced.Geometry; it is remapped to
+Loventre_Geometry [overriding-logical-loadpath,filesystem,default]
+File "./02_Advanced/Geometry/Loventre_LMetrics_Existence_Summary.v", line 17, characters 2-29:
+Error: Unable to locate library
+Loventre_LMetrics_Structure with prefix Loventre_Geometry (while searching for a .vos file).
+
+STATUS=
+===== COMPILE 02_Advanced/Geometry/Loventre_LMetrics_Phase_Predicates.v =====
+Warning:
+/Volumes/Extreme SSD/RICERCA/TUTTA LA RICERCA/02_VINCIT_R_D/loventre-coq-cycle11-lab/02_Advanced/Geometry
+was previously bound to Loventre_Advanced.Geometry; it is remapped to
+Loventre_Geometry [overriding-logical-loadpath,filesystem,default]
+File "./02_Advanced/Geometry/Loventre_LMetrics_Phase_Predicates.v", line 10, characters 2-29:
+Error: Unable to locate library
+Loventre_LMetrics_Structure with prefix Loventre_Geometry (while searching for a .vos file).
+
+STATUS=
+===== COMPILE 02_Advanced/Geometry/Loventre_LMetrics_Policy_SAFE_Spec.v =====
+Warning:
+/Volumes/Extreme SSD/RICERCA/TUTTA LA RICERCA/02_VINCIT_R_D/loventre-coq-cycle11-lab/02_Advanced/Geometry
+was previously bound to Loventre_Advanced.Geometry; it is remapped to
+Loventre_Geometry [overriding-logical-loadpath,filesystem,default]
+STATUS=
+===== COMPILE 02_Advanced/Geometry/Loventre_LMetrics_Accessible_Existence.v =====
+Warning:
+/Volumes/Extreme SSD/RICERCA/TUTTA LA RICERCA/02_VINCIT_R_D/loventre-coq-cycle11-lab/02_Advanced/Geometry
+was previously bound to Loventre_Advanced.Geometry; it is remapped to
+Loventre_Geometry [overriding-logical-loadpath,filesystem,default]
+File "./02_Advanced/Geometry/Loventre_LMetrics_Accessible_Existence.v", line 9, characters 0-30:
+Warning: "From Coq" has been replaced by "From Stdlib".
+[deprecated-from-Coq,deprecated-since-9.0,deprecated,default]
+File "./02_Advanced/Geometry/Loventre_LMetrics_Accessible_Existence.v", line 12, characters 2-37:
+Error: Unable to locate library
+Loventre_LMetrics_Existence_Summary with prefix Loventre_Main (while searching for a .vos file).
+
+STATUS=

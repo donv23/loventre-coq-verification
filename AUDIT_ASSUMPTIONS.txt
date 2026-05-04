@@ -1,0 +1,30 @@
+/Volumes/Extreme SSD/RICERCA/TUTTA LA RICERCA/02_VINCIT_R_D/loventre-coq-cycle11-lab/02_Advanced/Geometry
+Closed under the global context
+Axioms:
+ClassicalDedekindReals.sig_forall_dec :
+  forall P : nat -> Prop,
+  (forall n : nat, {P n} + {~ P n}) ->
+  {n : nat | ~ P n} + {forall n : nat, P n}
+Loventre_LMetrics_Policy_Specs.policy_unsafe_implies_NP_like_black_hole :
+  forall m : Loventre_Metrics_Bus.LMetrics,
+  Loventre_LMetrics_Policy_Specs.loventre_policy_decision m = false ->
+  Loventre_LMetrics_Phase_Predicates.Loventre_LMetrics_Phase_Predicates.is_NP_like_black_hole
+    m
+Loventre_LMetrics_Policy_Specs.policy_safe_implies_P_like :
+  forall m : Loventre_Metrics_Bus.LMetrics,
+  Loventre_LMetrics_Policy_Specs.loventre_policy_decision m = true ->
+  Loventre_LMetrics_Phase_Predicates.Loventre_LMetrics_Phase_Predicates.is_P_like
+    m
+Axioms:
+ClassicalDedekindReals.sig_forall_dec :
+  forall P : nat -> Prop,
+  (forall n : nat, {P n} + {~ P n}) ->
+  {n : nat | ~ P n} + {forall n : nat, P n}
+Axioms:
+Loventre_LMetrics_Existence_Summary.m_seed11_soddisfa_is_P_like :
+  Loventre_LMetrics_Existence_Summary.is_P_like
+    Loventre_LMetrics_Existence_Summary.m_seed11_cli_demo
+Axioms:
+Loventre_LMetrics_Existence_Summary.m_TSPcrit28_soddisfa_is_NP_like_black_hole :
+  Loventre_LMetrics_Existence_Summary.is_NP_like_black_hole
+    Loventre_LMetrics_Existence_Summary.m_TSPcrit28_cli_demo

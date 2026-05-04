@@ -1,0 +1,86 @@
+(*
+  LAB-12.2 — CounterModel_Pairwise.v
+  Versione canonica corretta (v10, gennaio 2026)
+
+  Contromodello che mostra:
+  Local irreversibility + terminal isolation
+  NON implicano global rigidity.
+*)
+
+Require Import
+  Loventre_Advanced.LAB_12_Minimal_Rigidity.L12_2_Pairwise.Core_Pairwise.
+
+Set Implicit Arguments.
+Unset Strict Implicit.
+Unset Printing Implicit Defensive.
+
+(* === Configurazioni concrete === *)
+
+Inductive C : Type :=
+| a
+| b
+| c.
+
+Definition Config := C.
+
+(* === Decidibilità dell’uguaglianza === *)
+
+Definition eq_dec_Config (x y : Config) : {x = y} + {x <> y}.
+Proof. decide equality. Defined.
+
+Lemma distinct_abc :
+  a <> b /\ b <> c /\ a <> c.
+Proof. repeat split; discriminate. Qed.
+
+(* === Relazione di transizione === *)
+
+Inductive transM : Config -> Config -> Prop :=
+| Hab : transM a b
+| Hbc : transM b c
+| Hca : transM c a.
+
+Definition trans := transM.
+
+(* === Nodo isolante === *)
+
+Definition Isolating (x : Config) : Prop :=
+  x = c.
+
+(* === Proprietà locali === *)
+
+Lemma IrrevLocal :
+  forall x y : Config,
+    trans x y -> ~ trans y x.
+Proof.
+  intros x y Hxy Hyx.
+  inversion Hxy; subst;
+  inversion Hyx; subst;
+  destruct distinct_abc as [Dab [Dbc Dac]];
+  tauto.
+Qed.
+
+Lemma terminal_isolated :
+  forall x y : Config,
+    Isolating x -> ~ trans x y.
+Proof.
+  intros x y Hiso Hxy.
+  unfold Isolating in Hiso; subst x.
+  inversion Hxy; subst.
+  all: destruct distinct_abc as [Dab [Dbc Dac]].
+  (* ogni caso esplicito: nessuna equality ricorsiva su x *)
+  - apply Dac; reflexivity.
+  - apply Dbc; reflexivity.
+  - apply Dac; reflexivity.
+Qed.
+
+(* === Fallimento della rigidità globale === *)
+
+Lemma not_GlobalRigid : ~ GlobalRigid.
+Proof.
+  unfold GlobalRigid.
+  intro H.
+  specialize (H a b).
+  apply (H Hab).
+  exact Hca.
+Qed.
+
