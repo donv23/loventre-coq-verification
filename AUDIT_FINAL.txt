@@ -1,0 +1,42 @@
+/Volumes/Extreme SSD/RICERCA/TUTTA LA RICERCA/02_VINCIT_R_D/loventre-coq-cycle11-lab/02_Advanced/Geometry
+Axioms:
+decision_color_coherence_safe :
+  forall m : Loventre_Metrics_Bus.LMetrics,
+  Loventre_Metrics_Bus.loventre_global_decision m =
+  Loventre_Metrics_Bus.GD_safe ->
+  Loventre_Metrics_Bus.loventre_global_color m =
+  Loventre_Metrics_Bus.GC_green
+Axioms:
+ClassicalDedekindReals.sig_forall_dec :
+  forall P : nat -> Prop,
+  (forall n : nat, {P n} + {~ P n}) ->
+  {n : nat | ~ P n} + {forall n : nat, P n}
+decision_color_coherence_safe :
+  forall m : Loventre_Metrics_Bus.LMetrics,
+  Loventre_Metrics_Bus.loventre_global_decision m =
+  Loventre_Metrics_Bus.GD_safe ->
+  Loventre_Metrics_Bus.loventre_global_color m =
+  Loventre_Metrics_Bus.GC_green
+Loventre_P_vs_NP_like_black_hole_exist_predicative :
+  (exists m : Loventre_Metrics_Bus.LMetrics, is_P_like m) /\
+  (exists m : Loventre_Metrics_Bus.LMetrics, is_NP_like_black_hole m)
+Axioms:
+ClassicalDedekindReals.sig_forall_dec :
+  forall P : nat -> Prop,
+  (forall n : nat, {P n} + {~ P n}) ->
+  {n : nat | ~ P n} + {forall n : nat, P n}
+Axioms:
+ClassicalDedekindReals.sig_forall_dec :
+  forall P : nat -> Prop,
+  (forall n : nat, {P n} + {~ P n}) ->
+  {n : nat | ~ P n} + {forall n : nat, P n}
+Axioms:
+ClassicalDedekindReals.sig_forall_dec :
+  forall P : nat -> Prop,
+  (forall n : nat, {P n} + {~ P n}) ->
+  {n : nat | ~ P n} + {forall n : nat, P n}
+Axioms:
+ClassicalDedekindReals.sig_forall_dec :
+  forall P : nat -> Prop,
+  (forall n : nat, {P n} + {~ P n}) ->
+  {n : nat | ~ P n} + {forall n : nat, P n}

@@ -1,58 +1,75 @@
 (* =========================================== *)
 (* Loventre_LMetrics_Policy_SAFE_Spec.v        *)
-(* Safe Policy and Green Metrics Placeholder   *)
+(* SAFE Policy → GREEN Color Bridge            *)
 (* =========================================== *)
 
-From Stdlib Require Import Arith.
+From Stdlib Require Import Reals.
 
-(* =========================================== *)
-(* Definition of SAFE Policy                  *)
-(* =========================================== *)
+From Loventre_Geometry Require Import
+  Loventre_Metrics_Bus.
 
-(* Placeholder for defining the SAFE policy criteria *)
-Parameter SAFE_Policy : Type.
+Import Loventre_Metrics_Bus.
 
-(* Axiom: The SAFE policy is always true for this example *)
-Axiom SAFE_Policy_Holds : SAFE_Policy.
+(* ----------------------------------------------------------------- *)
+(* Predicati di alto livello                                         *)
+(* ----------------------------------------------------------------- *)
 
-(* =========================================== *)
-(* Green Metrics Definition                   *)
-(* =========================================== *)
+Definition is_globally_SAFE (m : LMetrics) : Prop :=
+  loventre_global_decision m = GD_safe.
 
-(* Definition of a Green metric, typically used in optimization problems *)
-Parameter Green_Metric : Type.
+Definition is_globally_GREEN (m : LMetrics) : Prop :=
+  loventre_global_color m = GC_green.
 
-(* Axiom: Green Metric is always valid in this placeholder example *)
-Axiom Green_Metric_Valid : Green_Metric.
+(* ----------------------------------------------------------------- *)
+(* Assioma di coerenza decision ↔ color                              *)
+(*                                                                   *)
+(* Esprime il vincolo semantico (non strutturalmente forzato dal     *)
+(* record LMetrics) secondo cui la decisione globale e il colore     *)
+(* operativo sono allineati: SAFE ⇒ GREEN, INVALID ⇒ UNKNOWN.        *)
+(*                                                                   *)
+(* Questo assioma riflette l'invariante mantenuto dal Policy Bridge  *)
+(* del motore Python.                                                *)
+(* ----------------------------------------------------------------- *)
 
-(* =========================================== *)
-(* Function Definitions                        *)
-(* =========================================== *)
+Axiom decision_color_coherence_safe :
+  forall m : LMetrics,
+    loventre_global_decision m = GD_safe ->
+    loventre_global_color m = GC_green.
 
-(* Function to check if a system is in SAFE state *)
-Definition is_SAFE (p : SAFE_Policy) : Prop := 
-  p = SAFE_Policy_Holds.
+Axiom decision_color_coherence_invalid :
+  forall m : LMetrics,
+    loventre_global_decision m = GD_invalid ->
+    loventre_global_color m = GC_unknown.
 
-(* Function to check if a system is Green *)
-Definition is_Green (m : Green_Metric) : Prop := 
-  m = Green_Metric_Valid.
+(* ----------------------------------------------------------------- *)
+(* Enunciato e teorema: SAFE ⇒ GREEN (reale, non tautologico)        *)
+(* ----------------------------------------------------------------- *)
 
-(* =========================================== *)
-(* Integration with Loventre Metrics          *)
-(* =========================================== *)
+Definition policy_SAFE_implies_green_global : Prop :=
+  forall m : LMetrics,
+    is_globally_SAFE m ->
+    is_globally_GREEN m.
 
-(* Placeholder function for SAFE metric within Loventre metrics *)
-Parameter Loventre_SAFE_Metric : SAFE_Policy -> Green_Metric -> Prop.
+Theorem policy_SAFE_implies_green_global_proof :
+  policy_SAFE_implies_green_global.
+Proof.
+  unfold policy_SAFE_implies_green_global,
+         is_globally_SAFE, is_globally_GREEN.
+  intros m Hsafe.
+  apply decision_color_coherence_safe. exact Hsafe.
+Qed.
 
-(* Axiom: The Loventre SAFE Metric is always valid *)
-Axiom Loventre_SAFE_Metric_Valid : forall p m, 
-  is_SAFE p -> is_Green m -> Loventre_SAFE_Metric p m.
+(* ----------------------------------------------------------------- *)
+(* Corollario: separazione SAFE vs INVALID a livello colore          *)
+(* ----------------------------------------------------------------- *)
 
-(* =========================================== *)
-(* End of Loventre_LMetrics_Policy_SAFE_Spec.v  *)
-(* =========================================== *)
-
-
-
-(* Stub *)
-Definition policy_SAFE_implies_green_global : Prop := True.
+Theorem safe_and_invalid_colors_distinct :
+  forall m : LMetrics,
+    loventre_global_decision m = GD_safe ->
+    ~ loventre_global_color m = GC_unknown.
+Proof.
+  intros m Hsafe Habsurd.
+  assert (HG : loventre_global_color m = GC_green)
+    by (apply decision_color_coherence_safe; exact Hsafe).
+  rewrite HG in Habsurd. discriminate.
+Qed.

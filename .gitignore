@@ -7,3 +7,11 @@
 Makefile.coq
 .DS_Store
 
+
+# Coq build artifacts
+*.aux
+*.vo
+*.vos
+*.vok
+*.glob
+.*.aux

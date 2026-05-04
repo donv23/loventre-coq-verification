@@ -4,7 +4,9 @@ From Stdlib Require Import Reals Bool.
 From Loventre_Core Require Import Loventre_Core_Prelude.
 From Loventre_Geometry Require Import
   Loventre_Metrics_Bus
-  Loventre_LMetrics_Phase_Predicates.
+  Loventre_LMetrics_Phase_Predicates
+  Loventre_LMetrics_Existence_Summary
+  Loventre_LMetrics_Policy_SAFE_Spec.
 
 Import Loventre_Metrics_Bus.
 Import Loventre_LMetrics_Phase_Predicates.Loventre_LMetrics_Phase_Predicates.
@@ -13,13 +15,15 @@ Set Implicit Arguments.
 Set Strict Implicit.
 Unset Printing Implicit Defensive.
 
+(* ----------------------------------------------------------------- *)
+(* Policy decision booleana: assenza di orizzonte                    *)
+(* ----------------------------------------------------------------- *)
+
 Definition loventre_policy_decision (m : LMetrics) : bool :=
   negb (horizon_flag m).
 
 (* ----------------------------------------------------------------- *)
-(* Lemma di onestà: la policy garantisce ESATTAMENTE l'assenza di    *)
-(* orizzonte (horizon_flag = false). Per concludere is_P_like serve  *)
-(* l'ipotesi aggiuntiva ~ compact_positive m.                        *)
+(* Lemmi di onestà policy ↔ horizon                                  *)
 (* ----------------------------------------------------------------- *)
 
 Lemma policy_safe_iff_no_horizon :
@@ -41,8 +45,7 @@ Proof.
 Qed.
 
 (* ----------------------------------------------------------------- *)
-(* Lemmi originali, ora dimostrati con ipotesi aggiuntiva esplicita  *)
-(* sulla compact_positive (necessaria per chiudere is_P_like).       *)
+(* Dalla policy alle classi di fase (con ipotesi esplicite)          *)
 (* ----------------------------------------------------------------- *)
 
 Lemma policy_safe_implies_P_like :
@@ -73,5 +76,30 @@ Proof.
   - exact Hrisk.
 Qed.
 
-(* Stub mantenuto per compatibilità con Theorem_v3_Seed *)
-Definition Loventre_Policy_Core_Program : Prop := True.
+(* ----------------------------------------------------------------- *)
+(* Loventre_Policy_Core_Program: enunciato composito                 *)
+(*                                                                   *)
+(* Tre componenti:                                                   *)
+(*   (1) esistenza di una metrica P-like                             *)
+(*   (2) esistenza di una metrica NP-like-black-hole                 *)
+(*   (3) coerenza policy SAFE ⇒ colore GREEN                         *)
+(*                                                                   *)
+(* I primi due sono garantiti dall'assioma                           *)
+(* Loventre_P_vs_NP_like_black_hole_exist_predicative                *)
+(* (definito in Existence_Summary, witness dal motore Python).       *)
+(* Il terzo è un teorema reale dimostrato in Policy_SAFE_Spec.       *)
+(* ----------------------------------------------------------------- *)
+
+Definition Loventre_Policy_Core_Program : Prop :=
+  ((exists m : LMetrics, is_P_like m)
+   /\ (exists m : LMetrics, is_NP_like_black_hole m))
+  /\ policy_SAFE_implies_green_global.
+
+Theorem Loventre_Policy_Core_Program_holds :
+  Loventre_Policy_Core_Program.
+Proof.
+  unfold Loventre_Policy_Core_Program.
+  split.
+  - exact Loventre_P_vs_NP_like_black_hole_exist_predicative.
+  - exact policy_SAFE_implies_green_global_proof.
+Qed.

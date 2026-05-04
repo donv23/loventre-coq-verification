@@ -6,7 +6,8 @@ From Loventre_Core Require Import Loventre_Core_Prelude.
 
 From Loventre_Geometry Require Import
   Loventre_Metrics_Bus
-  Loventre_LMetrics_Phase_Predicates.
+  Loventre_LMetrics_Phase_Predicates
+  Loventre_LMetrics_Policy_SAFE_Spec.
 
 From Loventre_Main Require Import
   Loventre_LMetrics_Policy_Specs.
@@ -48,9 +49,23 @@ Proof.
   apply policy_unsafe_implies_NP_like_black_hole; assumption.
 Qed.
 
-(* Stub: separation statement and bridge theorem *)
-Definition Loventre_LMetrics_Separation_Statement : Prop := True.
+(* ----------------------------------------------------------------- *)
+(* Separation statement: la coerenza policy + SAFE→GREEN implica    *)
+(* l'esistenza di entrambe le classi (P-like e NP-like-BH).         *)
+(* ----------------------------------------------------------------- *)
+
+Definition Loventre_LMetrics_Separation_Statement : Prop :=
+  (exists m : LMetrics, is_P_like m)
+  /\ (exists m : LMetrics, is_NP_like_black_hole m).
 
 Theorem Loventre_LMetrics_Separation_Theorem_from_core_and_SAFE :
-  True -> True -> Loventre_LMetrics_Separation_Statement.
-Proof. intros _ _. unfold Loventre_LMetrics_Separation_Statement. exact I. Qed.
+  Loventre_Policy_Core_Program ->
+  policy_SAFE_implies_green_global ->
+  Loventre_LMetrics_Separation_Statement.
+Proof.
+  intros Hcore _Hsafe.
+  unfold Loventre_LMetrics_Separation_Statement.
+  unfold Loventre_Policy_Core_Program in Hcore.
+  destruct Hcore as [Hexist _].
+  exact Hexist.
+Qed.

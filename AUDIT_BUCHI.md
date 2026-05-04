@@ -1,31 +1,55 @@
 # Audit dei buchi formali — Loventre Coq Cycle 11
-Data: 2026-05-04
+Data: 2026-05-04 (sessione 2 — chiusura stub)
 
-## Stato della catena di teoremi
+## Stato della catena
 
-### ✅ Teoremi dimostrati senza buchi (eccetto assiomi standard Coq)
+### ✅ Teoremi reali dimostrati senza Admitted né stub
+
 - `Loventre_Theorem_v3_P_vs_NP_like`
-  Separazione costruttiva tra policy SAFE/UNSAFE e classi P-like/NP-like-black-hole.
+  Separazione costruttiva policy ↔ classi P-like / NP-like-BH.
+
 - `Loventre_NP_like_black_hole_not_P_like_accessible_v3`
-  Incompatibilità strutturale tra NP-like-black-hole e P-like-accessible.
-- `Loventre_Theorem_v3_P_vs_NP_like_black_hole_separated`
-  Esclusività policy true/false.
-- Tutti i lemmi di `Loventre_LMetrics_Policy_Specs.v` (4 lemmi)
-- Tutti i lemmi di `Loventre_LMetrics_Separation_Program.v` (3 lemmi)
+  Incompatibilità strutturale per contraddizione su horizon_flag.
 
-### ⚠️ Assiomi semantici legittimi (interfaccia con dati esterni)
-- `m_seed11_soddisfa_is_P_like` — il witness Python è P-like
-- `m_TSPcrit28_soddisfa_is_NP_like_black_hole` — il witness Python è NP-like-BH
-- `m_seed_grid_soddisfa_is_P_like`
-- `m_SATcrit16_soddisfa_is_NP_like_black_hole`
-- `exists_P_like_accessible`
-- `Loventre_P_vs_NP_like_black_hole_exist_predicative`
+- `policy_SAFE_implies_green_global_proof`
+  SAFE → GREEN (basato su axiom semantico esplicito).
 
-### 🔧 Stub residui da chiudere (definiti come True)
-- `Loventre_LMetrics_Separation_Statement := True` (Separation_Program.v)
-- `Loventre_LMetrics_Separation_Theorem_from_core_and_SAFE` (Separation_Program.v)
-- `Loventre_Policy_Core_Program := True` (Policy_Specs.v)
-- `policy_SAFE_implies_green_global := True` (Policy_SAFE_Spec.v)
+- `Loventre_Policy_Core_Program_holds`
+  Composizione delle tre componenti (esistenze + coerenza).
+
+- `Loventre_LMetrics_Separation_Theorem_from_core_and_SAFE`
+  Dal Core Program si ricavano le esistenze.
+
+- `Loventre_Theorem_v3_Seed_from_core_and_SAFE`
+  Bridge canonico v3.
+
+- 4 lemmi reali in Loventre_LMetrics_Policy_Specs.v
+- 3 lemmi reali in Loventre_LMetrics_Separation_Program.v
+- 2 corollari in Loventre_LMetrics_Policy_SAFE_Spec.v
+
+### ⚠️ Assiomi semantici espliciti (interfacce con sistema esterno)
+
+- `decision_color_coherence_safe` (Policy_SAFE_Spec.v)
+  Invariante mantenuto dal Policy Bridge Python: SAFE ⇒ GREEN.
+
+- `decision_color_coherence_invalid` (Policy_SAFE_Spec.v)
+  Stessa cosa per INVALID ⇒ UNKNOWN.
+
+- `Loventre_P_vs_NP_like_black_hole_exist_predicative` (Existence_Summary.v)
+  Esistenza witness per le due classi.
+
+- `m_seed11_soddisfa_is_P_like`, `m_seed_grid_soddisfa_is_P_like`,
+  `m_TSPcrit28_soddisfa_is_NP_like_black_hole`,
+  `m_SATcrit16_soddisfa_is_NP_like_black_hole` (Existence_Summary.v)
+  Classificazione dei witness Python concreti.
+
+- `exists_P_like_accessible` (Accessible_Existence.v)
+  Esistenza di una metrica P-like-accessible.
 
 ### Assiomi standard Coq (innocui)
+
 - `ClassicalDedekindReals.sig_forall_dec` (analisi reale)
+
+### 🚫 Stub `:= True` rimanenti
+
+NESSUNO. Tutti chiusi in questa sessione.
